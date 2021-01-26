@@ -10,12 +10,12 @@
    <meta name="keywords"
       content="ortodoncja Warszawa, Ortodonta Warszawa, ortodoncja Wawer, Ortodonta Wawer, Gabinet stomatologiczny Warszawa Wawer, ortodentica,   Magdalena Orczykowska, dobry dentysta Warszawa, implanty Warszawa, stomatologia dziecięca Warszawa, dobry stomatolog Warszawa, dobry ortodonta Warszawa,  stomatolog Warszawa, stomatolog Wawer">
 
-   <link rel="stylesheet" href="./public/bootstrap.min.css">
-   <link rel="stylesheet" href="./public/imgPosition.css">
-   <link rel="stylesheet" href="./public/scrollbar.css">
-   <link rel="stylesheet" href="./public/colorPallete.css">
-   <link rel="stylesheet" href="./public/app.css">
-   <link rel="stylesheet" href="./public/quariesAndKeyframes.css">
+   <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
+   <link rel="stylesheet" href="./public/stylesheets/imgPosition.css">
+   <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
+   <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
+   <link rel="stylesheet" href="./public/stylesheets/app.css">
+   <link rel="stylesheet" href="./public/stylesheets/quaries.css">
 
 </head>
 
@@ -43,7 +43,7 @@
       </div>
    </nav>
 
-   <header class="container-fluid welcome-img ">
+   <header class="container-fluid" id="welcome-img">
       <div id="title" class="px-5 py-4">
          <h1 class="display-1 text-sweet-brown">OrtoDentica</h1>
       </div>
@@ -113,12 +113,12 @@
          </div>
       </section>
 
-      <section id="team" class="container-fluid container-md py-5  mt-4">
+      <section id="team" class="container-fluid container-md pt-3 pb-1 py-md-5  mt-4 ">
          <div class="row">
             <h2 class="display-3 d-flex col-12 text-sweet-brown pt-3">O Nas</h2>
          </div>
 
-         <div class="row ps-2">
+         <div class="row px-2">
             <div class="col-12 col-md-7 d-flex flex-column flex-md-row flex-wrap justify-content-center py-2 px-0"
                id="members">
                <div class="member">
@@ -227,7 +227,7 @@
                </div>
 
             </div>
-            <div class="col-12 col-md-5 d-flex flex-column" id="shownMember">
+            <div class="col-12 col-md-5 d-flex flex-column pt-3" id="shownMember">
                <h4 class="display-7 text-sweet-brown " id="shownMemberName"></h4>
                <p id="shownMemberInfo" class="paragraph"></p>
                <div id="shownMemberPic"></div>
@@ -235,31 +235,33 @@
          </div>
       </section>
 
-      <section id="carouselImages" class="carousel slide container" data-bs-ride="carousel">
-         <ol class="carousel-indicators">
-            <li data-bs-target="#carouselImages" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselImages" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselImages" data-bs-slide-to="2"></li>
-         </ol>
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <img src="assets/ortodentica/img_3741_dxo.jpg" class="d-block w-100" alt="...">
+      <section id="carousel" class="bg-white py-5 rounded-top-left-s rounded-top-right-s">
+         <div id="carouselImages" class="carousel slide container bg-white" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-bs-target="#carouselImages" data-bs-slide-to="0" class="active"></li>
+               <li data-bs-target="#carouselImages" data-bs-slide-to="1"></li>
+               <li data-bs-target="#carouselImages" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="./public/assets/ortodentica/img_3741_dxo.jpg" class="d-block w-100" alt="...">
+               </div>
+               <div class="carousel-item">
+                  <img src="./public/assets/ortodentica/img_3745_dxo.jpg" class="d-block w-100" alt="...">
+               </div>
+               <div class="carousel-item">
+                  <img src="./public/assets/ortodentica/img_3724_dxo.jpg" class="d-block w-100" alt="...">
+               </div>
             </div>
-            <div class="carousel-item">
-               <img src="assets/ortodentica/img_3745_dxo.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-               <img src="assets/ortodentica/img_3724_dxo.jpg" class="d-block w-100" alt="...">
-            </div>
+            <a class="carousel-control-prev" href="#carouselImages" role="button" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselImages" role="button" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+            </a>
          </div>
-         <a class="carousel-control-prev" href="#carouselImages" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-         </a>
-         <a class="carousel-control-next" href="#carouselImages" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-         </a>
       </section>
 
       <section id="documents" class="container">
@@ -566,10 +568,10 @@
       </div>
    </footer>
 
-   <script src="./public/popper.min.js"></script>
-   <script src="./public/bootstrap.min.js"></script>
-   <script src="./public/membersData.js"></script>
-   <script src="./public/app.js"></script>
+   <script src="./public/javascripts/popper.min.js"></script>
+   <script src="./public/javascripts/bootstrap.min.js"></script>
+   <script src="./public/javascripts/membersData.js"></script>
+   <script src="./public/javascripts/app.js"></script>
 
 </body>
 

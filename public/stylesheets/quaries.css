@@ -28,6 +28,13 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
+   #carousel{
+      padding-top: 118px !important;
+      padding-bottom: 118px !important;
+   }
+   #shownMemberPic{
+         flex-grow: 1;
+   }
    .member{
       height: 0px;
       width:calc(100%/2 - 10px);
@@ -43,7 +50,7 @@
       min-height: 500px;
    }
    .row2{
-       min-height: 800px;
+       min-height: 700px;
    }
 
    .order-md-1{
@@ -95,6 +102,13 @@
    .rounded-top-right{
       border-top-right-radius:65px;
    }
+   .rounded-top-left-s{
+      border-top-left-radius:25px;
+   }
+
+   .rounded-top-right-s{
+      border-top-right-radius:25px;
+   }
 
    .rounded-bottom-right{
       border-bottom-right-radius:50px;
@@ -140,26 +154,3 @@
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {  }
-
-
-
-
-
-/* ANIMATIONS KEYFRAMES */
-@keyframes moveDown{
-   0%{transform: translate(-50%,0vh);}
-   30%{transform: translate(-50%,5vh);}
-   50%{transform: translate(-50%,0vh);}
-   70%{transform: translate(-50%,3vh);}
-   90%{transform: translate(-50%,0vh);}
-   100%{transform: translate(-50%,0vh);}
-}
-
-@keyframes rotateHover{
-   0%{transform: rotate(0deg)}
-   20%{transform: rotate(20deg)}
-   40%{transform: rotate(-10deg)}
-   60%{transform: rotate(5deg)}
-   80%{transform: rotate(-2.5deg)}
-   100%{transform: rotate(0deg)}
-}

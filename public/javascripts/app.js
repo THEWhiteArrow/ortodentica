@@ -22,7 +22,7 @@ const setUpShownMember = () => {
 
 const setUpMembersListener = () => {
    members.forEach((member, i) => {
-      member.style.backgroundImage = `url("./assets/team/${i + 1}.jpg")`;
+      member.style.backgroundImage = `url("./public/assets/team/${i + 1}.jpg")`;
       member.addEventListener('click', () => {
 
          shownMember.pic.style.backgroundImage = member.style.backgroundImage;
