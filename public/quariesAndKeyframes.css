@@ -1,0 +1,165 @@
+/* MEDIA QUARIES */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+   #row1-img,#row3-img{
+      width:400px;
+      height: 253px;
+   }
+   h2{
+      font-size:2.7rem;
+   }
+   .paragraph{
+      font-size:1.1rem;
+   }
+   /* .member{
+      margin:5px;
+   } */
+   .gigs{
+      font-size:1.2rem;
+      
+      width:80%;
+   }
+   .gigs svg{
+      margin-top:1rem;
+      width:40px;
+   }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+   .member{
+      height: 0px;
+      width:calc(100%/2 - 10px);
+      padding-bottom: calc(100%/2 - 10px);
+   }
+   #members{
+      padding:10px 10px !important;
+      height:700px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+   }
+   .row1,.row3{
+      min-height: 500px;
+   }
+   .row2{
+       min-height: 800px;
+   }
+
+   .order-md-1{
+      order: 1;
+   }
+   .order-md-2{
+      order: 2;
+   }
+
+   .bg-md-bone{
+      background-color: var(--bone) !important;
+   }
+   .bg-md-white{
+      background-color: white !important;
+   }
+
+   #row3-img{
+      top:50%;left:100%;
+      transform:translate(-50%,-50%);
+   }
+
+   #row1-img{
+      top:50%;left:0;
+      transform: translate(-50%,-50%);
+   }
+   h2{
+      font-size:3rem;
+   }
+   .paragraph{
+      font-size:1.2rem;
+   }
+
+   /* SEQUENCE HERE IS IMPORTANT ... if using fancy radius */
+   .rounded-bottom-left-xl{
+      /* border-radius:0% 0% 0% 13% / 0% 0% 0% 17%;  */
+      border-bottom-left-radius:150px ;
+   }
+   .rounded-bottom-left{
+      border-bottom-left-radius:50px;
+   }
+
+   .rounded-top-left{
+      border-top-left-radius:50px;
+   }
+   .rounded-top-left-xl{
+      border-top-left-radius:150px;
+   }
+
+   .rounded-top-right{
+      border-top-right-radius:65px;
+   }
+
+   .rounded-bottom-right{
+      border-bottom-right-radius:50px;
+   }
+   .square{
+      padding-bottom:30%;
+      width: 30%;
+   } 
+   .gigs{
+      font-size:1.2rem;
+   }
+   .gigs svg{
+      margin-top:1rem;
+      width:40px;
+   }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+   h2{
+      font-size: 3.5rem;
+   }
+   .paragraph{
+      font-size:1.4rem;
+   }
+   .member{
+   
+      width:calc(100%/3 - 10px);
+      padding-bottom: calc(100%/3 - 10px);
+   }
+   .gigs{
+      font-size:1.6rem;
+   }
+   .gigs svg{
+      margin-top:1rem;
+      width:60px;
+   }
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }
+
+
+
+
+
+/* ANIMATIONS KEYFRAMES */
+@keyframes moveDown{
+   0%{transform: translate(-50%,0vh);}
+   30%{transform: translate(-50%,5vh);}
+   50%{transform: translate(-50%,0vh);}
+   70%{transform: translate(-50%,3vh);}
+   90%{transform: translate(-50%,0vh);}
+   100%{transform: translate(-50%,0vh);}
+}
+
+@keyframes rotateHover{
+   0%{transform: rotate(0deg)}
+   20%{transform: rotate(20deg)}
+   40%{transform: rotate(-10deg)}
+   60%{transform: rotate(5deg)}
+   80%{transform: rotate(-2.5deg)}
+   100%{transform: rotate(0deg)}
+}
