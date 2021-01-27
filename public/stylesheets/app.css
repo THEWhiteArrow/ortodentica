@@ -11,7 +11,6 @@ html{
 }
 
 body{
-   min-height:5000px;
    color:#222C00ff;
    /* color:var(--slate-gray); */
    position: relative;
@@ -23,7 +22,6 @@ svg{
 }
 
 footer{
-   position: absolute;
    width:100%;
    bottom:0;
    background-color: #75685c;
@@ -130,8 +128,6 @@ footer{
 }
 
 
-
-
 #team{
    margin-bottom: 35px !important;
 
@@ -155,8 +151,10 @@ footer{
    background-repeat: no-repeat;
    background-position: center;
    display: flex;
-   width: 90%;
-   padding-bottom: 90%;
+
+   width: min(90%,500px);
+   padding-bottom: min(90%,500px);
+   /* padding-bottom: 90%; */
    /* max-width: 500px; */
    justify-self: center;
    align-self: center;
@@ -166,7 +164,7 @@ footer{
 }
 
 #shownMemberInfo,#shownMemberName{
-   line-height: normal;
+   line-height: 1.1em;
    width: 90%; 
    justify-self: center;
    align-self: center; 
@@ -177,7 +175,7 @@ footer{
    padding-bottom: 74px !important;
 }
 
-.carousel-item{
+.carousel-inner{
    border:5px solid var(--sweet-brown)
 }
 
@@ -272,10 +270,11 @@ footer{
 .solid-nav{
    /* -webkit-box-shadow: 0px 5px 25px 3px rgba(0,0,0,0.21); 
    box-shadow: 0px 5px 25px 3px rgba(0,0,0,0.21); */
-   min-height: 50px;
-   backdrop-filter: blur(5px);
-   background-color:rgba(255, 255, 255, 0.6);
    /* border-bottom: 1px solid rgba(255, 255, 255, 0.65); */
+   min-height: 57px;
+   background-color: rgba(255, 255, 255, 1);
+   /* backdrop-filter: blur(5px);
+   background-color:rgba(255, 255, 255, 0.6); */
    border-bottom: 1px solid var(--sweet-brown);
 }
 
@@ -350,7 +349,9 @@ footer{
    transform: scale(1.5);
 }
 
-
+.valid-tooltip,.invalid-tooltip{
+   right:0;
+}
 
 /* ANIMATIONS KEYFRAMES */
 @keyframes moveDown{

@@ -1,15 +1,20 @@
 /* MEDIA QUARIES */
 
 /* MAX */
+/* Medium breakboint */
 @media(max-width:767px){
+   .width-till-md-90{
+      width:90%;
+   }
    #members{
       width:90%;
    }
-   #shownMemberPic{
+
+
+   /* #shownMemberPic{
       max-width: 380px;
-      padding-bottom: min(90%,380px);
-      /* max-height: 380px; */
-   }
+      max-height: 380px;
+   } */
 }
 
 /* MIN */
@@ -53,6 +58,9 @@
       padding-bottom: 118px !important;
    }
    #shownMemberPic{
+      width:90%;
+      padding-bottom: min(90%,380px);
+      height: 0px;
       align-self: flex-end;
       flex-grow: 1;
    }
@@ -124,7 +132,7 @@
    }
 
    .rounded-top-right{
-      border-top-right-radius:65px;
+      border-top-right-radius:50px;
    }
    .rounded-top-left-s{
       border-top-left-radius:25px;
