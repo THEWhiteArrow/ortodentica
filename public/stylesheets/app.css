@@ -133,7 +133,7 @@ footer{
 
 
 #team{
-   margin-bottom: 70px !important;
+   margin-bottom: 35px !important;
 
 }
 
@@ -166,15 +166,21 @@ footer{
 }
 
 #shownMemberInfo,#shownMemberName{
-   width: 90%;
+   line-height: normal;
+   width: 90%; 
    justify-self: center;
-   align-self: center;
+   align-self: center; 
 }
 
 #carousel{
-   padding-top: 74px !important;
+   padding-top: 40px !important;
    padding-bottom: 74px !important;
 }
+
+.carousel-item{
+   border:5px solid var(--sweet-brown)
+}
+
 #carouselImages,.carousel-item,.arousel-inner{
    max-height: 700px;
 }
@@ -313,6 +319,7 @@ footer{
    cursor: pointer;
    transition: all 0.15s ease-in-out;
 }
+
 
 .whiten{
    position: absolute;

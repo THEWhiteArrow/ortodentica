@@ -5,6 +5,11 @@
    #members{
       width:90%;
    }
+   #shownMemberPic{
+      max-width: 380px;
+      padding-bottom: min(90%,380px);
+      /* max-height: 380px; */
+   }
 }
 
 /* MIN */
@@ -45,7 +50,6 @@
       align-self: flex-end;
    }
    #carousel{
-      padding-top: 118px !important;
       padding-bottom: 118px !important;
    }
    #shownMemberPic{
