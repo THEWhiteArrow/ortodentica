@@ -1,5 +1,13 @@
 /* MEDIA QUARIES */
 
+/* MAX */
+@media(max-width:767px){
+   #members{
+      width:90%;
+   }
+}
+
+/* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
    #row1-img,#row3-img{
@@ -28,12 +36,21 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {  
+ 
+   .absolute-md{
+      position: absolute !important;
+   }
+   #shownMemberInfo,#shownMemberName{
+      width: 90%;
+      align-self: flex-end;
+   }
    #carousel{
       padding-top: 118px !important;
       padding-bottom: 118px !important;
    }
    #shownMemberPic{
-         flex-grow: 1;
+      align-self: flex-end;
+      flex-grow: 1;
    }
    .member{
       height: 0px;
@@ -42,7 +59,8 @@
    }
    #members{
       padding:10px 10px !important;
-      height:700px;
+      height: 100%;
+      max-height:700px;
       overflow-y: scroll;
       overflow-x: hidden;
    }
@@ -50,8 +68,9 @@
       min-height: 500px;
    }
    .row2{
-       min-height: 700px;
+       min-height: 600px;
    }
+   
 
    .order-md-1{
       order: 1;
@@ -70,6 +89,7 @@
    #row3-img{
       top:50%;left:100%;
       transform:translate(-50%,-50%);
+
    }
 
    #row1-img{

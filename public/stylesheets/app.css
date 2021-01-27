@@ -65,7 +65,7 @@ footer{
    justify-content: center;
    align-items: center;
 
-   animation:moveDown 6s ease-in-out 1s infinite both;
+   animation:moveDown 6s ease-in-out 0.5s infinite both;
 }
 
 #showMore svg{
@@ -82,7 +82,7 @@ footer{
 
 #row1-img{
    /* display: none; */
-   position: absolute;
+   /* position: absolute; */
    /* transform: translate(-50%,-50%); */
    background-image: url("../assets/ortodentica/zesp_orto.jpg");
    background-position: center;
@@ -91,10 +91,10 @@ footer{
 }
 
 #row3-img{
-   top:50%;left:50%;
-   transform:translate(-50%,-50%);
+   /* top:50%;left:50%;
+   transform:translate(-50%,-50%); */
 
-   position: absolute;
+   /* position: absolute; */
    background-image: url("../assets/ortodentica/img_3724_dxo.jpg");
    background-position: center;
    background-size: cover;
@@ -103,7 +103,7 @@ footer{
 
 #row1-img,#row3-img{
    /* background-repeat: no-repeat; */
-   display: inline-block;
+   /* display: flex; */
    max-width:400px;
    width:80%;
    height:auto;
@@ -141,16 +141,13 @@ footer{
    padding:2rem;
    height:110px;
 
+   margin:0 auto;
    overflow-y: hidden;
    overflow-x: scroll;
    background-color:rgba(206, 171, 139, 0.58);
    -webkit-box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4); 
    box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4);
 } 
-
-#shownMember{
-   max-height:700px !important;
-}
  
 #shownMemberPic{
    background-image: url('../assets/team/m_orczykowska.jpg');
@@ -158,8 +155,8 @@ footer{
    background-repeat: no-repeat;
    background-position: center;
    display: flex;
-   width: 100%;
-   padding-bottom: 100%;
+   width: 90%;
+   padding-bottom: 90%;
    /* max-width: 500px; */
    justify-self: center;
    align-self: center;
@@ -168,9 +165,12 @@ footer{
    transition: all 0.20s ease-in-out;
 }
 
-/* #shownMemberInfo{
-   font-size:1.14rem;
-} */
+#shownMemberInfo,#shownMemberName{
+   width: 90%;
+   justify-self: center;
+   align-self: center;
+}
+
 #carousel{
    padding-top: 74px !important;
    padding-bottom: 74px !important;
@@ -192,10 +192,20 @@ footer{
    /* transform: translateY(-150px); */
    background-size: cover;
    background-position: center;
-   background-image: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0)),url("../assets/ortodentica/img_3731_dxo.jpg");
+   background-image: linear-gradient(rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0)),url("../assets/ortodentica/img_3731_dxo.jpg");
 }
 
+.content-box{
+   box-sizing: content-box;
+}
 
+.justify-top{
+   justify-content: flex-start !important;
+}
+
+.absolute{
+   position: absolute !important;
+}
 
 .relative{
    position: relative !important;
@@ -264,13 +274,17 @@ footer{
 }
 
 .row1,.row3{
-   min-height: 300px;
+   min-height: 500px !important;
 }
 
 .row2{
-   min-height: 400px;
+   min-height: 570px;
 }
 
+/* .transform-top{
+   top:0;
+   transform: translate();
+} */
 
 .bg-bone{
    background-color: var(--bone);
