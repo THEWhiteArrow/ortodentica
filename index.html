@@ -10,6 +10,10 @@
    <meta name="keywords"
       content="ortodoncja Warszawa, Ortodonta Warszawa, ortodoncja Wawer, Ortodonta Wawer, Gabinet stomatologiczny Warszawa Wawer, ortodentica,   Magdalena Orczykowska, dobry dentysta Warszawa, implanty Warszawa, stomatologia dziecięca Warszawa, dobry stomatolog Warszawa, dobry ortodonta Warszawa,  stomatolog Warszawa, stomatolog Wawer">
 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"></script>
+
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
    <link rel="stylesheet" href="./public/stylesheets/imgPosition.css">
    <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
@@ -238,11 +242,10 @@
          </div>
       </section>
 
-
-
       <section id="contact" class="bg-white rounded-top-left rounded-top-right">
          <div class="container d-flex justify-content-center py-4">
-            <form id="form" action="" class="pb-4 d-flex flex-column col-10 col-md-6 needs-validation" novalidate>
+            <form id="form" action="http://localhost:3000/api" method="post"
+               class="pb-4 d-flex flex-column col-10 col-md-6 needs-validation" novalidate netlify>
                <h2 class="text-sweet-brown pt-4 pb-5">Napisz do nas</h2>
 
                <div class="d-flex flex-column position-relative mb-2">
@@ -275,13 +278,13 @@
 
                </div>
                <div class="d-flex flex-column position-relative mb-2">
-                  <label for="message" class="form-label paragraph">Tekst wiadomości</label>
-                  <textarea name="message" id="message" rows="10" class="form-control" required></textarea>
+                  <label for="text" class="form-label paragraph">Tekst wiadomości</label>
+                  <textarea name="text" id="text" rows="10" class="form-control" required></textarea>
                   <div class="invalid-feedback">
                      Proszę wprowadzić wiadomość
                   </div>
                </div>
-               <button class="btn btn-success my-1" type="submit">Wyślij</button>
+               <button id="submit" class="btn btn-success my-1" type="submit">Wyślij</button>
             </form>
          </div>
       </section>
@@ -626,8 +629,9 @@
    <script src="./public/javascripts/popper.min.js"></script>
    <script src="./public/javascripts/bootstrap.min.js"></script>
    <script src="./public/javascripts/membersData.js"></script>
-   <script src="./public/javascripts/app.js"></script>
+   <script src="./public/javascripts/sendForms.js"></script>
    <script src="./public/javascripts/validateForms.js"></script>
+   <script src="./public/javascripts/app.js"></script>
 
 </body>
 

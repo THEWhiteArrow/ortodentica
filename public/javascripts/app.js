@@ -12,6 +12,7 @@ const init = () => {
    setUpShownMember();
    setUpMembersListener();
    setUpScrollListener();
+   wakeUpApi();
 }
 
 const setUpShownMember = () => {
@@ -49,6 +50,11 @@ const setUpScrollListener = () => {
          console.log('removed solid-nav')
       }
    });
+}
+
+const wakeUpApi = async () => {
+   const res = await axios.get('http://localhost:3000/wakeup');
+   console.log(res.data);
 }
 
 
