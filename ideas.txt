@@ -1,11 +1,38 @@
- 
+ const wakeUpApi = async () => {
+   const res = await axios.get('http://localhost:3000/wakeup');
+   console.log(res.data);
+}
       <ul class="nav nav-tabs px-md-4">
          <a class="nav-link active" href="#">OrtoDentica</a>
          <a class="nav-link" href="#btnRodo">Rodo</a>
          <a class="nav-link" href="#btnRegulamin">Regulamin świadczeń usług</a>
       </ul>
 
-      
+// const btnSubmit = document.querySelector('#submit');
+
+// btnSubmit.addEventListener('click', async (e) => {
+//    e.preventDefault();
+//    const form = document.querySelector('#form').elements;
+//    const headers = {
+//       'Content-Type': 'application/json',
+//    }
+//    const data = {
+//       name: form.name.value,
+//       phone: form.phone.value,
+//       email: form.email.value,
+//       text: form.text.value
+//    };
+
+//    const res = await fetch('http://localhost:3000/api', {
+//       method: 'POST',
+//       headers,
+//       body: JSON.stringify(data)
+//    })
+
+//    console.log('Message delivered successfully!')
+// })
+
+
 // const uncoverPage = () => {
 //    onloadDiv.style.opacity = '0';
 
