@@ -26,22 +26,23 @@
 <body class="bg-bone">
 
 
+
    <nav id="navbar" class="navbar navbar-expand-md navbar-light nav-gradient fixed-top">
       <div class="container-fluid">
-         <a class="navbar-brand" href="#" aria-current="page">OrtoDentica</a>
+         <a class="navbar-brand" href="#title" aria-current="page">OrtoDentica</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link" href="#">Aktualności</a>
-               <a class="nav-link" href="#">O
+               <a class="nav-link" href="#row1-img">Aktualności</a>
+               <a class="nav-link" href="#row2-img">O
                   Gabinecie</a>
                <a class="nav-link" href="#team">Nasz
                   Zespół</a>
-               <a class="nav-link" href="#">Cennik</a>
-               <a class="nav-link" href="#">Kontakt</a>
+               <a class="nav-link" href="#documents">Cennik</a>
+               <a class="nav-link" href="#contact">Kontakt</a>
             </div>
          </div>
       </div>
@@ -76,8 +77,9 @@
                      </p>
                   </div>
                </div>
-               <div class="relative col-12 col-md-4 pt-0 min-h-300 mt-4 center-everything justify-top">
-                  <div id="row1-img" class="absolute-md"></div>
+               <div class="relative col-12 col-md-4  pt-2 mb-4 mb-md-0 center-everything justify-top">
+                  <img id="row1-img" class="absolute-md" src="./public/assets/ortodentica/zesp_orto.jpg"
+                     alt="Część zespołu Ortodentica"></img>
                </div>
             </div>
 
@@ -99,9 +101,10 @@
 
             <div class="row row3 mt-4 mt-md-0">
                <div
-                  class="col-12 col-md-4 order-2 order-md-1 center-everything justify-top content-box px-0 pt-4 pt-md-0  bg-white min-h-300 relative ">
+                  class="col-12 col-md-4 order-2 order-md-1 center-everything justify-top content-box px-0 py-2  py-md-0  bg-white  relative ">
                   <div class="d-flex bg-md-bone w-100 h-100 rounded-top-right absolute"></div>
-                  <div id="row3-img" class="absolute-md"></div>
+                  <img id="row3-img" class="absolute-md" src="./public/assets/ortodentica/img_3724_dxo.jpg"
+                     alt="Logo Ortodentica"></img>
                </div>
                <div class="col-12 col-md-8 pt-4 order-1 order-md-2 center-everything bg-white rounded-bottom-left">
                   <div class="col-12 col-md-6 center-everything">
@@ -318,6 +321,12 @@
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
             </a>
+         </div>
+         <div class="container">
+            <iframe frameborder="0" style="border:0"
+               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAlDtiMOPDT5IFLCb23Gf4YE7R1vuGLi_k&q=Warszawa-Kędzieżyńska 9,Polska&zoom=15"
+               allowfullscreen>
+            </iframe>
          </div>
       </section>
 
@@ -625,13 +634,18 @@
       </div>
    </footer>
 
+
+   <div id="cursor"></div>
+
+
+
+
+
    <script src="./public/javascripts/popper.min.js"></script>
    <script src="./public/javascripts/bootstrap.min.js"></script>
    <script src="./public/javascripts/membersData.js"></script>
-   <script src="./public/javascripts/sendForms.js"></script>
    <script src="./public/javascripts/validateForms.js"></script>
    <script src="./public/javascripts/app.js"></script>
-
 </body>
 
 </html>
