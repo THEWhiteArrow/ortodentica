@@ -45,7 +45,6 @@ iframe{
 
 
 
-
 #cursor{
    pointer-events: none;
    position: fixed;
@@ -180,8 +179,8 @@ iframe{
    background-position: center;
    display: flex;
 
-   width: min(90%,500px);
-   padding-bottom: min(90%,500px);
+   width: min(100%,500px);
+   padding-bottom: min(100%,500px);
    /* padding-bottom: 90%; */
    /* max-width: 500px; */
    justify-self: center;
@@ -193,7 +192,8 @@ iframe{
 
 #shownMemberInfo,#shownMemberName{
    line-height: 1.1em;
-   width: 90%; 
+   width: min(100%,500px);
+   /* width: 90%;  */
    justify-self: center;
    align-self: center; 
 }
@@ -390,9 +390,6 @@ iframe{
    transform: scale(1.5);
 }
 
-.valid-tooltip,.invalid-tooltip{
-   right:0;
-}
 
 /* ANIMATIONS KEYFRAMES */
 @keyframes moveDown{

@@ -50,17 +50,19 @@
    .absolute-md{
       position: absolute !important;
    }
-   #shownMemberInfo,#shownMemberName{
+   /* #shownMemberInfo,#shownMemberName{
       width: 90%;
       align-self: flex-end;
-   }
+   } */
    #carousel{
       padding-bottom: 118px !important;
    }
    #shownMemberPic{
-      width:90%;
-      padding-bottom: min(90%,380px);
+      /* width:90%; */
+      /* padding-bottom: min(90%,380px); */
       height: 0px;
+      margin-left: auto;
+      margin-right: auto;
       align-self: flex-end;
       flex-grow: 1;
    }
@@ -160,6 +162,7 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+
    h2{
       font-size: 3.5rem;
    }
