@@ -44,6 +44,8 @@ const setUpScrollListener = () => {
    document.addEventListener("scroll", () => {
       const scroll = this.scrollY;
       const viewHeight = this.innerHeight;
+      console.log(scroll, ' - scrolled')
+      console.log(innerHeight, ' - innerHeight')
 
       if ((scroll >= viewHeight && scroll >= 700) && !navbar.classList.contains('solid-nav')) {
          navbar.classList.add('solid-nav');
