@@ -26,19 +26,19 @@ const init = () => {
 
 
 const setUpShownMember = () => {
-   shownMember.pic.style.backgroundImage = members[8].style.backgroundImage;
+   shownMember.pic.style.backgroundImage = getComputedStyle(members[8]).backgroundImage;
    shownMember.name.innerText = data[`member${9}`].name;
    shownMember.info.innerText = data[`member${9}`].info;
 }
 
 const setUpMembersTiles = () => {
    members.forEach((member, i) => {
-      member.style.backgroundImage = `url("./public/assets/team/${i + 1}-min.jpg")`;
+      // member.style.backgroundImage = `url("./public/assets/team/${i + 1}-min.jpg")`;
       member.addEventListener('click', () => {
 
-         shownMember.pic.style.backgroundImage = member.style.backgroundImage;
-         shownMember.pic.style.backgroundPositionX = getComputedStyle(member).backgroundPositionX;
-         shownMember.pic.style.backgroundPositionY = getComputedStyle(member).backgroundPositionY;
+         shownMember.pic.style.backgroundImage = getComputedStyle(member).backgroundImage;
+         // shownMember.pic.style.backgroundPositionX = getComputedStyle(member).backgroundPositionX;
+         // shownMember.pic.style.backgroundPositionY = getComputedStyle(member).backgroundPositionY;
 
          shownMember.name.innerText = data[`member${i + 1}`].name;
          shownMember.info.innerText = data[`member${i + 1}`].info;
