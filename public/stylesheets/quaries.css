@@ -9,7 +9,9 @@
    #members{
       width:90%;
    }
-
+   #contact{
+      min-height: 100vh;
+   }
 
    /* #shownMemberPic{
       max-width: 380px;
