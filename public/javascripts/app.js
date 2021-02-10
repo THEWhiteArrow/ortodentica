@@ -53,7 +53,8 @@ const setUpSmoothScrollbars = () => {
 
    const options = {
       damping: 0.11,
-      renderByPixels: !('ontouchstart' in document),
+      // renderByPixels: !('ontouchstart' in document),
+      renderByPixels: true,
       syncCallbacks: true,
       alwaysShowTracks: true
    };
@@ -118,8 +119,10 @@ const restoreScroll = () => {
 const setUpScrollListener = (scrollbar) => {
    scrollbar.addListener(() => {
       scroll = scrollbar.offset.y;
-      cursor.y = scroll;
-      cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
+      if (!cursor.removed) {
+         cursor.y = scroll;
+         cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
+      }
       navbar.style.top = scroll + 'px';
 
       if ((scroll >= 700) && !navbar.classList.contains('solid-nav')) {
@@ -148,6 +151,9 @@ const setUpCursor = () => {
       document.addEventListener('mouseup', () => {
          cursor.classList.remove('mouse-down');
       });
+   } else {
+      cursor.removed = true;
+      cursor.remove();
    }
 }
 
