@@ -8,15 +8,22 @@ const shownMember = {
 }
 
 
+let scroll = 0;
+cursor.y = 0;
+let e;
+
 
 
 
 const init = () => {
+   restoreScroll();
    setUpMembersTiles();
    setUpShownMember();
-   setUpScrollListener();
+   setUpSmoothScrollbars();
    setUpCursor();
 }
+
+
 
 const setUpShownMember = () => {
    shownMember.pic.style.backgroundImage = members[8].style.backgroundImage;
@@ -40,17 +47,85 @@ const setUpMembersTiles = () => {
    })
 }
 
-const setUpScrollListener = () => {
-   document.addEventListener("scroll", () => {
-      const scroll = this.scrollY;
-      const viewHeight = this.innerHeight;
-      console.log(scroll, ' - scrolled')
-      console.log(innerHeight, ' - innerHeight')
+const setUpSmoothScrollbars = () => {
+   const mainElem = document.getElementById("scroll-container");
+   const membersContainer = document.getElementById("members");
 
-      if ((scroll >= viewHeight && scroll >= 700) && !navbar.classList.contains('solid-nav')) {
+   const options = {
+      damping: 0.11,
+      renderByPixels: !('ontouchstart' in document),
+      syncCallbacks: true,
+      alwaysShowTracks: true
+   };
+
+   Scrollbar.use(OverscrollPlugin);
+   const overscrollOptions = {
+      enable: true,
+      effect: navigator.userAgent.match(/Android/) ? 'glow' : 'bounce',
+      damping: 0,
+      maxOverscroll: navigator.userAgent.match(/Android/) ? 150 : 100,
+      glowColor: mainElem.dataset.glowColor,
+   };
+
+
+
+   const bodyScrollbar = Scrollbar.init(mainElem, {
+      ...options,
+      delegateTo: document,
+      plugins: {
+         overscroll: { ...overscrollOptions },
+      },
+   })
+
+   overscrollOptions.damping = 0.11;
+   const membersScrollbar = Scrollbar.init(membersContainer, {
+      ...options,
+      delegateTo: membersContainer
+   })
+
+   setUpScrollListener(bodyScrollbar);
+   setUpLinks(bodyScrollbar);
+}
+
+const setUpLinks = (scrollbar) => {
+   const links = document.querySelectorAll('a');
+   for (let link of links) {
+      if (!link.classList.contains('not-scroll')) {
+         link.addEventListener('click', (e) => {
+            e.preventDefault();
+            let offsetTop = 0;
+            link.getAttribute('href') === '#gabinet' ? offsetTop = 100 : null;
+            scrollbar.scrollIntoView(document.querySelector(link.getAttribute('href')), {
+               // offsetLeft: 34,
+               offsetTop: offsetTop || 0,
+               alignToTop: true,
+               // onlyScrollIfNeeded: true,
+            });
+         })
+      }
+   }
+}
+
+const restoreScroll = () => {
+   // This prevents the page from scrolling down to where it was previously.
+   if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+   }
+   // This is needed if the user scrolls down during page load and you want to make sure the page is scrolled to the top once it's fully loaded. This has Cross-browser support.
+   window.scrollTo(0, 0);
+}
+
+const setUpScrollListener = (scrollbar) => {
+   scrollbar.addListener(() => {
+      scroll = scrollbar.offset.y;
+      cursor.y = scroll;
+      cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
+      navbar.style.top = scroll + 'px';
+
+      if ((scroll >= 700) && !navbar.classList.contains('solid-nav')) {
          navbar.classList.add('solid-nav');
          console.log('added solid-nav')
-      } else if ((scroll < viewHeight && scroll < 700) && navbar.classList.contains('solid-nav')) {
+      } else if ((scroll < 700) && navbar.classList.contains('solid-nav')) {
          navbar.classList.remove('solid-nav');
          console.log('removed solid-nav')
       }
@@ -60,10 +135,10 @@ const setUpScrollListener = () => {
 const setUpCursor = () => {
    if (!isMobile()) {
       document.addEventListener('mousemove', () => {
-         let e = window.event;
+         e = window.event;
+         cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
+         cursor.style.setProperty('--mleft', e.clientX - 22.5 + 'px');
 
-         cursor.style.setProperty('--mtop', e.clientY - cursor.offsetHeight / 2 + 'px');
-         cursor.style.setProperty('--mleft', e.clientX - cursor.offsetWidth / 2 + 'px');
       });
 
       document.addEventListener('mousedown', () => {
