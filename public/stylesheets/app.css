@@ -52,10 +52,10 @@ textarea{
    height:100px;
 }
 
-section,footer{
-   content-visibility: auto !important;
-   transform: translate3d(0,0,0);
-}
+/* section,footer{
+   content-visibility: auto ;
+   contain-intrinsic-size: 1000px; 
+} */
 
 /* .scroll-snap-container{
    overflow-y: scroll;

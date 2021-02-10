@@ -69,14 +69,17 @@ const setUpSmoothScrollbars = () => {
    };
 
 
-
-   const bodyScrollbar = Scrollbar.init(mainElem, {
-      ...options,
-      delegateTo: document,
-      plugins: {
-         overscroll: { ...overscrollOptions },
-      },
-   })
+   if (isMobile) {
+      const bodyScrollbar = Scrollbar.init(mainElem, {
+         ...options,
+         delegateTo: document,
+         plugins: {
+            overscroll: { ...overscrollOptions },
+         },
+      })
+      setUpScrollListener(bodyScrollbar);
+      setUpLinks(bodyScrollbar);
+   }
 
    overscrollOptions.damping = 0.11;
    const membersScrollbar = Scrollbar.init(membersContainer, {
@@ -84,8 +87,7 @@ const setUpSmoothScrollbars = () => {
       delegateTo: membersContainer
    })
 
-   setUpScrollListener(bodyScrollbar);
-   setUpLinks(bodyScrollbar);
+
 }
 
 const setUpLinks = (scrollbar) => {
@@ -166,3 +168,4 @@ const easyMode = () => {
 }
 
 init();
+easyMode();
