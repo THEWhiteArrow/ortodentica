@@ -43,10 +43,10 @@ footer{
    color:white;
 }
 
-iframe{
+/* iframe{
    width:100%;
    height:300px;
-}
+} */
 
 textarea{
    height:100px;
@@ -75,7 +75,7 @@ textarea{
 } */
 
 .member,
-#row3-img{
+.not-scroll{
    content-visibility: auto ;
 }
 
@@ -439,7 +439,7 @@ textarea{
    height: 100%;
    background-color: transparent;
 
-   transition: background-color 0.20s ease-in-out;
+   transition: background-color 0.3s ease-in-out;
 }
 
 .bi-search{
@@ -448,7 +448,10 @@ textarea{
    opacity: 0;
    color:#212529;
    position: absolute;
-   top:45%;left:50%;
+
+   top:50%;left:50%;
+      transform: translate3d(-40%,-40%,0);
+      transform-origin: center;
 
    transition: all 0.20s ease-in-out;
 }
@@ -459,7 +462,7 @@ textarea{
 
 .member:hover .bi-search{
    opacity: 1;
-   transform: scale(1.5);
+   transform: translate3d(-40%,-40%,0) scale(1.5);
 }
 
 

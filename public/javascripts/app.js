@@ -1,4 +1,5 @@
 const navbar = document.querySelector('#navbar');
+const welcomeImg = document.querySelector('#welcome-img');
 const cursor = document.querySelector('#cursor');
 const members = document.querySelectorAll('.member');
 const shownMember = {
@@ -8,19 +9,24 @@ const shownMember = {
 }
 
 
-let scroll = 0;
 cursor.y = 0;
-let e;
-
-
+let e, breakPoint, scroll = 0;
 
 
 const init = () => {
    restoreScroll();
    setUpMembersTiles();
    setUpShownMember();
-   setUpSmoothScrollbars();
-   setUpCursor();
+   if (!isMobile()) {
+      setUpSmoothScrollbars();
+      setUpCursor();
+      console.log('mouse device');
+   } else {
+      setUpScrollListener(document);
+      cursor.removed = true;
+      cursor.remove();
+      console.log('touch device');
+   }
 }
 
 
@@ -117,45 +123,50 @@ const restoreScroll = () => {
    window.scrollTo(0, 0);
 }
 
+const checkForNavbarChangePoints = (scrollOffset) => {
+   breakPoint = welcomeImg.offsetHeight - 56;
+   if ((scrollOffset >= breakPoint) && !navbar.classList.contains('solid-nav')) {
+      navbar.classList.add('solid-nav');
+      // console.log('added solid-nav')
+   } else if ((scrollOffset < breakPoint) && navbar.classList.contains('solid-nav')) {
+      navbar.classList.remove('solid-nav');
+      // console.log('removed solid-nav')
+   }
+}
+
 const setUpScrollListener = (scrollbar) => {
-   scrollbar.addListener(() => {
-      scroll = scrollbar.offset.y;
-      if (!cursor.removed) {
+
+   if (scrollbar === document) {
+      document.addEventListener('scroll', () => {
+         scroll = this.scrollY;
+         checkForNavbarChangePoints(scroll)
+      });
+   } else {
+      scrollbar.addListener(() => {
+         scroll = scrollbar.offset.y;
          cursor.y = scroll;
          cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
-      }
-      navbar.style.top = scroll + 'px';
-
-      if ((scroll >= 700) && !navbar.classList.contains('solid-nav')) {
-         navbar.classList.add('solid-nav');
-         console.log('added solid-nav')
-      } else if ((scroll < 700) && navbar.classList.contains('solid-nav')) {
-         navbar.classList.remove('solid-nav');
-         console.log('removed solid-nav')
-      }
-   });
+         navbar.style.top = scroll + 'px';
+         checkForNavbarChangePoints(scroll);
+      });
+   }
 }
 
 const setUpCursor = () => {
-   if (!isMobile()) {
-      document.addEventListener('mousemove', () => {
-         e = window.event;
-         cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
-         cursor.style.setProperty('--mleft', e.clientX - 22.5 + 'px');
+   document.addEventListener('mousemove', () => {
+      e = window.event;
+      cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
+      cursor.style.setProperty('--mleft', e.clientX - 22.5 + 'px');
 
-      });
+   });
 
-      document.addEventListener('mousedown', () => {
-         cursor.classList.add('mouse-down');
-      });
+   document.addEventListener('mousedown', () => {
+      cursor.classList.add('mouse-down');
+   });
 
-      document.addEventListener('mouseup', () => {
-         cursor.classList.remove('mouse-down');
-      });
-   } else {
-      cursor.removed = true;
-      cursor.remove();
-   }
+   document.addEventListener('mouseup', () => {
+      cursor.classList.remove('mouse-down');
+   });
 }
 
 const isMobile = () => {
@@ -163,7 +174,7 @@ const isMobile = () => {
 }
 
 const easyMode = () => {
-   Scrollbar.destroyAll()
+   Scrollbar.destroyAll();
 }
 
 init();
