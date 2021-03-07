@@ -10,13 +10,41 @@
    <meta name="keywords"
       content="ortodoncja Warszawa, Ortodonta Warszawa, ortodoncja Wawer, Ortodonta Wawer, Gabinet stomatologiczny Warszawa Wawer, ortodentica,   Magdalena Orczykowska, dobry dentysta Warszawa, implanty Warszawa, stomatologia dziecięca Warszawa, dobry stomatolog Warszawa, dobry ortodonta Warszawa,  stomatolog Warszawa, stomatolog Wawer">
 
-   <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
 
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+   <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
    <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
    <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
    <link rel="stylesheet" href="./public/stylesheets/app.css">
    <link rel="stylesheet" href="./public/stylesheets/quaries.css">
 
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+      #map {
+         height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+         height: 100%;
+         margin: 0;
+         padding: 0;
+      }
+   </style>
+   <script>
+      let map;
+
+      function initMap() {
+         map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+         });
+      }
+   </script>
 </head>
 
 <body id="scroll-container" class="bg-bone" data-scrollbar>
@@ -319,11 +347,12 @@
          </div>
       </section>
 
-      <section id="map" class="container-fluid">
-         <iframe frameborder="0" style="border:0"
+      <section id="googleMap" class="container-fluid">
+         <div id="map"></div>
+         <!-- <iframe frameborder="0" style="border:0"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAlDtiMOPDT5IFLCb23Gf4YE7R1vuGLi_k&q=Warszawa-Kędzieżyńska 9,Polska&zoom=15"
             allowfullscreen>
-         </iframe>
+         </iframe> -->
       </section>
 
       <section id="carousel">
@@ -667,7 +696,6 @@
    <!-- <div id="cursor"></div> -->
 
 
-
    <!-- We use StatCrab to protect your privacy -->
    <script src="https://app.statcrab.com/embed/crab.js" data-project="AxlaKm" defer></script>
    <!-- StatCrab.com -->
@@ -679,6 +707,13 @@
    <script src="./public/javascripts/membersData.js"></script>
    <script src="./public/javascripts/validateForms.js"></script>
    <script src="./public/javascripts/app.js"></script>
+
+   <div id="map"></div>
+
+   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANCKjaDk-XScaeveIbajn7kR_XpXkXRkI&callback=initMap&libraries=&v=weekly"
+      async></script>
 </body>
 
 </html>
