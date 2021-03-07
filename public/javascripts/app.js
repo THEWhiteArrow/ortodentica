@@ -9,7 +9,7 @@ const shownMember = {
 }
 
 
-cursor.y = 0;
+// cursor.y = 0;
 let e, breakPoint, scroll = 0;
 
 
@@ -19,7 +19,7 @@ const init = () => {
    setUpShownMember();
    if (!isMobile()) {
       setUpSmoothScrollbars();
-      setUpCursor();
+      // setUpCursor();
       console.log('mouse device');
    } else {
       setUpScrollListener(document);
@@ -144,8 +144,10 @@ const setUpScrollListener = (scrollbar) => {
    } else {
       scrollbar.addListener(() => {
          scroll = scrollbar.offset.y;
-         cursor.y = scroll;
-         cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
+
+         // DELETED CURSOR
+         // cursor.y = scroll;
+         // cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
          navbar.style.top = scroll + 'px';
          checkForNavbarChangePoints(scroll);
       });
