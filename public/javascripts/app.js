@@ -15,8 +15,6 @@ let e, breakPoint, scroll = 0;
 
 const init = () => {
    restoreScroll();
-   setUpMembersTiles();
-   setUpShownMember();
    if (!isMobile()) {
       setUpSmoothScrollbars();
       // setUpCursor();
@@ -27,6 +25,8 @@ const init = () => {
       cursor.remove();
       console.log('touch device');
    }
+   setUpMembersTiles();
+   setUpShownMember();
 }
 
 
@@ -102,7 +102,7 @@ const setUpLinks = (scrollbar) => {
          link.addEventListener('click', (e) => {
             e.preventDefault();
             let offsetTop = 0;
-            link.getAttribute('href') === '#gabinet' ? offsetTop = 100 : null;
+            link.getAttribute('href') === '#o-nas' ? offsetTop = 100 : null;
             scrollbar.scrollIntoView(document.querySelector(link.getAttribute('href')), {
                // offsetLeft: 34,
                offsetTop: offsetTop || 0,

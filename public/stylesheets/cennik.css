@@ -1,0 +1,118 @@
+*{
+   padding:0;
+   margin:0;
+   box-sizing: border-box;
+}
+
+html{
+   min-height: 100vh;
+   height:100%;
+}
+body{
+   display:flex;
+   flex-direction: column;
+   min-height: 100%;
+   background-color: var(--bone);
+}
+
+h1{
+   text-align: center;
+   margin:0;
+   padding-top:90px;
+   padding-bottom:20px;
+}
+
+main{
+   margin: 0 auto;
+   width:min(100%,1200px);
+   height:clamp(400px,75vh,800px);
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   transition: all ease-in-out 0.4s;
+}
+
+main div{
+   position: relative;
+   display: flex;
+   color:white;
+   background-color: var(--grullo);
+   border:2px solid var(--sweet-brown);   
+   /* width:calc(100%/4);
+   padding-bottom: calc(100%/4);
+   margin:10px; */
+}
+
+main div span{
+   position: absolute;
+   display: flex;
+   width:100%;
+   justify-content: center;
+   text-align: center;
+   top:50%;
+   /* text-align: center; */
+   transform: translate3d(0,-50%,0);
+}
+
+ul{
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+}
+
+section{
+   transition: all .4s ease-in-out;
+}
+
+.fadeIn{
+   animation:fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn{
+   from{opacity:0;}
+   to{opacity:1;}
+}
+
+
+button.btn{
+   width:min(100%,500px);
+   margin:20px auto 50px 0;
+}
+
+
+
+
+.solid-nav{
+
+   background-color:rgb(255, 255, 255);
+   border-bottom: 1px solid var(--sweet-brown);
+}
+
+.grid-container {
+   padding-left: 10px;
+   padding-right: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: repeat(8, 1fr);
+   gap: 7px 7px;
+   grid-template-areas:
+     "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
+     "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
+     "cztery cztery cztery cztery piec piec piec szesc szesc"
+     "cztery cztery cztery cztery piec piec piec szesc szesc"
+     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
+     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
+     "dziesiec dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie jedenascie"
+     "dziesiec dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie jedenascie";
+ }
+ .jeden { grid-area: jeden; }
+ .dwa { grid-area: dwa; }
+ .trzy { grid-area: trzy; }
+ .cztery { grid-area: cztery; }
+ .piec { grid-area: piec; }
+ .szesc { grid-area: szesc; }
+ .siedem { grid-area: siedem; }
+ .osiem { grid-area: osiem; }
+ .dziewiec { grid-area: dziewiec; }
+ .dziesiec { grid-area: dziesiec; }
+ .jedenascie { grid-area: jedenascie; }

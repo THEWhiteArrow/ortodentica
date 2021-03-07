@@ -94,6 +94,21 @@ textarea{
    z-index: 0;
 } */
 
+#map{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   border: 2px solid var(--sweet-brown);
+   border-left: none;
+   border-right: none;
+}
+
+#map iframe{
+   width:100%;
+   height: 400px;
+}
+
 #cursor{
    pointer-events: none;
    position: fixed;
@@ -282,16 +297,19 @@ textarea{
 #carousel{
    padding-top: 40px !important;
    padding-bottom: 74px !important;
+   background-color: white;
 }
 
 .carousel-inner{
-   border:5px solid var(--sweet-brown)
+   border:5px solid var(--sweet-brown);
 }
 
-
+#content p {
+   font-size: 1.4rem;
+}
 
 #carouselImages,.carousel-item,.arousel-inner{
-   max-height: 700px;
+   max-height: min(600px,70vh);
 }
 
 /* #navbarNavAltMarkup{

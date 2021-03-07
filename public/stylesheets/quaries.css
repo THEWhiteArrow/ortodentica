@@ -72,6 +72,9 @@
    } */
 
 
+   #carousel{
+      padding-top:150px !important;
+   }
    #contact,#team,#carousel{
       padding-bottom: 100px !important;
    } 
