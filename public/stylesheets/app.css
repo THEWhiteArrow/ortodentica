@@ -94,6 +94,16 @@ textarea{
    z-index: 0;
 } */
 
+div.mapboxgl-popup-content h3{
+   font-size:1.2rem;
+   
+}
+
+div.mapboxgl-popup-content p{
+   margin:0;
+   
+}
+
 #googleMap{
    display: flex;
    justify-content: center;

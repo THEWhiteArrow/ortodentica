@@ -19,32 +19,12 @@
    <link rel="stylesheet" href="./public/stylesheets/app.css">
    <link rel="stylesheet" href="./public/stylesheets/quaries.css">
 
-   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-   <style type="text/css">
-      /* Always set the map height explicitly to define the size of the div
-      * element that contains the map. */
-      #map {
-         height: 100%;
-      }
-
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-         height: 100%;
-         margin: 0;
-         padding: 0;
-      }
-   </style>
-   <script>
-      let map;
-
-      function initMap() {
-         map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8,
-         });
-      }
-   </script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.13.1/mapbox-gl.min.css"
+      integrity="sha512-f9ygkycTxYz4ZGWOrdRHvW8RvVtF0BzP0nl2a2eF2LE4N5FzXqtHnxip+Ses43V9l9QwP0iGs7NvCp7yrdBXpg=="
+      crossorigin="anonymous" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/1.13.1/mapbox-gl.js"
+      integrity="sha512-cgdTppqjf6a7zwsrK44mF2PTBM9yaIJReLtFDZprtTlrkv+UFR65jSQQdY9/bNdh4f26D7mIvc2heWSznLd+KQ=="
+      crossorigin="anonymous"></script>
 </head>
 
 <body id="scroll-container" class="bg-bone" data-scrollbar>
@@ -708,12 +688,11 @@
    <script src="./public/javascripts/validateForms.js"></script>
    <script src="./public/javascripts/app.js"></script>
 
-   <div id="map"></div>
 
-   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-   <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANCKjaDk-XScaeveIbajn7kR_XpXkXRkI&callback=initMap&libraries=&v=weekly"
-      async></script>
+   <script>
+      const mapToken = 'pk.eyJ1Ijoid2hpdGVhcnJvdyIsImEiOiJja2x6ZXNvY2gxend1Mm9tdzcxMzFyeGl4In0.7zFxD_H-bzWj-EuqOVNwlQ';
+   </script>
+   <script src="./public/javascripts/showPageMap.js"></script>
 </body>
 
 </html>
