@@ -15,14 +15,15 @@ let e, breakPoint, scroll = 0;
 
 const init = () => {
    restoreScroll();
-   if (!isMobile()) {
+
+   if (!isMobile() && false) {
       setUpSmoothScrollbars();
       // setUpCursor();
       console.log('mouse device');
    } else {
       setUpScrollListener(document);
-      cursor.removed = true;
-      cursor.remove();
+      // cursor.removed = true;
+      // cursor.remove();
       console.log('touch device');
    }
    setUpMembersTiles();
