@@ -66,11 +66,102 @@ const cennik = {
       'Lakierowanie zębów': '80 - 120 PLN',
       'Lakowanie bruzd': '80 - 100 PLN',
       'Wystawienie recepty, zaświadczenia lekarskiego': '50 PLN'
+   },
+   'Stomatologia estetyczna': {
+      'Wybielanie w gabinecie z użyciem lampy': '1000 PLN',
+      'Wybielanie nakładkowe': '700 PLN',
+      'Wybielanie zęba martwego – pierwsza wizyta/kolejne wizyty': '120/ 80 PLN',
+      'Licówka porcelanowa': '1500 PLN',
+      'Licówka kompozytowa - bezpośrednia/ pośrednia': '700/ 1000 PLN',
+      'Wax-up (za punkt)': '60 PLN',
+      'Mock-up (za punkt)': '100 PLN',
+   },
+   'Stomatologia dziecięca': {
+      'Wizyta adaptacyjna': '80 PLN',
+      'Wypełnienie zęba mlecznego': '100 - 150 PLN',
+      'Opatrunek leczniczy': '100 PLN',
+      'Lakowanie bruzd': '80 - 100 PLN',
+      'Dewitalizacja zęba mlecznego': '80 PLN',
+      'Amputacja miazgi w zębie mlecznym': '100 PLN',
+   },
+   'Stomatologia zachowawcza': {
+      'Przegląd stomatologiczny': '50 PLN',
+      'Wypełnienie kompozytowe ': '150 - 250 PLN',
+      'Opatrunek leczniczy': '100 - 150 PLN',
+      'Znieczulenie': '30 - 50 PLN',
+      'Włókno szklane': '100 PLN',
+   },
+   'Chirurgia stomatologiczna': {
+      'Konsultacja chirurgiczna': '100 PLN',
+      'Kortykotomia (za ząb)': '150 - 200 PLN',
+      'Usunięcie zęba': '150 - 200 PLN',
+      'Usunięcie zęba mlecznego': '100 - 150 PLN',
+      'Ekstrakcja ósemki': '200 - 300 PLN',
+      'Ekstrakcja ósemki zatrzymanej': '450 - 600 PLN',
+      'Dłutowanie zęba': '350 - 450 PLN',
+      'Hemisekcje': '400 PLN',
+      'Resekcja': '400 - 500 PLN',
+      'Odsłonięcie zęba i naklejenie zamka': '500 - 700 PLN',
+      'Usunięcie torbieli': '400 PLN',
+      'Usunięcie zęba zatrzymanego': '400 PLN',
+      'Plastyka połączenia z zatoką szczękową': '200 PLN',
+      'Augmentacja  z użyciem biomateriału': 'WYCENA INDYWIDUALNA',
+      'Nacięcie ropnia': '200 PLN',
+      'Płukanie jamy ropnia': '50 PLN',
+      'Szycie': '50 PLN',
+      'Zdjęcie szwów': 'BEZPŁATNIE',
+      'Płukanie kieszonki': '40 PLN',
+      'Podcięcie więzidełka': '250 - 350 PLN',
+   },
+   Protetyka: {
+      'Konsultacja protetyczna': '100 PLN',
+      'Korona porcelanowa na stopie złota': '1200 - 1600 PLN',
+      'Korona porcelanowa na metalu ': '900 PLN',
+      'Korona pełnoceramiczna cerkon Lava': '1600 PLN',
+      'Korona pełnoceramiczna Emax': '1600 - 1800 PLN',
+      'Korona tymczasowa wykonana w gabinecie': '200 - 250 PLN',
+      'Korona tymczasowa wykonana w pracowni protetycznej': '400 PLN',
+      'Licówka porcelanowa': '1500 PLN',
+      'Endokorona kompozytowa': '800 - 1000 PLN',
+      'Endokorona porcelanowa ': '1600 PLN',
+      'Nakład inlay/onlay/ overlay kompozyt': '600 - 1000 PLN',
+      'Nakład inlay/onlay/ overlay porcelana ': '800 - 1600 PLN',
+      'Most adhezyjny kompozyt/ porcelana (za punkt)': '350/800 PLN',
+      'Wkład koronowo-korzeniowy stal prosty': '350 PLN',
+      'Wkład koronowo-korzeniowy stal złożony': '400 PLN',
+      'Wkład koronowo-korzeniowy stop złota': '1000 - 1400 PLN',
+      'Proteza osiadająca całkowita': 'od 1200 PLN',
+      'Elementy wzmacniające protezę (łuki, siatki) ': 'WYCENA INDYWIDUALNA',
+      'Proteza częściowa (za punkt)': '80 PLN',
+      'Proteza szkieletowa': 'od 1700 PLN',
+      'Naprawa protezy ': 'od 200 PLN',
+      'Szyna relaksacyjna': '600 - 1000 PLN',
+      'Usunięcie korony/  wkładu': 'od 200/ od 300 PLN',
+      'Modele diagnostyczne': 'od 120 PLN',
+      'Rejestracja łukiem twarzowym': '100 PLN',
+   },
+   Implantologia: {
+      'Konsultacja PROMOCJA': '100 PLN',
+      'Podniesienie zatoki ': '2500 - 3000 PLN',
+      'Wszczepienie implantu (firmy OSSTEM) ': '2500 PLN',
+      'Część protetyczna': 'od 2000 PLN',
+      'Zabiegi modyfikujące podłoże kostne': 'wycena indywidualna',
+   },
+   Periodontologia: {
+      'Konsultacja periodontologiczna': '100 PLN',
+      'Kiretaż zamknięty (za ząb)': '80 PLN',
+      'Kiretaż otwarty (za ząb)': '200 - 400 PLN',
+      'Aplikacja leku (za ząb)': '30 PLN',
+      'Panel periodontologiczny': '120 PLN',
+      'Wydłużenie korony klinicznej zęba': '200 - 400 PLN',
+      'Gingiwektomia': 'od 200 PLN',
+      'Test PET': 'od 250 PLN',
    }
 }
 
+
 const main = document.querySelector('main')
-const rodzaje = document.querySelectorAll('main div')
+const rodzaje = document.querySelectorAll('main button')
 const h1 = document.querySelector('h1');
 
 const deleteCennikShowMain = () => {
@@ -99,12 +190,14 @@ const appendCennikHideMain = function () {
       const returnBtn = document.createElement('button');
       const section = document.createElement('section');
 
-      returnBtn.innerText = 'Zobacz inne działy stomatologii'
-      returnBtn.classList.add('btn', 'btn-danger');
+      returnBtn.innerHTML = `<svg class="svg-icon" viewBox="0 0 20 20">
+      <path d="M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10"></path>
+      <span>ZOBACZ INNE DZIAŁY STOMATOLOGII</span>`
+      returnBtn.classList.add('return');
       section.classList.add('container', 'fadeIn');
 
       for (let i in cennik[name]) {
-         ceny.innerHTML += `<li>${i} : ${cennik[name][i]}</li>`
+         ceny.innerHTML += `<li><span class="action">${i} </span> <span class="price">${cennik[name][i]}</span></li>`
       }
 
       section.append(returnBtn, ceny);
@@ -118,6 +211,11 @@ const appendCennikHideMain = function () {
 
 
 
-for (let rodzaj of rodzaje) {
-   rodzaj.addEventListener('click', appendCennikHideMain);
+
+const init = () => {
+   for (let rodzaj of rodzaje) {
+      rodzaj.addEventListener('click', appendCennikHideMain);
+   }
 }
+
+init();

@@ -117,13 +117,15 @@
       overflow-y: scroll;
       overflow-x: hidden;
    }
-   #members .scroll-content{
+   
+   /* SMOOTH SCROLLBAR */
+   /* #members .scroll-content{
       display: flex;
       padding:0;
       flex-wrap: wrap;
       width:100%;
       justify-content: center;
-   }
+   } */
 
    .row1,.row3{
       min-height: 500px;

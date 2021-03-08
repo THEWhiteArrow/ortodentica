@@ -4,6 +4,11 @@
    box-sizing: border-box;
 }
 
+@font-face {
+   font-family: 'Tinos';
+   src: url('../fonts/Tinos-Regular.ttf');
+}
+
 html{
    min-height: 100vh;
    height:100%;
@@ -12,6 +17,7 @@ body{
    display:flex;
    flex-direction: column;
    min-height: 100%;
+   font-family: 'Tinos', serif;
    background-color: var(--bone);
 }
 
@@ -32,33 +38,58 @@ main{
    transition: all ease-in-out 0.4s;
 }
 
-main div{
+main button{
    position: relative;
    display: flex;
-   color:white;
-   background-color: var(--grullo);
+   color:var(--sweet-brown);
+   background-color: var(--bone-trasparent);
    border:2px solid var(--sweet-brown);   
-   /* width:calc(100%/4);
-   padding-bottom: calc(100%/4);
-   margin:10px; */
+
 }
 
-main div span{
+main button span{
    position: absolute;
    display: flex;
    width:100%;
    justify-content: center;
    text-align: center;
    top:50%;
-   /* text-align: center; */
    transform: translate3d(0,-50%,0);
+
 }
 
 ul{
+   /* padding-top: 2rem; */
    display: flex;
    flex-direction: column;
    align-self: center;
+   list-style-type:none;
+   padding-left: 0;;
+   border:2px solid var(--sweet-brown);
+   border-top: none;
 }
+
+
+ul li{
+   font-size: 1.19rem;
+   display: flex;
+   flex-direction: row;
+   justify-content:space-between;
+
+   padding-left: 20px;
+   padding-right: 20px;
+
+}
+
+ul li:nth-of-type(2n+1){
+   background-color: var(--bone-trasparent);
+}
+
+
+
+
+
+
 
 section{
    transition: all .4s ease-in-out;
@@ -74,20 +105,45 @@ section{
 }
 
 
-button.btn{
-   width:min(100%,500px);
-   margin:20px auto 50px 0;
+button.return{
+   margin-top: 1rem;
+   display: flex;
+   width:100%;
+   border: 2px solid var(--sweet-brown);
+   padding: 10px 20px;
+   font-size: 1.22rem;
+}
+
+button.return svg{
+   width:20px;
+   margin-top: 3px;
+   margin-right: 10px;
 }
 
 
+.nav-gradient{
+   will-change: height, background-color, backdrop-filter, border-bottom;
+   width:100%;
+   z-index: 100;
+   align-items: flex-start;
+   background-color: rgba(255, 255, 255, 0.7);
+   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
 
-
+   transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+}
+.nav-link{
+   color:#222C00ff !important;
+}
+.nav-link.active{
+   color:#292d31 !important;
+}
 .solid-nav{
-
    background-color:rgb(255, 255, 255);
    border-bottom: 1px solid var(--sweet-brown);
 }
-
 .grid-container {
    padding-left: 10px;
    padding-right: 10px;
@@ -116,3 +172,8 @@ button.btn{
  .dziewiec { grid-area: dziewiec; }
  .dziesiec { grid-area: dziesiec; }
  .jedenascie { grid-area: jedenascie; }
+
+
+
+
+

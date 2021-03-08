@@ -33,9 +33,10 @@ const init = () => {
 
 
 const setUpShownMember = () => {
-   shownMember.pic.style.backgroundImage = getComputedStyle(members[8]).backgroundImage;
-   shownMember.name.innerText = data[`member${9}`].name;
-   shownMember.info.innerText = data[`member${9}`].info;
+   let n = 0;
+   shownMember.pic.style.backgroundImage = getComputedStyle(members[n]).backgroundImage;
+   shownMember.name.innerText = data[`member${n + 1}`].name;
+   shownMember.info.innerText = data[`member${n + 1}`].info;
 }
 
 const setUpMembersTiles = () => {
