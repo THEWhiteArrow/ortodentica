@@ -1,5 +1,5 @@
 const cennik = {
-   Ortodoncja: {
+   ortodoncja: {
       'Konsultacja ortodontyczna PROMOCJA': '50 PLN',
       'Konsultacja w trakcie leczenia aparatami stałymi': '100 PLN',
       'Powtórna konsultacja ortodontyczna': '80 PLN',
@@ -34,7 +34,7 @@ const cennik = {
       'Redukcja napiecia mięśni żuchwy, leczenie bruksizmu - Toksyna Botulinowa': '900 PLN',
       'Wizyta awaryjna': '20 - 50 PLN',
    },
-   Endodoncja: {
+   endodoncja: {
       'Leczenie kanałowe zęba 1-kanałowego': '400-600 PLN',
       'Leczenie kanałowe zęba 2-kanałowego': '700 - 850 PLN',
       'Leczenie kanałowe zęba 3-kanałowego': 'od 900 PLN',
@@ -52,14 +52,14 @@ const cennik = {
       'Amputacja przeżyciowa(MTA, Biodentine)': '300 - 500 PLN',
       'Wymiana opatrunku w kanałach': 'od 100 PLN'
    },
-   RTG: {
+   rtg: {
       'Pantomogram': '100 PLN',
       'Zdjęcie cefalometryczne': '100 PLN',
       'Tomografia komputerowa': 'od 250 PLN',
       'Tomografia komputerowa punktowa jednego zęba': '120 PLN',
       'Zdjęcie punktowe': '30 PLN'
    },
-   Profilaktyka: {
+   profilaktyka: {
       'Ultradźwiękowe usuwanie kamienia nazębnego (skaling)': '100 - 150 PLN',
       'Piaskowanie zębów': '150 PLN',
       'Skaling + piaskowanie + fluoryzacja': '250 PLN',
@@ -67,7 +67,7 @@ const cennik = {
       'Lakowanie bruzd': '80 - 100 PLN',
       'Wystawienie recepty, zaświadczenia lekarskiego': '50 PLN'
    },
-   'Stomatologia estetyczna': {
+   'stomatologia estetyczna': {
       'Wybielanie w gabinecie z użyciem lampy': '1000 PLN',
       'Wybielanie nakładkowe': '700 PLN',
       'Wybielanie zęba martwego – pierwsza wizyta/kolejne wizyty': '120/ 80 PLN',
@@ -76,7 +76,7 @@ const cennik = {
       'Wax-up (za punkt)': '60 PLN',
       'Mock-up (za punkt)': '100 PLN',
    },
-   'Stomatologia dziecięca': {
+   'stomatologia dziecięca': {
       'Wizyta adaptacyjna': '80 PLN',
       'Wypełnienie zęba mlecznego': '100 - 150 PLN',
       'Opatrunek leczniczy': '100 PLN',
@@ -84,14 +84,14 @@ const cennik = {
       'Dewitalizacja zęba mlecznego': '80 PLN',
       'Amputacja miazgi w zębie mlecznym': '100 PLN',
    },
-   'Stomatologia zachowawcza': {
+   'stomatologia zachowawcza': {
       'Przegląd stomatologiczny': '50 PLN',
       'Wypełnienie kompozytowe ': '150 - 250 PLN',
       'Opatrunek leczniczy': '100 - 150 PLN',
       'Znieczulenie': '30 - 50 PLN',
       'Włókno szklane': '100 PLN',
    },
-   'Chirurgia stomatologiczna': {
+   'chirurgia stomatologiczna': {
       'Konsultacja chirurgiczna': '100 PLN',
       'Kortykotomia (za ząb)': '150 - 200 PLN',
       'Usunięcie zęba': '150 - 200 PLN',
@@ -113,7 +113,7 @@ const cennik = {
       'Płukanie kieszonki': '40 PLN',
       'Podcięcie więzidełka': '250 - 350 PLN',
    },
-   Protetyka: {
+   protetyka: {
       'Konsultacja protetyczna': '100 PLN',
       'Korona porcelanowa na stopie złota': '1200 - 1600 PLN',
       'Korona porcelanowa na metalu ': '900 PLN',
@@ -140,14 +140,14 @@ const cennik = {
       'Modele diagnostyczne': 'od 120 PLN',
       'Rejestracja łukiem twarzowym': '100 PLN',
    },
-   Implantologia: {
+   implantologia: {
       'Konsultacja PROMOCJA': '100 PLN',
       'Podniesienie zatoki ': '2500 - 3000 PLN',
       'Wszczepienie implantu (firmy OSSTEM) ': '2500 PLN',
       'Część protetyczna': 'od 2000 PLN',
       'Zabiegi modyfikujące podłoże kostne': 'wycena indywidualna',
    },
-   Periodontologia: {
+   periodontologia: {
       'Konsultacja periodontologiczna': '100 PLN',
       'Kiretaż zamknięty (za ząb)': '80 PLN',
       'Kiretaż otwarty (za ząb)': '200 - 400 PLN',
@@ -178,7 +178,7 @@ const deleteCennikShowMain = () => {
 }
 
 const appendCennikHideMain = function () {
-   const name = this.children[0].innerText;
+   const name = this.children[0].innerText.toLowerCase();
 
    h1.innerText = `Cennik - ${name}`;
    main.style.opacity = 0;

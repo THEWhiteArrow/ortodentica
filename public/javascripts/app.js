@@ -16,7 +16,7 @@ let e, breakPoint, scroll = 0;
 const init = () => {
    restoreScroll();
 
-   if (!isMobile() && false) {
+   if (!isMobile()) {
       setUpSmoothScrollbars();
       // setUpCursor();
       console.log('mouse device');

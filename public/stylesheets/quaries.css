@@ -13,16 +13,13 @@
       min-height: 100vh;
    }
 
-   /* #shownMemberPic{
-      max-width: 380px;
-      max-height: 380px;
-   } */
+
 }
 
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-   #row1-img,#row3-img{
+   .row1-img{
       width:400px;
       height: 253px;
    }
@@ -32,44 +29,26 @@
    .paragraph{
       font-size:1.1rem;
    }
-   /* .member{
-      margin:5px;
-   } */
-   .gigs{
-      font-size:1.2rem;
-      
-      width:80%;
-   }
-   .gigs svg{
-      margin-top:1rem;
-      width:40px;
-   }
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-   .row-1-container{
-      padding-right: 200px;
-   }
-   .row-3-container{
-      padding-left: 200px;
-   }
-   /* .row-1-content{
-      width:90% !important;
-   } */
-   /* .row-1-content{
-      width:calc(100% - 250px);
-   }
-   .row-3-content{
-      padding-left: 200px;
-      box-sizing: content-box;
-   } */
+   /* #row3-img{
+      top:50%;left:100%;
+      transform:translate(-50%,-50%);
 
-   /* .row-1-content,
-   .row-2-content,
-   .row-3-content{
-      max-width: 450px;
+   }
+   #row1-img{
+      top:50%;left:0;
+      transform: translate(-50%,-50%);
    } */
+   h2{
+      font-size:3rem;
+   }
+   .paragraph{
+      font-size:1.2rem;
+   }
 
 
    #carousel{
@@ -91,13 +70,8 @@
    .absolute-md{
       position: absolute !important;
    }
-   /* #shownMemberInfo,#shownMemberName{
-      width: 90%;
-      align-self: flex-end;
-   } */
+
    #shownMemberPic{
-      /* width:90%; */
-      /* padding-bottom: min(90%,380px); */
       height: 0px;
       margin-left: auto;
       margin-right: auto;
@@ -119,20 +93,14 @@
    }
    
    /* SMOOTH SCROLLBAR */
-   /* #members .scroll-content{
+   #members .scroll-content{
       display: flex;
       padding:0;
       flex-wrap: wrap;
       width:100%;
       justify-content: center;
-   } */
+   }
 
-   .row1,.row3{
-      min-height: 500px;
-   }
-   .row2{
-       min-height: 600px;
-   }
    
 
    .order-md-1{
@@ -141,34 +109,13 @@
    .order-md-2{
       order: 2;
    }
-
    .bg-md-bone{
       background-color: var(--bone) !important;
    }
    .bg-md-white{
       background-color: white !important;
    }
-
-   #row3-img{
-      top:50%;left:100%;
-      transform:translate(-50%,-50%);
-
-   }
-
-   #row1-img{
-      top:50%;left:0;
-      transform: translate(-50%,-50%);
-   }
-   h2{
-      font-size:3rem;
-   }
-   .paragraph{
-      font-size:1.2rem;
-   }
-
-   /* SEQUENCE HERE IS IMPORTANT ... if using fancy radius */
    .rounded-bottom-left-xl{
-      /* border-radius:0% 0% 0% 13% / 0% 0% 0% 17%;  */
       border-bottom-left-radius:150px ;
    }
    .rounded-bottom-left{
@@ -196,25 +143,11 @@
    .rounded-bottom-right{
       border-bottom-right-radius:50px;
    }
-   .square{
-      padding-bottom:30%;
-      width: 30%;
-   } 
-   .gigs{
-      font-size:1.2rem;
-   }
-   .gigs svg{
-      margin-top:1rem;
-      width:40px;
-   }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-   /* .row-1-content{
-      width:50% !important;
-   } */
-
    h2{
       font-size: 3.5rem;
    }
@@ -225,13 +158,6 @@
    
       width:calc(100%/3 - 10px);
       padding-bottom: calc(100%/3 - 10px);
-   }
-   .gigs{
-      font-size:1.6rem;
-   }
-   .gigs svg{
-      margin-top:1rem;
-      width:60px;
    }
  }
 

@@ -23,6 +23,7 @@ body{
 
 h1{
    text-align: center;
+   text-transform: uppercase;
    margin:0;
    padding-top:90px;
    padding-bottom:20px;
@@ -41,6 +42,7 @@ main{
 main button{
    position: relative;
    display: flex;
+   text-transform: uppercase;
    color:var(--sweet-brown);
    background-color: var(--bone-trasparent);
    border:2px solid var(--sweet-brown);   

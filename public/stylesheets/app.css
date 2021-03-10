@@ -1,20 +1,10 @@
-/* :root{
---bone:#ebd7c4;
---bone-trasparent:#f7ece2ad;
---sweet-brown: #9D3C31ff;
---slate-gray: #647994ff;
---grullo: #A69F96ff;
---pine-tree: #222C00ff;
---pine-tree-light: rgb(84, 92, 55);
-} */
-
 @font-face {
    font-family: 'Tinos';
    src: url('../fonts/Tinos-Regular.ttf');
 }
- *{
+*{
     box-sizing: border-box;
- }
+}
 html{
    scroll-behavior: auto;
    scroll-behavior: smooth;
@@ -22,131 +12,84 @@ html{
    height: 100%;
 
 }
-
 body{
    color:#222C00ff;
    position: relative;
    height: 100vh;
    font-family: 'Tinos', serif;
-   /* overflow: hidden; */
 
 }
-
 svg{
    height:auto;
 }
-
 footer{
    width:100%;
    bottom:0;
    background-color: #75685c;
    color:white;
 }
-
-/* iframe{
-   width:100%;
-   height:300px;
-} */
-
 textarea{
    height:100px;
 }
 
-/* section,footer{
-   content-visibility: auto ;
-   contain-intrinsic-size: 1000px; 
-} */
 
-/* .scroll-snap-container{
-   overflow-y: scroll;
-   scroll-behavior: smooth;
-   height: 100vh;
-   width: 100%;
 
-   scroll-snap-type: y proximity;
+
+
+
+/* AKSJOMATY */
+.paragraph{
+   font-size:1rem;
+} 
+.order-1{
+   order: 1;
 }
-
-.scroll-snap-container header,
-.scroll-snap-container main section:not(#content)
-{
-
-   scroll-snap-align: start;
-    
-} */
-
+.order-2{
+   order: 2;
+}
 .member,
 .not-scroll{
    content-visibility: auto ;
 }
-
-.contact-content{
-   padding-top: 64px;
+.content-box{
+   box-sizing: content-box;
 }
-
-
-/* .sticky-contact{
-   padding-top:64px;
+.justify-top{
+   justify-content: flex-start !important;
 }
- 
-.sticky-container{
-   position: relative;
-   min-height:150vh ;
-   z-index: 0;
-} */
-
-div.mapboxgl-popup-content h3{
-   font-size:1.2rem;
-   
+.absolute{
+   position: absolute !important;
 }
-
-div.mapboxgl-popup-content p{
-   margin:0;
-   
+.relative{
+   position: relative !important;
 }
-
-#googleMap{
-   display: flex;
+.h-200{
+   height: 200px;
+}
+.text-sweet-brown{
+   color:var(--sweet-brown) !important;
+}
+.center-everything{
+   display:flex;
    justify-content: center;
    align-items: center;
-   padding: 0;
-   border: 2px solid var(--sweet-brown);
-   border-left: none;
-   border-right: none;
+   /* text-align: center; */
+   flex-direction: column;
+}
+.bg-bone{
+   background-color: var(--bone);
+}
+.border-box{
+   box-sizing: border-box !important;
 }
 
-#googleMap #map {
-   width:100%;
-   height: 500px;
-}
 
-#cursor{
-   pointer-events: none;
-   position: fixed;
-   /* position: relative; */
-   width:45px;
-   height: 45px;
-   z-index: 1000;
-   top:var(--mtop);
-   left:var(--mleft);
-   /* background-color: var(--bone); */
-   border: 4px solid var(--sweet-brown);
-   /* will-change: transform; */
-   /* transition: transform 0.15s ease-in-out !important; */
-   /* transition-duration: 100ms;
-   transition-timing-function: ease-out; */
-   transform:translate3d(0,0,0) ;
 
-   animation: cursorRotate 10s linear infinite;
-}
 
-#cursor.mouse-down{
-   /* width:20px;
-   height:20px; */
-   animation-play-state: paused;
-   /* transform: scale(0.8) !important; */
-   /* transform: scale(0.8) !important; */
-}
 
+
+
+/* CONTENT */
 #title{
    transform: translateY(-35%);
    background-color: var(--bone-trasparent);
@@ -154,7 +97,6 @@ div.mapboxgl-popup-content p{
    border-radius: 8px;
    backdrop-filter: blur(3px);
 }
-
 #showMore{
    -webkit-box-shadow: 0px 0px 10px 2px rgba(110, 109, 109, 0.048);
    box-shadow: 0px 0px 10px 2px rgba(110, 109, 109, 0.048);
@@ -175,7 +117,6 @@ div.mapboxgl-popup-content p{
 
    animation:moveDown 6s ease-in-out 0.5s infinite both;
 }
-
 #showMore svg{
    width:100%;
    height: 65%;
@@ -183,43 +124,20 @@ div.mapboxgl-popup-content p{
 #showMore svg:hover{
    animation:rotateHover 1s ease-out;
 }
-
 #showMore:hover{
    animation-play-state:paused;
 }
 
-#row1-img{
-   /* display: none; */
-   /* position: absolute; */
-   /* transform: translate(-50%,-50%); */
-   /* background-image: url("../assets/ortodentica/zesp_orto.jpg"); */
-   background-position: center;
-   background-size: contain;
-   border: 5px solid var(--sweet-brown);
-}
-
-#row3-img{
-   /* top:50%;left:50%;
-   transform:translate(-50%,-50%); */
-   /* position: absolute; */
-
-   /* background-image: url("../assets/ortodentica/img_3724_dxo.jpg"); */
-   background-position: center;
-   background-size: cover;
-   border: 5px solid var(--sweet-brown);
-}
-
-#row1-img,#row3-img{
-   /* background-repeat: no-repeat; */
-   /* display: flex; */
+.row-img{
    max-width:400px;
    width:80%;
-   /* padding-bottom: 100%; */
-   /* height:auto; */
-
+   border: 5px solid var(--sweet-brown);
 }
 
-#row2-img{
+
+
+
+/* #row2-img{
    background-image: url("../assets/ortodentica/img_3728_dxo.jpg");
    background-position: center;
    background-size: cover;
@@ -228,17 +146,74 @@ div.mapboxgl-popup-content p{
    width:80%;
    margin-right:auto;
    margin-left:auto;
+} */
+#content p {
+   font-size: 1.4rem;
+}
+#welcome-img{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height:clamp(400px,100vh,700px);
+   background-size: cover;
+   background-position: center;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0)),url("../assets/ortodentica/img_3731_dxo.jpg");
+}
+
+.nav-gradient{
+   will-change: height, background-color, backdrop-filter, border-bottom;
+   width:100%;
+   z-index: 100;
+   align-items: flex-start;
+
+
+   background-color: rgba(255, 255, 255, 0.7);
+   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
+
+   transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+}
+.nav-link{
+   color:#222C00ff !important;
+}
+.nav-link.active{
+   color:#292d31 !important;
+}
+.solid-nav{
+   background-color:rgb(255, 255, 255);
+   border-bottom: 1px solid var(--sweet-brown);
+}
+
+.space{
+   width:100%;
+   height: 20px;
+   background: rgb(255,255,255);
+background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebd7c4",GradientType=1);
+}
+
+.upsidedown{
+   transform: rotate(180deg);
 }
 
 
 
 
 
+
+
+
+
+
+/* TEAM */
 #team{
    margin-bottom: 35px !important;
-   
 }
-
 .member{
    position: relative;
    height: 100%;
@@ -255,7 +230,6 @@ div.mapboxgl-popup-content p{
    cursor: pointer;
    transition: all 0.15s ease-in-out;
 }
-
 #members{
    height:110px;
 
@@ -267,19 +241,6 @@ div.mapboxgl-popup-content p{
    -webkit-box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4); 
    box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4);
 } 
-
-
-
-
-
-/* #members .scroll-content{
-   display: flex;
-   flex-wrap: nowrap;
-   height:100%;
-   margin-bottom: 15px;
-} */
-
- 
 #shownMemberPic{
    background-size: cover;
    background-repeat: no-repeat;
@@ -288,180 +249,17 @@ div.mapboxgl-popup-content p{
 
    width: min(100%,500px);
    padding-bottom: min(100%,500px);
-   /* padding-bottom: 90%; */
-   /* max-width: 500px; */
    justify-self: center;
    align-self: center;
-   /* flex-grow: 1; */
 
    transition: all 0.20s ease-in-out;
 }
-
 #shownMemberInfo,#shownMemberName{
    line-height: 1.1em;
    width: min(100%,500px);
-   /* width: 90%;  */
    justify-self: center;
    align-self: center; 
 }
-
-#carousel{
-   padding-top: 40px !important;
-   padding-bottom: 74px !important;
-   background-color: white;
-}
-
-.carousel-inner{
-   border:5px solid var(--sweet-brown);
-}
-
-#content p {
-   font-size: 1.4rem;
-}
-
-#carouselImages,.carousel-item,.arousel-inner{
-   max-height: min(600px,70vh);
-}
-
-/* #navbarNavAltMarkup{
-   transition: height .35s ease !important;
-}
-#navbar{
-   transition: transform none;
-} */
-
-#welcome-img{
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height:clamp(400px,100vh,700px);
-   /* transform: translateY(-150px); */
-   background-size: cover;
-   background-position: center;
-   background-image: linear-gradient(rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0)),url("../assets/ortodentica/img_3731_dxo.jpg");
-}
-
-.paragraph{
-   font-size:1rem;
-} 
-
-.order-1{
-   order: 1;
-}
-.order-2{
-   order: 2;
-}
-
-.content-box{
-   box-sizing: content-box;
-}
-
-.justify-top{
-   justify-content: flex-start !important;
-}
-
-.absolute{
-   position: absolute !important;
-}
-
-.relative{
-   position: relative !important;
-}
-
-.h-200{
-   height: 200px;
-}
-
-/* .min-h-300{
-   min-height: 300px;
-} */
-
-.text-sweet-brown{
-   color:var(--sweet-brown) !important;
-}
-
-
-.center-everything{
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   flex-direction: column;
-}
-
-.bi-file-earmark-arrow-down{
-   margin:0.32rem 0 0 0.5rem;
-   width:15px;
-}
-
-
-.nav-gradient{
-   will-change: height, background-color, backdrop-filter, border-bottom;
-   width:100%;
-   z-index: 100;
-   align-items: flex-start;
-   /* min-height: 150px; */
-
-
-   background-color: rgba(255, 255, 255, 0.7);
-   /* border-bottom: 2px solid transparent; */
-   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
-   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
-   background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
-
-   transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
-}
-
-.nav-link{
-   color:#222C00ff !important;
-}
-
-
-.nav-link.active{
-   color:#292d31 !important;
-}
-
-.solid-nav{
-   /* -webkit-box-shadow: 0px 5px 25px 3px rgba(0,0,0,0.21); 
-   box-shadow: 0px 5px 25px 3px rgba(0,0,0,0.21); */
-   /* border-bottom: 1px solid rgba(255, 255, 255, 0.65); */
-   /* min-height: 57px; */
-   /* background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%);
-   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%);
-   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%); */
-   /* backdrop-filter: blur(5px);
-   background-color:rgba(255, 255, 255, 0.6); */
-
-   background-color:rgb(255, 255, 255);
-   border-bottom: 1px solid var(--sweet-brown);
-}
-
-.row1,.row3{
-   min-height: 500px !important;
-}
-
-.row2{
-   min-height: 570px;
-}
-
-/* .transform-top{
-   top:0;
-   transform: translate();
-} */
-
-.bg-bone{
-   background-color: var(--bone);
-}
-
-.border-box{
-   box-sizing: border-box !important;
-}
-
-
-
-
 .whiten{
    position: absolute;
    width: 100%;
@@ -470,21 +268,6 @@ div.mapboxgl-popup-content p{
 
    transition: background-color 0.3s ease-in-out;
 }
-
-.bi-search{
-   widows: 35px;
-   height:35px;
-   opacity: 0;
-   color:#212529;
-   position: absolute;
-
-   top:50%;left:50%;
-      transform: translate3d(-40%,-40%,0);
-      transform-origin: center;
-
-   transition: all 0.20s ease-in-out;
-}
-
 .member:hover .whiten{
    background-color: rgba(255, 255, 255, 0.5);
 }
@@ -493,7 +276,6 @@ div.mapboxgl-popup-content p{
    opacity: 1;
    transform: translate3d(-40%,-40%,0) scale(1.5);
 }
-
 
 .member:nth-of-type(1){
    background-image: url('../assets/team/1-min.jpg');
@@ -534,6 +316,172 @@ div.mapboxgl-popup-content p{
 .member:nth-of-type(13){
    background-image: url('../assets/team/13-min.jpg');
 }
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT */
+.contact-content{
+   padding-top: 64px;
+}
+
+
+
+
+
+
+/* MAPY */
+#googleMap{
+   height: 100vh;
+   display: flex;
+   padding: 0;
+}
+
+#googleMap h2{
+   width:fit-content;
+   margin:auto;
+   padding:1rem !important;
+   /* background-color: white;
+   border: 2px solid var(--sweet-brown); */
+}
+
+
+
+
+#googleMap #map {
+   width:100%;
+   height: 60vh;
+   border: 2px solid var(--sweet-brown);
+   border-left: none;
+   border-right: none;
+   /* border-top: none;
+   border-bottom: none; */
+   margin:0 auto auto auto;
+   padding:0;
+   /* margin:auto 0; */
+}
+/* .circle{
+   position: absolute;
+   top:50%;left:50%;
+   transform:translate3d(-50%,-50%,0);
+
+   width:50%;
+   padding-bottom: 50%;
+   border-radius: 50%;
+   background-color:white ;
+} */
+
+.map-mark-out{
+   clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+   background: none;
+   filter: none;
+   background-color: var(--sweet-brown);
+}
+
+
+
+
+
+
+
+
+
+/* KURSOR */
+#cursor{
+   pointer-events: none;
+   position: fixed;
+   width:45px;
+   height: 45px;
+   z-index: 1000;
+   top:var(--mtop);
+   left:var(--mleft);
+   border: 4px solid var(--sweet-brown);
+   transform:translate3d(0,0,0) ;
+
+   animation: cursorRotate 10s linear infinite;
+}
+#cursor.mouse-down{
+   animation-play-state: paused;
+}
+
+/* #members .scroll-content{
+   display: flex;
+   flex-wrap: nowrap;
+   height:100%;
+   margin-bottom: 15px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* GALERIA ZDJĘĆ */
+#carousel{
+   padding-top: 40px !important;
+   padding-bottom: 74px !important;
+   background-color: white;
+}
+.carousel-inner{
+   border:5px solid var(--sweet-brown);
+}
+#carouselImages,.carousel-item,.arousel-inner{
+   max-height: min(600px,70vh);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* DOKUMENTY */
+.bi-file-earmark-arrow-down{
+   margin:0.32rem 0 0 0.5rem;
+   width:15px;
+}
+.bi-search{
+   widows: 35px;
+   height:35px;
+   opacity: 0;
+   color:#212529;
+   position: absolute;
+
+   top:50%;left:50%;
+      transform: translate3d(-40%,-40%,0);
+      transform-origin: center;
+
+   transition: all 0.20s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ANIMATIONS KEYFRAMES */
 @keyframes moveDown{
