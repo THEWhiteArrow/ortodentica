@@ -478,7 +478,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 /* ADVERTISEMENT */
 #ads{
-   border: 1px solid #222C00ff;
+   border: 2px solid #222C00ff;
    border-left: none;
    border-top: none;
 
@@ -487,18 +487,20 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    left:0;  
    display: flex;
    flex-direction: column;
-
+   
    z-index: 1000;
-   background-color: #f7ece2;
+   /* background-color: #f7ece2; */
+   background-color: var(--grullo);
    height:min-content;
-
+   
    transition: opacity 1s ease-in-out;
 }
 
 #ads a{
-   border-top: 1px solid #222C00ff;
+   border-top: 2px solid #222C00ff;
    text-decoration: none;
    color:#222C00ff;
+   font-weight: 600;
    padding:10px 10px 10px 7px;
    writing-mode: vertical-rl;
    text-orientation: upright;

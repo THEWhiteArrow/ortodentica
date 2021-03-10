@@ -128,7 +128,7 @@ const restoreScroll = () => {
 
 const checkForNavbarChangePoints = (scrollOffset) => {
    // breakPoint = welcomeImg.offsetHeight - 56;
-   breakPoint = welcomeImg.offsetHeight - 256;
+   breakPoint = welcomeImg.offsetHeight - 456;
    if ((scrollOffset >= breakPoint) && !navbar.classList.contains('solid-nav')) {
       navbar.classList.add('solid-nav');
       ads.style.opacity = "1";
