@@ -1,4 +1,5 @@
 const navbar = document.querySelector('#navbar');
+const ads = document.querySelector('#ads');
 const welcomeImg = document.querySelector('#welcome-img');
 const cursor = document.querySelector('#cursor');
 const members = document.querySelectorAll('.member');
@@ -126,11 +127,14 @@ const restoreScroll = () => {
 }
 
 const checkForNavbarChangePoints = (scrollOffset) => {
-   breakPoint = welcomeImg.offsetHeight - 56;
+   // breakPoint = welcomeImg.offsetHeight - 56;
+   breakPoint = welcomeImg.offsetHeight - 256;
    if ((scrollOffset >= breakPoint) && !navbar.classList.contains('solid-nav')) {
       navbar.classList.add('solid-nav');
+      ads.style.opacity = "1";
       // console.log('added solid-nav')
    } else if ((scrollOffset < breakPoint) && navbar.classList.contains('solid-nav')) {
+      ads.style.opacity = "0";
       navbar.classList.remove('solid-nav');
       // console.log('removed solid-nav')
    }
@@ -141,7 +145,7 @@ const setUpScrollListener = (scrollbar) => {
    if (scrollbar === document) {
       document.addEventListener('scroll', () => {
          scroll = this.scrollY;
-         checkForNavbarChangePoints(scroll)
+         checkForNavbarChangePoints(scroll);
       });
    } else {
       scrollbar.addListener(() => {
@@ -151,6 +155,7 @@ const setUpScrollListener = (scrollbar) => {
          // cursor.y = scroll;
          // cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
          navbar.style.top = scroll + 'px';
+         ads.style.top = scroll + document.documentElement.clientHeight - ads.offsetHeight * 1.25 + 'px';
          checkForNavbarChangePoints(scroll);
       });
    }

@@ -63,9 +63,9 @@
    #contact{
       padding-top: 20px !important;
    }
-   textarea{
-      height:250px;
-   }
+   /* textarea{
+      height:150px;
+   } */
  
    .absolute-md{
       position: absolute !important;

@@ -22,7 +22,24 @@
 
 <body id="scroll-container" class="bg-bone" data-scrollbar>
 
-
+   <section id="ads">
+      <a href="#contact">UMÓW WIZYTĘ</a>
+      <a href="#googleMap">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+         </svg>
+      </a>
+      <a class="not-scroll" href="cennik.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill"
+            viewBox="0 0 16 16">
+            <path
+               d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            <path
+               d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+         </svg>
+      </a>
+   </section>
 
    <nav id="navbar" class="fixed-top navbar navbar-expand-md navbar-light nav-gradient">
       <div class="container-fluid ">
@@ -322,13 +339,22 @@
       </section>
 
 
-      <section id="googleMap" class="container-fluid d-flex flex-column">
+      <section id="googleMap" class=" d-flex flex-column ">
          <div class="space"></div>
-         <h2 class="text-sweet-brown text-center pt-3">Gdzie jesteśmy?</h2>
-         <iframe id="map" frameborder="0" class="relative"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANCKjaDk-XScaeveIbajn7kR_XpXkXRkI&q=Warszawa-Kędzieżyńska 9,Polska&zoom=15"
-            allowfullscreen>
-         </iframe>
+         <div class="container">
+
+            <div class="row">
+               <div class="col-12 col-lg-4 px-0">
+                  <h2 class="text-sweet-brown text-center pt-3">Gdzie jesteśmy?</h2>
+               </div>
+               <div class="col-12 col-lg-8 px-0">
+                  <iframe id="map" frameborder="0"
+                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANCKjaDk-XScaeveIbajn7kR_XpXkXRkI&q=Warszawa-Kędzieżyńska 9,Polska&zoom=15"
+                     allowfullscreen>
+                  </iframe>
+               </div>
+            </div>
+         </div>
       </section>
 
       <div class="space upsidedown"></div>
@@ -666,10 +692,12 @@
 
          </div>
       </section>
+
+
    </main>
 
    <footer>
-      <div class="text-center text-md-end p-3">
+      <div class="text-center text-md-end p-2 pe-md-5">
          &copy; 2021 Damian Trafiałek
       </div>
    </footer>
