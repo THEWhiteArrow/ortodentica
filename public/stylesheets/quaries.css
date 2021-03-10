@@ -34,15 +34,36 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-   /* #row3-img{
-      top:50%;left:100%;
-      transform:translate(-50%,-50%);
 
+   .svg-welcome{
+      display: flex;
+      position: absolute;
+      width:20%;
+      right:0;
    }
-   #row1-img{
-      top:50%;left:0;
-      transform: translate(-50%,-50%);
-   } */
+
+   .svg-contact{
+      display: flex;
+      position: absolute;
+      width:20%;
+      top:20%;left:8%;
+   }
+   
+   .svg{
+      display: flex;
+      position: absolute;
+      right:0;
+      top:-10%;
+      transform: translate3d(50%,0,0) rotate(-5deg);
+      z-index: 5 !important;
+      
+      margin:0 auto;
+      width:30%;
+   }
+
+   
+
+   
    h2{
       font-size:3rem;
    }
@@ -51,17 +72,14 @@
    }
 
 
-   #carousel{
-      padding-top:150px !important;
+   #carousel h2{
+      margin-top:100px !important;
    }
    #contact,#team,#carousel{
       padding-bottom: 100px !important;
    } 
    #team{
       padding-top: 70px !important;
-   }
-   #contact{
-      padding-top: 20px !important;
    }
    /* textarea{
       height:150px;
