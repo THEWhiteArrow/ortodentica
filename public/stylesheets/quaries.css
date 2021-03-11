@@ -19,6 +19,7 @@
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+
    .row1-img{
       width:400px;
       height: 253px;
@@ -28,6 +29,10 @@
    }
    .paragraph{
       font-size:1.1rem;
+   }
+
+   #googleMap .container{
+      border:2px solid var(--sweet-brown);
    }
 
    #ads a{
@@ -71,7 +76,7 @@
       top:20%;left:8%;
    }
    
-   .svg{
+   .svg-map{
       display: flex;
       position: absolute;
       right:0;

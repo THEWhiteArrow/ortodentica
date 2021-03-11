@@ -354,9 +354,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 #googleMap .container{
    position: relative;
    width:100% ;
-   content-visibility: auto;
+   /* content-visibility: auto; */
    height:600px;
+  
    border:2px solid var(--sweet-brown);
+   border-left: none;
+   border-right: none;
    
 }
 
@@ -378,7 +381,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 #googleMap #map {
    width:100%;
    height: 100%;
-
+   content-visibility: auto;
    /* border-left: 2px solid var(--sweet-brown); */
    /* border-left: none; */
    /* border-right: none; */
@@ -390,7 +393,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 }
 
 #googleMap #map::after{
-   content:'Use Two Fingers To Drag A Map';
+   content:'Kliknij i odpuść drugim palcem aby przeciągąć';
+   text-transform: capitalize;
    opacity: var(--opacity,0);
    pointer-events: none;
 
@@ -419,7 +423,7 @@ background: #6666667e;
 
 .svg-welcome,
 .svg-contact,
-.svg{
+.svg-map{
    display: none;
 }
 
