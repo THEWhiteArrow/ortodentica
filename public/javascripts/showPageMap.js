@@ -41,23 +41,28 @@ map.on("wheel", event => {
 const mapElement = document.querySelector('#map');
 
 const checkForDrag = (e) => {
-   console.log(e.touches.length)
+   console.log(e.touches)
    if (e.touches.length === 1) {
       map.dragPan.disable();
       mapElement.style.setProperty('--opacity', '1');
 
    } else {
+      e.preventDefault();
+      map.scrollZoom.disable();
       map.dragPan.enable();
       mapElement.style.setProperty('--opacity', '0');
    }
 }
+
 const touchStopped = (e) => {
-   if (e.touches.length === 0 || e.touches.length === 2)
+   if (e.touches.length === 0 || e.touches.length === 2) {
       mapElement.style.setProperty('--opacity', '0');
+      map.scrollZoom.enable();
+   }
 }
 
 
-if (isMobile()) {
+if (isMobile() || 1) {
    mapElement.addEventListener('touchstart', checkForDrag);
    mapElement.addEventListener('touchend', touchStopped);
 }
