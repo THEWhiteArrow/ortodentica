@@ -382,6 +382,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    padding:0;
    /* margin:auto 0; */
 }
+ 
+#googleMap #map canvas{
+   width:100% !important;
+}
 
 
 #googleMap .container{
