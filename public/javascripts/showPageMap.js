@@ -1,4 +1,4 @@
-mapboxgl.accessToken = mapToken;
+mapboxgl.accessToken = API_KEY;
 
 
 const map = new mapboxgl.Map({
