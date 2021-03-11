@@ -48,8 +48,9 @@ const checkForDrag = (e) => {
 
    } else {
       e.preventDefault();
-      map.scrollZoom.disable();
+      e.stopPropagation();
       map.dragPan.enable();
+      map.scrollZoom.disable();
       map.dragRotate.disable();
       mapElement.style.setProperty('--opacity', '0');
    }
