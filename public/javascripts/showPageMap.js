@@ -25,7 +25,6 @@ new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false
 
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 map.scrollZoom.disable();
-map.dragRotate.disable();
 map.scrollZoom.setWheelZoomRate(0.01); // Default 1/450
 
 map.on("wheel", event => {
@@ -43,7 +42,6 @@ const mapElement = document.querySelector('#map');
 const checkForDrag = (e) => {
    console.log(e.touches)
    if (e.touches.length === 1) {
-      e.stopPropagation();
       map.dragPan.disable();
 
       mapElement.style.setProperty('--opacity', '1');
@@ -52,6 +50,7 @@ const checkForDrag = (e) => {
       e.preventDefault();
       map.scrollZoom.disable();
       map.dragPan.enable();
+      map.dragRotate.disable();
       mapElement.style.setProperty('--opacity', '0');
    }
 }
@@ -59,7 +58,7 @@ const checkForDrag = (e) => {
 const touchStopped = (e) => {
    if (e.touches.length === 0 || e.touches.length === 2) {
       mapElement.style.setProperty('--opacity', '0');
-      map.scrollZoom.enable();
+      // map.scrollZoom.enable();
    }
 }
 
