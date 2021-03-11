@@ -43,7 +43,9 @@ const mapElement = document.querySelector('#map');
 const checkForDrag = (e) => {
    console.log(e.touches)
    if (e.touches.length === 1) {
+      e.stopPropagation();
       map.dragPan.disable();
+
       mapElement.style.setProperty('--opacity', '1');
 
    } else {
