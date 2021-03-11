@@ -393,8 +393,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 }
 
 #googleMap #map::after{
-   content:'Kliknij i odpuść drugim palcem aby przeciągąć';
-   text-transform: capitalize;
+   content:'Kliknij i odpuść drugim palcem aby przeciągąć. Używaj z conajmniej jednym palcem na ekranie';
+   /* text-transform: capitalize; */
    text-align: center;
    line-height: 2rem;
    opacity: var(--opacity,0);

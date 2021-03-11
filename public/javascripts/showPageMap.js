@@ -25,7 +25,7 @@ new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false
 
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 map.scrollZoom.disable();
-
+map.dragRotate.disable();
 map.scrollZoom.setWheelZoomRate(0.01); // Default 1/450
 
 map.on("wheel", event => {
