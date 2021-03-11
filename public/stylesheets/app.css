@@ -352,8 +352,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 }
 
 #googleMap .container{
+   position: relative;
+   width:100% ;
+   height:600px;
    border:2px solid var(--sweet-brown);
-   height: 600px;
+   
 }
 
 
@@ -373,26 +376,38 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 #googleMap #map {
    width:100%;
-   height: 596px;
+   height: 100%;
    /* border-left: 2px solid var(--sweet-brown); */
    /* border-left: none; */
    /* border-right: none; */
    /* border-top: none;
    border-bottom: none; */
    padding:0;
+   position: relative;
    /* margin:auto 0; */
 }
- 
-#googleMap #map canvas{
-   width:100% !important;
+
+#googleMap #map::after{
+   content:'Use Two Fingers To Drag A Map';
+   opacity: var(--opacity,0);
+   pointer-events: none;
+
+   width:100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   font-size:x-large;
+   align-items: center;
+   position: absolute;
+   padding-bottom: 20px;
+   
+background: #6666667e;
+  color: white; 
+  text-shadow: 0px 1px 10px #000000;
+
+  transition: opacity 0.35s ease-in-out;
 }
 
-
-#googleMap .container{
-   position: relative;
-   /* margin-top: -100px; */
-   /* z-index: 20 !important; */
-}
 
 
 #contact,
@@ -493,8 +508,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    border-top: none;
 
    opacity: 0;
+   font-size: 0.6rem;
+   /* font-size: 1rem; */
    position: fixed;
    left:0;  
+   top:100vh;
+   transform: translate3d(0,-130%,0);
    display: flex;
    flex-direction: column;
    
@@ -511,15 +530,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* border-top: 2px solid #222C00ff; */
    color:white;
    text-decoration: none;
-   padding:7px 7px 7px 5px;
+   padding:7px 3px 7px 3px;
+   /* padding:7px 7px 7px 5px; */
    writing-mode: vertical-rl;
    text-orientation: upright;
 
 }
 
 #ads a:nth-of-type(1){
-   padding-top: 10px;
-   padding-bottom: 10px;
+   padding-top: 10px !important;
+   padding-bottom: 10px !important;
 }
 #ads a:nth-of-type(2){
    background-color: var(--slate-gray-dark);
@@ -530,7 +550,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 #ads svg{
    margin-left: -5px;
-   width:18px;
+   width:10px;
+   /* width:18px; */
 }
 
 

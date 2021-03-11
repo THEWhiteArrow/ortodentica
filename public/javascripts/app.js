@@ -155,7 +155,7 @@ const setUpScrollListener = (scrollbar) => {
          // cursor.y = scroll;
          // cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
          navbar.style.top = scroll + 'px';
-         ads.style.top = scroll + document.documentElement.clientHeight - ads.offsetHeight * 1.3 + 'px';
+         ads.style.transform = ` translate3d(0,${scroll - ads.offsetHeight * 1.3}px,0)`;
          checkForNavbarChangePoints(scroll);
       });
    }
