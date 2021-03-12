@@ -1,0 +1,53 @@
+@font-face {
+   font-family: 'Tinos';
+   src: url('../fonts/Tinos-Regular.ttf');
+}
+*{
+    box-sizing: border-box !important;
+}
+html{
+   scroll-behavior: auto;
+   scroll-behavior: smooth;
+   margin: 0;
+   padding:0;
+   min-height: 100vh;
+   height: 100%;
+
+}
+body{
+   color:#222C00ff;
+   background-color: var(--bone);
+   position: relative;
+   min-height: 100vh;
+   font-family: 'Tinos', serif;
+
+}
+svg{
+   height:auto;
+}
+footer{
+   width:100%;
+   bottom:0;
+   background-color: #444444;
+   color:white;
+}
+
+.nav-gradient{
+   will-change: height, background-color, backdrop-filter, border-bottom;
+   width:100%;
+   z-index: 100;
+   align-items: flex-start;
+   background-color: rgba(255, 255, 255, 1);
+
+   transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+}
+.nav-link{
+   color:#222C00ff !important;
+}
+.nav-link.active{
+   color:#292d31 !important;
+}
+.solid-nav{
+   background-color:rgb(255, 255, 255);
+   border-bottom: 1px solid var(--sweet-brown);
+}

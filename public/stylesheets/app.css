@@ -348,18 +348,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    min-height: 80vh;
    display: flex;
    /* padding-top: 70px; */
-   padding-bottom: 120px;
 }
 
 #googleMap .container{
    position: relative;
-   width:100% ;
+   width:90% !important;
    /* content-visibility: auto; */
-   height:600px;
+   height:350px;
   
    border:2px solid var(--sweet-brown);
-   border-left: none;
-   border-right: none;
+   /* border-left: none;
+   border-right: none; */
    
 }
 
@@ -372,9 +371,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 }
 
 #googleMap h2{
-   margin: 70px auto 0 auto;
    padding:1rem !important;
-   border-bottom:2px solid var(--sweet-brown);
 
 }
 
@@ -392,9 +389,21 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* margin:auto 0; */
 }
 
-#googleMap #map::after{
+#googleMap .container .mapboxgl-popup-content{
+   padding:5px;
+}
+#googleMap .container h3{
+   font-size: 0.9rem;
+   margin: 0;
+}
+#googleMap .container p{
+   font-size: 0.7rem;
+   margin: 0;
+}
+
+/* #googleMap #map::after{
    content:'Kliknij i odpuść drugim palcem aby przeciągąć. Używaj z conajmniej jednym palcem na ekranie';
-   /* text-transform: capitalize; */
+
    text-align: center;
    line-height: 2rem;
    opacity: var(--opacity,0);
@@ -414,7 +423,7 @@ background: #6666667e;
   text-shadow: 0px 1px 10px #000000;
 
   transition: opacity 0.35s ease-in-out;
-}
+} */
 
 
 
@@ -516,7 +525,7 @@ background: #6666667e;
    border-top: none;
 
    opacity: 0;
-   font-size: 0.85rem;
+   font-size: 0.84rem;
    /* font-size: 1rem; */
    position: fixed;
    left:0;  
@@ -548,16 +557,16 @@ background: #6666667e;
 }
 
 #ads a:nth-of-type(1){
-   padding:10px 4px;
+   padding:10px 2px;
 }
 #ads a:nth-of-type(2){
    background-color: var(--slate-gray-dark);
-   height:32px;
+   height:24px;
    
 }
 #ads a:nth-of-type(3){
    background-color: var(--slate-gray-dark-extra);
-   height:32px;
+   height:24px;
    
 }
 
@@ -565,8 +574,8 @@ background: #6666667e;
    /* box-sizing: content-box !important; */
    /* padding:6px; */
    /* display: flex; */
-   width:16px;
-   height:16px;
+   width:14px;
+   height:14px;
 
    /* width:18px; */
 }

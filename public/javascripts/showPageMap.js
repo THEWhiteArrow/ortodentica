@@ -4,7 +4,7 @@ const map = new mapboxgl.Map({
    container: 'map',
    style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
    center: [21.2132904, 52.1622951],
-   zoom: 16 // starting zoom
+   zoom: 16.5 // starting zoom
 });
 
 
@@ -12,9 +12,7 @@ new mapboxgl.Marker()
    .setLngLat([21.2132904, 52.1622951])
    // .setPopup(
    //    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: true, offset: 35, maxWidth: 'none' })
-   //       .setHTML(
-   //          `<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>`
-   //       )
+   //       .setHTML(`<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>`)
    // )
    .addTo(map)
 
@@ -37,34 +35,34 @@ map.on("wheel", event => {
 });
 
 
-const mapElement = document.querySelector('#map');
+// const mapElement = document.querySelector('#map');
 
-const checkForDrag = (e) => {
-   console.log(e.touches)
-   if (e.touches.length === 1) {
-      map.dragPan.disable();
+// const checkForDrag = (e) => {
+//    console.log(e.touches)
+//    if (e.touches.length === 1) {
+//       map.dragPan.disable();
 
-      mapElement.style.setProperty('--opacity', '1');
+//       mapElement.style.setProperty('--opacity', '1');
 
-   } else {
-      e.preventDefault();
-      e.stopPropagation();
-      map.dragPan.enable();
-      map.scrollZoom.disable();
-      map.dragRotate.disable();
-      mapElement.style.setProperty('--opacity', '0');
-   }
-}
+//    } else {
+//       e.preventDefault();
+//       e.stopPropagation();
+//       map.dragPan.enable();
+//       map.scrollZoom.disable();
+//       map.dragRotate.disable();
+//       mapElement.style.setProperty('--opacity', '0');
+//    }
+// }
 
-const touchStopped = (e) => {
-   if (e.touches.length === 0 || e.touches.length === 2) {
-      mapElement.style.setProperty('--opacity', '0');
-      // map.scrollZoom.enable();
-   }
-}
+// const touchStopped = (e) => {
+//    if (e.touches.length === 0 || e.touches.length === 2) {
+//       mapElement.style.setProperty('--opacity', '0');
+//       // map.scrollZoom.enable();
+//    }
+// }
 
 
-if (isMobile() || 1) {
-   mapElement.addEventListener('touchstart', checkForDrag);
-   mapElement.addEventListener('touchend', touchStopped);
-}
+// if (isMobile() || 1) {
+//    mapElement.addEventListener('touchstart', checkForDrag);
+//    mapElement.addEventListener('touchend', touchStopped);
+// }
