@@ -11,27 +11,48 @@
    <!-- TUTAJ SEO -->
 </head>
 
-<body>
-   <nav id="navbar" class="fixed-top solid-nav navbar navbar-expand-md navbar-light nav-gradient">
+<body id="scroll-container" data-scrollbar>
+   <section id="ads">
+      <a class="not-scroll" href="/?q=contact">
+         <span>UMÓW WIZYTĘ</span>
+      </a>
+      <a class="not-scroll" href="/?q=mapa">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+         </svg>
+      </a>
+      <a class="not-scroll" href="/cennik.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill"
+            viewBox="0 0 16 16">
+            <path
+               d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            <path
+               d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+         </svg>
+      </a>
+   </section>
+
+   <nav id="navbar" class="solid-nav sitcky-top navbar navbar-expand-md navbar-light nav-gradient">
       <div class="container-fluid ">
-         <a class="navbar-brand" href="./index.html">OrtoDentica</a>
+         <a class="navbar-brand not-scroll" href="/" aria-current="page">OrtoDentica</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link" href="./index.html#content">Aktualności</a>
-               <a class="nav-link" href="./index.html#o-nas">O Nas</a>
-               <a class="nav-link" href="./index.html#team">Nasz
+               <a class="nav-link not-scroll" href="/?q=aktualnosci">Aktualności</a>
+               <a class="nav-link not-scroll" href="/?q=o-nas">O Nas</a>
+               <a class="nav-link not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
-               <a class="nav-link" href="./cennik.html" aria-current="page">Cennik</a>
-               <a class="nav-link" href="./index.html#contact">Kontakt</a>
+               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
+               <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
             </div>
          </div>
       </div>
-      <!-- <div class="border-bottom absolute"></div> -->
    </nav>
+
    <h1>Cennik</h1>
    <main class="grid-container">
       <button class="jeden"><span>Ortodoncja</span></button>
@@ -40,14 +61,22 @@
       <button class="cztery"><span>Stomatologia estetyczna</span></button>
       <button class="piec"><span>Profilaktyka</span></button>
       <button class="szesc"><span>RTG</span></button>
-      <button class="siedem"><span>Stomatologia zachowawcza</span></button>
+      <button class="siedem"><span>Protetyka</span></button>
       <button class="osiem"><span>Chirurgia stomatologiczna</span></button>
-      <button class="dziewiec"><span>Protetyka</span></button>
+      <button class="dziewiec"><span>Stomatologia zachowawcza</span></button>
       <button class="dziesiec"><span>Implantologia</span></button>
       <button class="jedenascie"><span>Periodontologia</span></button>
+      <button class="dwanascie"><span>Logopedia</span></button>
    </main>
 
+
+   <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
+   <script src="./public/javascripts/overscroll.min.js"></script>
+
+
    <script src="./public/javascripts/cennik.js"></script>
+   <script src="./public/javascripts/scrollbarInit.js"></script>
+
 </body>
 
 </html>

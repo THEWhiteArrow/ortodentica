@@ -31,18 +31,21 @@
       font-size:1.1rem;
    }
 
-   #googleMap .container{
-      border:2px solid var(--sweet-brown);
+
+
+   #mapa .container{
+      width:100%;
       height:600px;
+      border:2px solid var(--sweet-brown);
    }
-   #googleMap .container .mapboxgl-popup-content{
+   #mapa .container .mapboxgl-popup-content{
       padding:10px 10px 13px 10px;
    }
-   #googleMap .container h3{
+   #mapa .container h3{
       font-size: 1.2rem;
       margin: 0;
    }
-   #googleMap .container p{
+   #mapa .container p{
       font-size: 0.8rem;
       margin: 0;
    }

@@ -29,13 +29,13 @@
       <a href="#contact">
          <span>UMÓW WIZYTĘ</span>
       </a>
-      <a href="#googleMap">
+      <a href="#mapa">
          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
             viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
          </svg>
       </a>
-      <a class="not-scroll" href="cennik.html">
+      <a class="not-scroll" href="/cennik.html">
          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill"
             viewBox="0 0 16 16">
             <path
@@ -48,7 +48,7 @@
 
    <nav id="navbar" class="fixed-top navbar navbar-expand-md navbar-light nav-gradient">
       <div class="container-fluid ">
-         <a class="navbar-brand" href="#welcome-img" aria-current="page">OrtoDentica</a>
+         <a class="navbar-brand " href="#welcome-img" aria-current="page">OrtoDentica</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,14 +57,13 @@
             <div class="navbar-nav" id="navbarLinks">
                <a class="nav-link" href="#content">Aktualności</a>
                <a class="nav-link" href="#o-nas">O Nas</a>
-               <a class="nav-link" href="#team">Nasz
+               <a class="nav-link not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
-               <a class="nav-link not-scroll" href="cennik.html">Cennik</a>
+               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
                <a class="nav-link" href="#contact">Kontakt</a>
             </div>
          </div>
       </div>
-      <!-- <div class="border-bottom absolute"></div> -->
    </nav>
 
    <header class="container-fluid" id="welcome-img">
@@ -84,7 +83,7 @@
    <main>
       <section id="content" class="relative">
 
-         <div class=" row-content d-flex flex-column bg-white ">
+         <div id="aktualnosci" class=" row-content d-flex flex-column bg-white ">
             <img src="./public/svgs/doctors.svg" class="svg-welcome" alt="Dentyści Grafika">
             <div class="container center-everything">
                <h2 class="text-sweet-brown pt-3 pt-md-0">OrtoDentica</h2>
@@ -110,7 +109,7 @@
          </div>
          <div class="space"></div>
 
-         <div class="row-content d-flex flex-column bg-bone">
+         <div id="o-nas" class="row-content d-flex flex-column bg-bone">
             <div class="container center-everything">
                <h2 class="text-sweet-brown pt-3 pt-md-0">OrtoDentica</h2>
                <p class="paragraph width-till-md-90">
@@ -157,7 +156,7 @@
       <div class="space"></div>
 
 
-      <section id="team" class="container-fluid container-md py-5">
+      <!-- <section id="team" class="container-fluid container-md py-5">
          <div class="row">
             <h2
                class="col-12 display-3 text-sweet-brown pt-3 pb-4 pb-md-0 d-flex justify-content-center justify-content-md-start">
@@ -282,10 +281,10 @@
                <div id="shownMemberPic"></div>
             </div>
          </div>
-      </section>
+      </section> -->
 
 
-      <div class="space upsidedown"></div>
+      <!-- <div class="space upsidedown"></div> -->
 
 
       <section id="contact" class="bg-white relative pt-0">
@@ -356,7 +355,7 @@
       <div class="space"></div>
 
 
-      <section id="googleMap" class="d-flex flex-column ">
+      <section id="mapa" class="d-flex flex-column ">
 
          <h2 class="text-sweet-brown text-center pt-3">Gdzie jesteśmy?</h2>
          <div class="container px-0">
@@ -726,13 +725,15 @@
    <!-- We use StatCrab to protect your privacy -->
    <!-- <script src="https://app.statcrab.com/embed/crab.js" data-project="AxlaKm" defer></script> -->
    <!-- StatCrab.com -->
-   <script src="./public/javascripts/apiKey.js" defer></script>
-   <script src="./public/javascripts/showPageMap.js" defer></script>
+   <script src="./public/javascripts/apiKey.js"></script>
+   <script src="./public/javascripts/showPageMap.js"></script>
 
    <script src="./public/javascripts/popper.min.js"></script>
    <script src="./public/javascripts/bootstrap.min.js"></script>
+
    <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
    <script src="./public/javascripts/overscroll.min.js"></script>
+
    <script src="./public/javascripts/membersData.js"></script>
    <script src="./public/javascripts/validateForms.js"></script>
    <script src="./public/javascripts/app.js"></script>

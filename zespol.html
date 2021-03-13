@@ -2,38 +2,328 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
+   <meta charset="UTF-7">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Nasz Zespół</title>
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
    <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
    <link rel="stylesheet" href="./public/stylesheets/zespol.css">
+   <!-- <link rel="stylesheet" href="./public/stylesheets/quaries-zespol.css"> -->
 </head>
 
-<body>
+<body id="scroll-container" data-scrollbar>
 
-   <nav id="navbar" class="solid-nav fixed-top navbar navbar-expand-md navbar-light nav-gradient">
+   <section id="ads">
+      <a class="not-scroll" href="/?q=contact">
+         <span>UMÓW WIZYTĘ</span>
+      </a>
+      <a class="not-scroll" href="/?q=mapa">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+         </svg>
+      </a>
+      <a class="not-scroll" href="/cennik.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill"
+            viewBox="0 0 16 16">
+            <path
+               d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            <path
+               d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+         </svg>
+      </a>
+   </section>
+
+   <nav id="navbar" class="solid-nav sitcky-top navbar navbar-expand-md navbar-light nav-gradient">
       <div class="container-fluid ">
-         <a class="navbar-brand" href="#welcome-img" aria-current="page">OrtoDentica</a>
+         <a class="navbar-brand not-scroll" href="/" aria-current="page">OrtoDentica</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link" href="#content">Aktualności</a>
-               <a class="nav-link" href="#o-nas">O Nas</a>
-               <a class="nav-link" href="#team">Nasz
+               <a class="nav-link not-scroll" href="/?q=aktualnosci">Aktualności</a>
+               <a class="nav-link not-scroll" href="/?q=o-nas">O Nas</a>
+               <a class="nav-link not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
-               <a class="nav-link not-scroll" href="cennik.html">Cennik</a>
-               <a class="nav-link" href="#contact">Kontakt</a>
+               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
+               <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
             </div>
          </div>
       </div>
-      <!-- <div class="border-bottom absolute"></div> -->
    </nav>
 
+   <main>
+      <div class="container px-1 pt-5 mt-4 pb-1 w-90-till-sm">
+         <h1 class="display-4">Zespół OrtoDentica</h1>
+         <h4>Stworzenie idealnego zespoły nie jest łatwe, ale <span class="underline">nie</span> niewykonalne. Na
+            przestrzeni
+            wieloletniego
+            doświadczenia i
+            wielu sukcesów udało nam się zatrudnić najlepszych lekarzy, tak abyśmy razem byli najskuteczniejszym wyborem
+            w sprawie leczenia Waszych uśmiechów, z którymi zawsze jest Państwu do twarzy. Poznaj nasz zespół lekarzy i
+            przekonaj się, że jesteśmy najlepsi w
+            swoim fachu.</h4>
+      </div>
+      <!-- <div class="space"></div> -->
+
+      <!-- <img src="./public/svgs/team4.svg" class="svg-team" alt="Zespół OrtoDentica"> -->
+      <div class="container w-90-till-sm">
+         <div class="member row">
+            <img src="./public/assets/team/1-min.jpg" alt="Magdalena Orczykowska"
+               class="member-pic col-12 col-md-6 col-lg-5 my-0">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Magdalena Orczykowska</h3>
+               <h5>Ortodoncja, właściciel</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/2-min.jpg" alt="Agnieszka Przybysz"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Agnieszka Przybysz</h3>
+               <h5>Stomatologia zachowawcza, dziecięca i protetyka</h5>
+               <p>Jestem absolwentką Pomorskiej Akademii Medycznej w Szczecinie.
+                  Studia ukończyłam z wyróżnieniem w 2003 roku. Zajmuję się stomatologią zachowawczą, stomatologią
+                  dziecięcą i protetyką. Systematycznie podnoszę kwalifikacje podczas kursów i szkoleń zawodowych u
+                  polskich i zagranicznych wykładowców. Od kilku lat doskonalę się w kompleksowej odbudowie zwarcia.
+                  Wieloletnie doświadczenie w pracy z dziećmi spowodowało, że wykonywanie zabiegów u najmłodszych
+                  pacjentów sprawia mi przyjemność i satysfakcję z wykonywanego zawodu.
+                  Zwracam uwagę na profilaktykę nie tylko chorób zębów ale i stawów skroniowo żuchwowych.
+                  Używam najnowocześniejszych technik aby zabiegi były bezbolesne, a dzięki współpracy z innymi
+                  specjalistami w naszym zespole jestem w stanie każdemu zaoferować piękny uśmiech i komfort.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/3-min.jpg" alt="Monika Dworakowska"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Monika Dworakowska</h3>
+               <h5>Ortodoncja</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/4-min.jpg" alt="Katarzyna Mąkosa"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Katarzyna Mąkosa</h3>
+               <h5>Ortodoncja</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/5-min.jpg" alt="Urszula Olszak" class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Urszula Olszak</h3>
+               <h5>Ortodoncja</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/6-min.jpg" alt="Izabela Sierpińska"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Izabela Sierpińska</h3>
+               <h5>Endodoncja, periodontologia, stomatologia zachowawcza, protetyka</h5>
+               <p>Jestem dentystą z dziesięcioletnim stażem.
+                  Od początku kariery zawodowej pracuję przy pomocy najwyższej klasy narzędzi optycznych zapewniających
+                  maksymalną precyzję działania.
+                  Umiejętności rozwijam przede wszystkim w kierunku nowoczesnego leczenia kanałowego z zastosowaniem
+                  najnowszych urządzeń, zaawansowanych technik kompozytowych oraz protetyki, głównie adhezyjnej. W
+                  swojej codziennej pracy kieruję się koncepcjami minimalnie inwazyjnej stomatologii. Przywiązuję dużo
+                  wagi do bezbolesnego i komfortowego przebiegu leczenia.
+
+                  Stale poszerzam swoją wiedzę zawodową. Uczestniczę w teoretycznych i praktycznych kursach
+                  doskonalących, na bieżąco śledzę literaturę fachową oraz międzynarodowe doniesienia naukowe.
+                  Jestem absolwentką prestiżowego program Polskiego Towarzystwa Endododntycznego z zakresu nowoczesnego
+                  leczenia kanałowego „Curriculum Endodontyczne”
+                  Jestem aktywnym członkiem wielu krajowych i zagranicznych stomatologicznych grup dyskusyjnych.
+                  Należę do Polskiego Towarzystwa Endodontycznego oraz European Society of Endodontics.
+                  Prowadzę bloga o tematyce stomatologicznej izasierpinska.pl oraz jestem mamą dwójki maluchów – Poli i
+                  Tadzia.
+
+                  Najważniejsze dla mnie są pełen profesjonalizm, najwyższy standard opieki i zadowolenie pacjenta.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/7-min.jpg" alt="Mirosława Bodalska"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Mirosława Bodalska</h3>
+               <h5>Logopedia</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/8-min.jpg" alt="Tobiasz Podlaski"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Tobiasz Podlaski</h3>
+               <h5>Specjalista chirurg stomatolog, Biegły sądowy</h5>
+               <p>W zakresie oferowanych przeze mnie zabiegów znajdują się wszystkie procedury typowe dla chirurgii
+                  stomatologicznej np. usunięcie zębów zatrzymanych, resekcje itp. Zajmuję się również implantologią, w
+                  której wykorzystuję najnowsze i najskuteczniejsze dostępne metody łącznie z zastosowaniem
+                  piezochirurgii.
+                  Od wielu lat oferuje moim pacjentom szereg rozwiązań począwszy od standardowych implantów
+                  stomatologicznych, przez implanty poprawiające utrzymanie protez, a na minimalnie inwazyjnej metodzie
+                  podnoszenia dna zatoki szczękowej kończąc.
+                  Szeroko stosuję też interdyscyplinarne procedury we współpracy z ortodontami np. zabiegi kortykotomii
+                  znacznie poprawiające i przyspieszające efekty leczenia aparatem stałym.
+                  Poza pracą kliniczną poświęcam się funkcji biegłego sądowego w zakresie chirurgii stomatologicznej i
+                  implantologii.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/9-min.jpg" alt="Sylwia Przybysz" class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Sylwia Przybysz</h3>
+               <h5>Menadżer kliniki, higienistka stomatologiczna</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/10-min.jpg" alt="Aleksandra Szefer"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Aleksandra Szefer</h3>
+               <h5>Asystentka stomatologiczna, rejestratorka</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/11-min.jpg" alt="Anita Kozłowska"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Anita Kozłowska</h3>
+               <h5>Higienistka stomatologiczna, rejestratorka</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/12-min.jpg" alt="Paulina Ziarek" class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Paulina Ziarek</h3>
+               <h5>Asystentka stomatologiczna, rejestratorka</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+         <div class="member row">
+            <img src="./public/assets/team/13-min.jpg" alt="Dominika Stanaszek"
+               class="member-pic col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-7 member-data">
+               <h3>Dominika Stanaszek</h3>
+               <h5>Asystentka stomatologiczna, rejestratorka</h5>
+               <p>Moją pasją jest nowoczesna, bezekstrakcyjna ortodoncja w której stawiam nacisk na estetykę twarzy.
+                  Ukończyłam Warszawski Uniwersytet Medyczny. Następnie przez 15 lat pracowałam w Poradni Ortodoncji w
+                  Mazowieckim Centrum Stomatologii w Warszawie gdzie zdobywałam doświadczenie w leczeniu
+                  najtrudniejszych problemów ortodontycznych. Zajmowałam się także szkoleniem lekarzy stażystów.
+                  Nieustająco podnoszę swoje kwalifikacje. Uczestniczyłam w blisko stu kursach, szkoleniach i
+                  kongresach. Jestem członkiem Polskiego Towarzystwa Ortodontycznego.
+                  Stawiam nacisk na interdyscyplinarne podejście do problemów stomatologicznych, czego efektem są
+                  zarówno piękne uśmiechy wyleczonych pacjentów jak i trwałość efektów leczenia zagwarantowana przez
+                  idealną okluzję.</p>
+            </div>
+         </div>
+         <hr role=tournament6>
+
+
+
+
+
+      </div>
+   </main>
+
+   <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
+   <script src="./public/javascripts/overscroll.min.js"></script>
+   <script src="./public/javascripts/scrollbarInit.js"></script>
 </body>
 
 </html>

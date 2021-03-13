@@ -27,11 +27,30 @@ const init = () => {
       // cursor.remove();
       console.log('touch device');
    }
-   setUpMembersTiles();
-   setUpShownMember();
+
+   // setUpMembersTiles();
+   // setUpShownMember();
 }
 
 
+const scrollOnQuery = (scrollbar) => {
+   const urlParam = window.location.href;
+   console.log('yes')
+
+   setTimeout(() => {
+
+
+      if (urlParam.indexOf('q=aktualnosci') !== -1) {
+         scrollbar.scrollIntoView(document.querySelector('#aktualnosci'));
+      } else if (urlParam.indexOf('q=o-nas') !== -1) {
+         scrollbar.scrollIntoView(document.querySelector('#o-nas'));
+      } else if (urlParam.indexOf('q=mapa') !== -1) {
+         scrollbar.scrollIntoView(document.querySelector('#mapa'));
+      } else if (urlParam.indexOf('q=contact') !== -1) {
+         scrollbar.scrollIntoView(document.querySelector('#contact'));
+      }
+   }, 500);
+}
 
 const setUpShownMember = () => {
    let n = 0;
@@ -58,7 +77,7 @@ const setUpMembersTiles = () => {
 
 const setUpSmoothScrollbars = () => {
    const mainElem = document.getElementById("scroll-container");
-   const membersContainer = document.getElementById("members");
+   // const membersContainer = document.getElementById("members");
 
    const options = {
       damping: 0.11,
@@ -85,15 +104,16 @@ const setUpSmoothScrollbars = () => {
          overscroll: { ...overscrollOptions },
       },
    })
+
    setUpScrollListener(bodyScrollbar);
    setUpLinks(bodyScrollbar);
+   scrollOnQuery(bodyScrollbar);
 
-
-   overscrollOptions.damping = 0.11;
-   const membersScrollbar = Scrollbar.init(membersContainer, {
-      ...options,
-      delegateTo: membersContainer
-   })
+   // overscrollOptions.damping = 0.11;
+   // const membersScrollbar = Scrollbar.init(membersContainer, {
+   //    ...options,
+   //    delegateTo: membersContainer
+   // })
 
 
 }

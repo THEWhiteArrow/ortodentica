@@ -344,15 +344,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 
 /* MAPY */
-#googleMap{
+#mapa{
    min-height: 80vh;
    display: flex;
    /* padding-top: 70px; */
 }
 
-#googleMap .container{
+#mapa .container{
    position: relative;
-   width:90% !important;
+   width:90%;
    /* content-visibility: auto; */
    height:350px;
   
@@ -364,21 +364,22 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 
 
-#googleMap .row div:first-of-type{
+#mapa .row div:first-of-type{
    background-color: white;
    /* border-bottom:2px solid var(--sweet-brown); */
    height: 596px;
 }
 
-#googleMap h2{
+#mapa h2{
    padding:1rem !important;
 
 }
 
-#googleMap #map {
-   width:100%;
+#mapa #map {
+   width:100% !important;
    height: 100%;
    content-visibility: auto;
+   background-color: rgb(191, 237, 255);
    /* border-left: 2px solid var(--sweet-brown); */
    /* border-left: none; */
    /* border-right: none; */
@@ -389,19 +390,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* margin:auto 0; */
 }
 
-#googleMap .container .mapboxgl-popup-content{
+#mapa .container .mapboxgl-popup-content{
    padding:5px;
 }
-#googleMap .container h3{
+#mapa .container h3{
    font-size: 0.9rem;
    margin: 0;
 }
-#googleMap .container p{
+#mapa .container p{
    font-size: 0.7rem;
    margin: 0;
 }
 
-/* #googleMap #map::after{
+/* #mapa #map::after{
    content:'Kliknij i odpuść drugim palcem aby przeciągąć. Używaj z conajmniej jednym palcem na ekranie';
 
    text-align: center;
@@ -428,7 +429,7 @@ background: #6666667e;
 
 
 #contact,
-#googleMap{
+#mapa{
    overflow-x: hidden;
 }
 

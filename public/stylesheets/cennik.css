@@ -1,31 +1,34 @@
-*{
-   padding:0;
-   margin:0;
-   box-sizing: border-box;
-}
-
 @font-face {
    font-family: 'Tinos';
    src: url('../fonts/Tinos-Regular.ttf');
 }
-
+*{
+    box-sizing: border-box !important;
+}
 html{
+   scroll-behavior: auto;
+   scroll-behavior: smooth;
+   margin: 0;
+   padding:0;
    min-height: 100vh;
-   height:100%;
+   height: 100%;
+
 }
 body{
-   display:flex;
-   flex-direction: column;
-   min-height: 100%;
-   font-family: 'Tinos', serif;
+   color:#222C00ff;
+   position: relative;
    background-color: var(--bone);
+   /* background-color: var(--bone-trasparent); */
+   height: 100vh;
+   font-family: 'Tinos', serif;
+
 }
 
 h1{
    text-align: center;
    text-transform: uppercase;
    margin:0;
-   padding-top:90px;
+   padding-top:45px;
    padding-bottom:20px;
 }
 
@@ -158,10 +161,18 @@ button.return svg{
      "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
      "cztery cztery cztery cztery piec piec piec szesc szesc"
      "cztery cztery cztery cztery piec piec piec szesc szesc"
+     "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
+     "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
+     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
+     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie";
+     /* "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
+     "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
+     "cztery cztery cztery piec piec piec szesc szesc szesc"
+     "cztery cztery cztery piec piec piec szesc szesc szesc"
      "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
      "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
-     "dziesiec dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie jedenascie"
-     "dziesiec dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie jedenascie";
+     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"
+     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"; */
  }
  .jeden { grid-area: jeden; }
  .dwa { grid-area: dwa; }
@@ -174,8 +185,114 @@ button.return svg{
  .dziewiec { grid-area: dziewiec; }
  .dziesiec { grid-area: dziesiec; }
  .jedenascie { grid-area: jedenascie; }
+ .dwanascie { grid-area: dwanascie; }
 
 
 
 
+/* ADVERTISEMENT */
+#ads{
+   /* border: 2px solid #222C00ff; */
+   border-left: none;
+   border-top: none;
 
+   opacity: 1;
+   font-size: 0.84rem;
+   /* font-size: 1rem; */
+   position: fixed;
+   left:0;  
+   top:100vh;
+   transform: translate3d(0,-130%,0);
+   display: flex;
+   flex-direction: column;
+   
+   z-index: 1000;
+   /* background-color: #f7ece2; */
+   background-color: var(--slate-gray);
+
+   height:min-content;
+   
+   transition: none;
+}
+
+#ads a{
+   /* border-top: 2px solid #222C00ff; */
+   color:white;
+   display: flex;
+   justify-content: center !important;
+   align-items: center !important;
+   text-decoration: none;
+   /* padding:7px 7px 7px 5px; */
+   writing-mode: vertical-rl;
+   text-orientation: upright;
+
+}
+
+#ads a:nth-of-type(1){
+   padding:10px 2px;
+}
+#ads a:nth-of-type(2){
+   background-color: var(--slate-gray-dark);
+   height:24px;
+   
+}
+#ads a:nth-of-type(3){
+   background-color: var(--slate-gray-dark-extra);
+   height:24px;
+   
+}
+
+#ads svg{
+   /* box-sizing: content-box !important; */
+   /* padding:6px; */
+   /* display: flex; */
+   width:14px;
+   height:14px;
+
+   /* width:18px; */
+}
+
+/* MIN */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+   #ads a{
+      font-size: 1rem;
+      /* padding:7px 7px 7px 5px; */
+   }
+
+   #ads a:nth-of-type(1){
+      padding:10px 6px;
+   }
+   #ads a:nth-of-type(2){
+      height:36px;
+      
+   }
+   #ads a:nth-of-type(3){
+      height:36px;
+      
+   }
+
+   #ads svg{
+      width:22px;
+      height:22px;
+   }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }

@@ -156,6 +156,10 @@ const cennik = {
       'Wydłużenie korony klinicznej zęba': '200 - 400 PLN',
       'Gingiwektomia': 'od 200 PLN',
       'Test PET': 'od 250 PLN',
+   },
+   logopedia: {
+      'Diagnoza logopedyczna': '150 PLN',
+      'Terapia logopedyczna': '120 PLN',
    }
 }
 
@@ -164,8 +168,10 @@ const main = document.querySelector('main')
 const rodzaje = document.querySelectorAll('main button')
 const h1 = document.querySelector('h1');
 
+const autoStartScroll = 'false';
+
 const deleteCennikShowMain = () => {
-   const section = document.querySelector('section');
+   const section = document.querySelector('#ceny');
 
    section.style.opacity = 0;
    setTimeout(() => {
@@ -174,7 +180,10 @@ const deleteCennikShowMain = () => {
       main.style.display = 'grid';
       main.classList.add('fadeIn');
       main.style.opacity = 1;
+
    }, 400);
+   Scrollbar.destroyAll();
+
 }
 
 const appendCennikHideMain = function () {
@@ -194,17 +203,18 @@ const appendCennikHideMain = function () {
       <path d="M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10"></path>
       <span>ZOBACZ INNE DZIAŁY STOMATOLOGII</span>`
       returnBtn.classList.add('return');
-      section.classList.add('container', 'fadeIn');
+      section.setAttribute('id', 'ceny')
+      section.classList.add('container', 'fadeIn', 'pb-5');
 
       for (let i in cennik[name]) {
          ceny.innerHTML += `<li><span class="action">${i} </span> <span class="price">${cennik[name][i]}</span></li>`
       }
 
       section.append(returnBtn, ceny);
-      document.body.append(section);
-
+      main.parentNode.insertBefore(section, main.nextSibling);
       returnBtn.addEventListener('click', deleteCennikShowMain);
 
+      initScroll();
    }, 400);
 }
 
