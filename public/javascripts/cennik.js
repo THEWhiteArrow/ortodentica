@@ -136,7 +136,7 @@ const cennik = {
       'Proteza szkieletowa': 'od 1700 PLN',
       'Naprawa protezy ': 'od 200 PLN',
       'Szyna relaksacyjna': '600 - 1000 PLN',
-      'Usunięcie korony/  wkładu': 'od 200/ od 300 PLN',
+      'Usunięcie korony/  wkładu': 'od 200 od 300 PLN',
       'Modele diagnostyczne': 'od 120 PLN',
       'Rejestracja łukiem twarzowym': '100 PLN',
    },
@@ -168,7 +168,7 @@ const main = document.querySelector('main')
 const rodzaje = document.querySelectorAll('main button')
 const h1 = document.querySelector('h1');
 
-const autoStartScroll = 'false';
+// const autoStartScroll = 'false';
 
 const deleteCennikShowMain = () => {
    const section = document.querySelector('#ceny');
@@ -182,7 +182,6 @@ const deleteCennikShowMain = () => {
       main.style.opacity = 1;
 
    }, 400);
-   Scrollbar.destroyAll();
 
 }
 
@@ -214,7 +213,6 @@ const appendCennikHideMain = function () {
       main.parentNode.insertBefore(section, main.nextSibling);
       returnBtn.addEventListener('click', deleteCennikShowMain);
 
-      initScroll();
    }, 400);
 }
 

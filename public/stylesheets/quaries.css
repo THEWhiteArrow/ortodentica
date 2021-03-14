@@ -5,12 +5,11 @@
 @media(max-width:767px){
    .width-till-md-90{
       width:90%;
+      margin-left:auto;
+      margin-right:auto;
    }
    #members{
       width:90%;
-   }
-   #contact{
-      min-height: 100vh;
    }
 
 
@@ -80,6 +79,29 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+   .svg-experience{
+      display: flex;
+      position: absolute;
+      width:260px;
+      right:50%;
+      transform: translate3d(-80%,60%,0);
+   }
+
+   .svg-certificate{
+      display: flex;
+      position: absolute;
+      width:260px;
+      left:50%;
+      transform: translate3d(80%,64.5%,0) scaleX(-1);
+   }
+
+   .svg-trust{
+      display: flex;
+      position: absolute;
+      width:350px;
+      right:50%;
+      transform: translate3d(-15%,33%,0) scaleX(-1);
+   }
 
    .svg-welcome{
       display: flex;

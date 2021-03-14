@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Cennik</title>
+   <title>Aktualności</title>
+
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
+   <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
    <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
-   <link rel="stylesheet" href="./public/stylesheets/cennik.css">
-   <!-- TUTAJ SEO -->
+   <link rel="stylesheet" href="./public/stylesheets/polityka-prywatnosci.css">
+   <!-- <link rel="stylesheet" href="./public/stylesheets/app.css"> -->
+   <!-- <link rel="stylesheet" href="./public/stylesheets/quaries.css"> -->
 </head>
 
-<body id="scroll-container" data-scrollbar>
+<body id="scroll-container" class="bg-white" data-scrollbar>
+
    <section id="ads">
-      <a class="not-scroll" href="/?q=contact">
+      <a href="#contact">
          <span>UMÓW WIZYTĘ</span>
       </a>
-      <a class="not-scroll" href="/?q=mapa">
+      <a href="#mapa">
          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
             viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
@@ -33,43 +38,49 @@
       </a>
    </section>
 
-   <nav id="navbar" class="solid-nav sitcky-top navbar navbar-expand-md navbar-light nav-gradient">
+   <nav id="navbar" class="solid-nav fixed-top navbar navbar-expand-md navbar-light nav-gradient">
       <div class="container-fluid ">
-         <a class="navbar-brand not-scroll" href="/" aria-current="page">OrtoDentica</a>
+         <a class="navbar-brand " href="/" aria-current="page">OrtoDentica</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link not-scroll" href="/?q=aktualnosci">Aktualności</a>
-               <a class="nav-link not-scroll" href="/?q=o-nas">O Nas</a>
+               <a class="nav-link" href="/?q=content">Aktualności</a>
+               <a class="nav-link" href="/?q=o-nas">O Nas</a>
                <a class="nav-link not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
                <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
-               <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
+               <a class="nav-link" href="/?q=contact">Kontakt</a>
             </div>
          </div>
       </div>
    </nav>
 
-   <h1>Cennik</h1>
-   <main class="grid-container">
-      <button class="jeden"><span>Ortodoncja</span></button>
-      <button class="dwa"><span>Endodoncja</span></button>
-      <button class="trzy"><span>Stomatologia dziecięca</span></button>
-      <button class="cztery"><span>Stomatologia estetyczna</span></button>
-      <button class="piec"><span>Profilaktyka</span></button>
-      <button class="szesc"><span>RTG</span></button>
-      <button class="siedem"><span>Protetyka</span></button>
-      <button class="osiem"><span>Chirurgia stomatologiczna</span></button>
-      <button class="dziewiec"><span>Stomatologia zachowawcza</span></button>
-      <button class="dziesiec"><span>Implantologia</span></button>
-      <button class="jedenascie"><span>Periodontologia</span></button>
-      <button class="dwanascie"><span>Logopedia</span></button>
+   <main id="aktualnosci" class="container">
+      <h1 class="mt-5 pt-5">Aktualności</h1>
+      <h3>Czyli co mogło Państwa ominąć!</h3>
+      <p>
+         Drodzy Pacjeci!
+         Z uwagi na bezpieczeństwo swoje, innych pacjentow i personelu w przypadku podejrzenia lub
+         infekcji COVID - 19 prosimy o zmianę terminu wizyty.
+         Jeśli obserwujesz u siebie gorączkę, kaszel, duszności i problemy z oddychaniem- zadzwoń i
+         odwołaj swoją wizytę oraz powiadom odpowiednie służby telefonicznie.
+         Uprzejmie informujemy, iż osoby towarzyszące Pacjentom nieletnim także powinny być zdrowe.
+         Uprzejmie prosimy, byście przed wejściem do gabinetu zdezynfekowali ręce.
+         Zapewniamy Was także, że w Gabinecie stosujemy i spełniamy najwyższe rygorystyczne warunki
+         bezpieczeństwa naszych Pacjentów, stosując zasady aseptyki i antyseptyki, dezynfekcje gabinetów
+         pomiędzy Pacjentami jak i po całym dniu pracy, sterylność pakietów i najwyższe normy
+         sterylizacji.
+         Zachęcamy Was do świadomego i równocześnie rozsądnego podejścia do kwestii zagrożenia
+         koronawirusem.
+      </p>
+      <p>Zespół OrtoDentica</p>
+
    </main>
 
-   <footer class="mt-5 pt-2 px-3">
+   <footer class="pt-2 px-3">
       <div class="container p-2">
          <div class="row">
 
@@ -104,15 +115,12 @@
       </div>
    </footer>
 
-
    <script src="./public/javascripts/popper.min.js"></script>
    <script src="./public/javascripts/bootstrap.min.js"></script>
 
    <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
    <script src="./public/javascripts/overscroll.min.js"></script>
    <script src="./public/javascripts/scrollbarInit.js"></script>
-
-   <script src="./public/javascripts/cennik.js"></script>
 
 </body>
 

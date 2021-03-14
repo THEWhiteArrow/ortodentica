@@ -17,7 +17,7 @@ html{
 body{
    color:#222C00ff;
    position: relative;
-   background-color: var(--bone);
+   background-color: var(--bone-trasparent-vivit);
    /* background-color: var(--bone-trasparent); */
    height: 100vh;
    font-family: 'Tinos', serif;
@@ -90,6 +90,29 @@ ul li:nth-of-type(2n+1){
    background-color: var(--bone-trasparent);
 }
 
+footer{
+   width:100%;
+   bottom:0;
+   background-color: #444444;
+   color:white;
+}
+
+footer a{
+   color: white;
+   /* text-transform: uppercase; */
+   /* text-decoration: none;
+   border-bottom:1px solid white;
+   width:fit-content; */
+}
+
+footer a:hover{
+   color: var(--sweet-brown);
+}
+
+footer img{
+   margin-left: 2px;
+   margin-top: -4px;
+}
 
 
 
@@ -125,6 +148,9 @@ button.return svg{
    margin-right: 10px;
 }
 
+.bg-sweet-brown{
+   background-color: var(--sweet-brown);
+}
 
 .nav-gradient{
    will-change: height, background-color, backdrop-filter, border-bottom;
@@ -149,46 +175,6 @@ button.return svg{
    background-color:rgb(255, 255, 255);
    border-bottom: 1px solid var(--sweet-brown);
 }
-.grid-container {
-   padding-left: 10px;
-   padding-right: 10px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: repeat(8, 1fr);
-   gap: 7px 7px;
-   grid-template-areas:
-     "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
-     "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
-     "cztery cztery cztery cztery piec piec piec szesc szesc"
-     "cztery cztery cztery cztery piec piec piec szesc szesc"
-     "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
-     "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
-     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
-     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie";
-     /* "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
-     "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
-     "cztery cztery cztery piec piec piec szesc szesc szesc"
-     "cztery cztery cztery piec piec piec szesc szesc szesc"
-     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
-     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
-     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"
-     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"; */
- }
- .jeden { grid-area: jeden; }
- .dwa { grid-area: dwa; }
- .trzy { grid-area: trzy; }
- .cztery { grid-area: cztery; }
- .piec { grid-area: piec; }
- .szesc { grid-area: szesc; }
- .siedem { grid-area: siedem; }
- .osiem { grid-area: osiem; }
- .dziewiec { grid-area: dziewiec; }
- .dziesiec { grid-area: dziesiec; }
- .jedenascie { grid-area: jedenascie; }
- .dwanascie { grid-area: dwanascie; }
-
-
-
 
 /* ADVERTISEMENT */
 #ads{
@@ -252,9 +238,64 @@ button.return svg{
    /* width:18px; */
 }
 
+.grid-container {
+   padding-left: 10px;
+   padding-right: 10px;
+   display: grid;
+   grid-template-columns:1fr;
+   grid-template-rows: repeat(12, 1fr);
+   gap: 7px 7px;
+   grid-template-areas:
+   "jeden"
+   "dwa"
+   "trzy"
+   "cztery"
+   "piec"
+   "szesc"
+   "siedem"
+   "osiem"
+   "dziewiec"
+   "dziesiec"
+   "jedenascie"
+   "dwanascie";
+
+
+ }
+ .jeden { grid-area: jeden; }
+ .dwa { grid-area: dwa; }
+ .trzy { grid-area: trzy; }
+ .cztery { grid-area: cztery; }
+ .piec { grid-area: piec; }
+ .szesc { grid-area: szesc; }
+ .siedem { grid-area: siedem; }
+ .osiem { grid-area: osiem; }
+ .dziewiec { grid-area: dziewiec; }
+ .dziesiec { grid-area: dziesiec; }
+ .jedenascie { grid-area: jedenascie; }
+ .dwanascie { grid-area: dwanascie; }
+
+
+
+
+
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
+   .grid-container{
+      grid-template-columns:repeat(2,1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas:
+      "jeden dwa"
+      "trzy cztery"
+      "piec szesc"
+      "siedem osiem"
+      "dziewiec dziesiec"
+      "jedenascie dwanascie";
+   } 
+
+
+
+
    #ads a{
       font-size: 1rem;
       /* padding:7px 7px 7px 5px; */
@@ -281,8 +322,27 @@ button.return svg{
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-
-
+   .grid-container{
+      grid-template-columns: repeat(9,1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-areas:
+      "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
+     "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
+     "cztery cztery cztery cztery piec piec piec szesc szesc"
+     "cztery cztery cztery cztery piec piec piec szesc szesc"
+     "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
+     "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
+     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
+     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie";
+     /* "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
+     "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
+     "cztery cztery cztery piec piec piec szesc szesc szesc"
+     "cztery cztery cztery piec piec piec szesc szesc szesc"
+     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
+     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
+     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"
+     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"; */
+   }
 }
 
 /* Large devices (desktops, 992px and up) */
