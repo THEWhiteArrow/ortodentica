@@ -116,10 +116,16 @@ footer img{
 
 
 
-
+div.scroll-content{
+   height:100%;
+   display: flex;
+   flex-direction: column;
+   /* align-content: space-between; */
+}
 
 
 section{
+   flex:1;
    transition: all .4s ease-in-out;
 }
 

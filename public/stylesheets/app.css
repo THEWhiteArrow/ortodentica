@@ -111,6 +111,11 @@ textarea{
 
 }
 
+
+
+
+
+
 /* input,textarea{
    background-color: white !important;
 } */
@@ -120,6 +125,13 @@ textarea{
 
 
 /* CONTENT */
+.card{
+   transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card:hover{
+   transform: translate3d(0,-10px,0);
+}
+
 #title{
    transform: translateY(-35%);
    background-color: var(--bone-trasparent);
