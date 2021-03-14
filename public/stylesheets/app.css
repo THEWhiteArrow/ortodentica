@@ -32,6 +32,9 @@ textarea{
    height:150px;
 }
 
+h2{
+   font-size: 2.2rem;
+}
 
 
 
@@ -396,7 +399,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    position: relative;
    width:90%;
    /* content-visibility: auto; */
-   height:350px;
+   height:clamp(420px,75vh,500px);
   
    border:2px solid var(--sweet-brown);
    /* border-left: none;
