@@ -38,6 +38,12 @@ textarea{
 
 
 /* AKSJOMATY */
+.py-adjusted{
+   min-height: 100vh;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
 .svg-experience,
 .svg-certificate,
 .svg-trust,
@@ -87,8 +93,14 @@ textarea{
 .bg-bone{
    background-color: var(--bone);
 }
+.bg-bone-transparent{
+   background-color: var(--bone-transparent);
+}
 .bg-sweet-brown{
    background-color: var(--sweet-brown);
+}
+.border-sweet-brown{
+   border:2px solid var(--sweet-brown);
 }
 .border-box{
    box-sizing: border-box !important;
@@ -587,10 +599,7 @@ footer img{
 }
 
 
- .py-adjusted{
-   padding-top: 75px;
-   padding-bottom: 75px;
-}
+
 
 /* ANIMATIONS KEYFRAMES */
 @keyframes moveDown{

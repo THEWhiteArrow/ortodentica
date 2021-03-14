@@ -34,7 +34,8 @@
 
    #mapa .container{
       width:100%;
-      height:600px;
+      height:700px;
+      max-height: 80vh;
       border:2px solid var(--sweet-brown);
    }
    #mapa .container .mapboxgl-popup-content{
@@ -79,28 +80,32 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+   .w-md-50{
+      width: 50% !important;
+   }
+
    .svg-experience{
       display: flex;
       position: absolute;
-      width:260px;
+      width:200px;
       right:50%;
-      transform: translate3d(-80%,60%,0);
+      transform: translate3d(-80%,110%,0);
    }
 
    .svg-certificate{
       display: flex;
       position: absolute;
-      width:260px;
+      width:170px;
       left:50%;
-      transform: translate3d(80%,64.5%,0) scaleX(-1);
+      transform: translate3d(110%,150%,0) scaleX(-1);
    }
 
    .svg-trust{
       display: flex;
       position: absolute;
-      width:350px;
+      width:270px;
       right:50%;
-      transform: translate3d(-15%,33%,0) scaleX(-1);
+      transform: translate3d(-22%,70%,0) scaleX(-1);
    }
 
    .svg-welcome{
