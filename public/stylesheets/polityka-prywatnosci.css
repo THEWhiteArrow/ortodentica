@@ -69,7 +69,9 @@ div.scroll-content{
    /* align-items: space-between; */
 }
 
-
+.color-sweet-brown{
+   color: var(--sweet-brown);
+}
 .bg-bone{
    background-color: var(--bone);
 }

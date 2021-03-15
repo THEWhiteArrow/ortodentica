@@ -15,7 +15,10 @@ let e, breakPoint, scroll = 0;
 
 
 const init = () => {
-   restoreScroll();
+   // DELETE ALL THE HASHES
+   document.location.hash = '';
+   // window.onload = hideURLParams;
+   // restoreScroll();
 
    if (!isMobile()) {
       setUpSmoothScrollbars();
@@ -29,8 +32,9 @@ const init = () => {
       console.log('touch device');
    }
 
-   // setUpMembersTiles();
-   // setUpShownMember();
+   // AFTER INITIALIZED PAGE DELETE URL PARAMS
+   hideURLParams();
+
 }
 
 
@@ -63,6 +67,19 @@ const scrollOnQuery = (scrollbar) => {
             scrollbar.scroll(0, document.querySelector('#contact').offsetTop + window.innerHeight);
          }
       }, 500);
+   }
+}
+
+const getURLParameter = (name) => {
+   return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]);
+}
+const hideURLParams = () => {
+   //Parameters to hide (ie ?success=value, ?error=value, etc)
+   const hide = ['success', 'error'];
+   for (let h in hide) {
+      if (getURLParameter(h)) {
+         history.replaceState(null, document.getElementsByTagName("title")[0].innerHTML, window.location.pathname);
+      }
    }
 }
 
