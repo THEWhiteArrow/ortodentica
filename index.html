@@ -102,16 +102,20 @@
                      ustnej, to nasza codzienność.
                   </p>
                   <p class="paragraph width-till-md-90 mt-3 mb-0">Serdecznie zapraszamy na wizytę konsultacyjną :</p>
-                  <p class="paragraph width-till-md-90 d-flex flex-column">
+                  <p class="paragraph width-till-md-90 d-flex flex-column zIndex-5">
                      <span>Telefon: +48 604 53 22 02</span>
                      <a href="#contact" class="w-md-50 btn btn-success text-uppercase">Napisz do nas!</a>
                   </p>
                </div>
 
-               <div class="w-100 d-flex justify-content-center">
-                  <img class="row-img my-5" src="./public/assets/ortodentica/img_3731_dxo.jpg"
-                     alt="Część zespołu Ortodentica">
-                  <img class="svg-experience" src="./public/svgs/experience.svg" alt="Doświadczenie">
+               <div class="row  w-100 d-flex justify-content-center justify-content-md-start">
+                  <div class="col-12 col-lg-6 px-0 d-flex justify-content-lg-center">
+                     <img class="row-img my-5 zIndex-5" src="./public/assets/ortodentica/img_3731_dxo.jpg"
+                        alt="Część zespołu Ortodentica">
+                  </div>
+                  <img class="svg-doctors" src="./public/svgs/doctors.svg" alt="Dentysta i stomatolog">
+
+                  <!-- <img class="svg-experience" src="./public/svgs/experience.svg" alt="Doświadczenie"> -->
 
                </div>
 
@@ -340,8 +344,15 @@
 
       <section id="mapa" class="py-adjusted d-flex flex-column ">
 
-         <h2 class="text-sweet-brown text-center pb-5">Gdzie jesteśmy?</h2>
-         <div class="container px-0">
+         <div class="container mb-5">
+            <h2 class="text-sweet-brown text-center">Gdzie jesteśmy?</h2>
+            <p class="paragraph lead">Znajdujemy się w gabinecie na Kędzierzyńskiej 9 w Warszawie, Falenicy, w pięknym
+               białym budynku niedaleko stacji PKP Falenica. Posiadamy parking i dobrą komunikacje z resztą miasta.
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorum accusamus repudiandae omnis,
+               voluptatum amet quisquam beatae deleniti similique numquam, obcaecati, dolor necessitatibus nisi quos.
+            </p>
+         </div>
+         <div id="mapContainer" class="container px-0">
             <!-- <div class="container px-0" aria-hidden="true"> -->
             <img src="./public/svgs/phone.svg" class="svg-map" alt="Mapa dojazdu do dentysty">
             <div id="map"></div>

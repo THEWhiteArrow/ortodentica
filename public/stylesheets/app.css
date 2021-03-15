@@ -41,13 +41,17 @@ h2{
 
 
 /* AKSJOMATY */
+.zIndex-5{
+   z-index: 5 !important;
+   /* position: relative; */
+}
 .py-adjusted{
-   min-height: 100vh;
   padding-top: 75px;
   padding-bottom: 75px;
 }
 
 .svg-experience,
+.svg-doctors,
 .svg-certificate,
 .svg-trust,
 .svg-contact,
@@ -395,7 +399,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* padding-top: 70px; */
 }
 
-#mapa .container{
+#mapa #mapContainer{
    position: relative;
    width:90%;
    /* content-visibility: auto; */
@@ -430,14 +434,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* margin:auto 0; */
 }
 
-#mapa .container .mapboxgl-popup-content{
+#mapa #mapContainer .mapboxgl-popup-content{
    padding:5px;
 }
-#mapa .container h3{
+#mapa #mapContainer h3{
    font-size: 0.9rem;
    margin: 0;
 }
-#mapa .container p{
+#mapa #mapContainer p{
    font-size: 0.7rem;
    margin: 0;
 }
