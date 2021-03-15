@@ -23,6 +23,7 @@ const init = () => {
       console.log('mouse device');
    } else {
       setUpScrollListener(document);
+      scrollOnQuery(window);
       // cursor.removed = true;
       // cursor.remove();
       console.log('touch device');
@@ -37,19 +38,32 @@ const scrollOnQuery = (scrollbar) => {
    const urlParam = window.location.href;
    console.log('yes')
 
-   setTimeout(() => {
+   if (!isMobile()) {
 
-
-      if (urlParam.indexOf('q=aktualnosci') !== -1) {
-         scrollbar.scrollIntoView(document.querySelector('#aktualnosci'));
-      } else if (urlParam.indexOf('q=o-nas') !== -1) {
-         scrollbar.scrollIntoView(document.querySelector('#o-nas'));
-      } else if (urlParam.indexOf('q=mapa') !== -1) {
-         scrollbar.scrollIntoView(document.querySelector('#mapa'));
-      } else if (urlParam.indexOf('q=contact') !== -1) {
-         scrollbar.scrollIntoView(document.querySelector('#contact'));
-      }
-   }, 500);
+      setTimeout(() => {
+         if (urlParam.indexOf('q=aktualnosci') !== -1) {
+            scrollbar.scrollIntoView(document.querySelector('#aktualnosci'));
+         } else if (urlParam.indexOf('q=o-nas') !== -1) {
+            scrollbar.scrollIntoView(document.querySelector('#o-nas'));
+         } else if (urlParam.indexOf('q=mapa') !== -1) {
+            scrollbar.scrollIntoView(document.querySelector('#mapa'));
+         } else if (urlParam.indexOf('q=contact') !== -1) {
+            scrollbar.scrollIntoView(document.querySelector('#contact'));
+         }
+      }, 500);
+   } else {
+      setTimeout(() => {
+         if (urlParam.indexOf('q=aktualnosci') !== -1) {
+            scrollbar.scroll(0, document.querySelector('#aktualnosci').offsetTop + window.innerHeight);
+         } else if (urlParam.indexOf('q=o-nas') !== -1) {
+            scrollbar.scroll(0, document.querySelector('#o-nas').offsetTop + window.innerHeight);
+         } else if (urlParam.indexOf('q=mapa') !== -1) {
+            scrollbar.scroll(0, document.querySelector('#mapa').offsetTop + window.innerHeight);
+         } else if (urlParam.indexOf('q=contact') !== -1) {
+            scrollbar.scroll(0, document.querySelector('#contact').offsetTop + window.innerHeight);
+         }
+      }, 500);
+   }
 }
 
 const setUpShownMember = () => {
