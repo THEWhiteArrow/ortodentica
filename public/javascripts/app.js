@@ -13,10 +13,10 @@ const shownMember = {
 // cursor.y = 0;
 let e, breakPoint, scroll = 0;
 
-
 const init = () => {
    // DELETE ALL THE HASHES
    document.location.hash = '';
+
    // window.onload = hideURLParams;
    // restoreScroll();
 
@@ -26,7 +26,7 @@ const init = () => {
       console.log('mouse device');
    } else {
       setUpScrollListener(document);
-      scrollOnQuery(window);
+      // scrollOnQuery(window);
       // cursor.removed = true;
       // cursor.remove();
       console.log('touch device');
@@ -73,6 +73,7 @@ const scrollOnQuery = (scrollbar) => {
 const getURLParameter = (name) => {
    return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]);
 }
+
 const hideURLParams = () => {
    //Parameters to hide (ie ?success=value, ?error=value, etc)
    const hide = ['success', 'error'];
@@ -145,7 +146,6 @@ const setUpSmoothScrollbars = () => {
    //    ...options,
    //    delegateTo: membersContainer
    // })
-
 
 }
 

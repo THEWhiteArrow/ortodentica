@@ -131,12 +131,12 @@ const cennik = {
       'Wkład koronowo-korzeniowy stal złożony': '400 PLN',
       'Wkład koronowo-korzeniowy stop złota': '1000 - 1400 PLN',
       'Proteza osiadająca całkowita': 'od 1200 PLN',
-      'Elementy wzmacniające protezę (łuki, siatki) ': 'WYCENA INDYWIDUALNA',
+      'Elementy wzmacniające protezę (łuki, siatki) ': 'wycena indywidualna',
       'Proteza częściowa (za punkt)': '80 PLN',
       'Proteza szkieletowa': 'od 1700 PLN',
       'Naprawa protezy ': 'od 200 PLN',
       'Szyna relaksacyjna': '600 - 1000 PLN',
-      'Usunięcie korony/  wkładu': 'od 200 od 300 PLN',
+      'Usunięcie korony/  wkładu': '200 - 300 PLN',
       'Modele diagnostyczne': 'od 120 PLN',
       'Rejestracja łukiem twarzowym': '100 PLN',
    },
@@ -204,9 +204,10 @@ const appendCennikHideMain = function () {
       returnBtn.classList.add('return');
       section.setAttribute('id', 'ceny')
       section.classList.add('container', 'fadeIn', 'pb-5');
+      ceny.classList.add('container');
 
       for (let i in cennik[name]) {
-         ceny.innerHTML += `<li><span class="action">${i} </span> <span class="price">${cennik[name][i]}</span></li>`
+         ceny.innerHTML += `<li class="row"><span class="ps-4 action col-12 col-md-9">${i} </span> <span class="ps-4 price col-12 col-md-3 d-flex justify-content-start justify-content-md-end align-items-end">${cennik[name][i]}</span></li>`
       }
 
       section.append(returnBtn, ceny);

@@ -35,7 +35,42 @@ textarea{
 h2{
    font-size: 2.2rem;
 }
+canvas{
+   width:100% !important;
+}
 
+#logo{
+   width:130px;
+   height:55px;
+
+   object-fit: contain;
+   object-position: center;
+   /* background-position: center;
+   background-size: cover;
+   background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
+}
+
+
+
+button#submit:focus,
+button#submit:active,
+.btn-sweet-brown:focus,
+.btn-sweet-brown:active{
+   background-color: var(--sweet-brown-dark);
+   border-color: var(--sweet-brown-dark);
+   box-shadow:0 0 0 .25rem var(--sweet-brown-transparent) !important;
+}
+
+button#submit,
+.btn-sweet-brown{
+   background-color: var(--sweet-brown);
+   border-color: var(--sweet-brown);
+}
+button#submit:hover,
+.btn-sweet-brown:hover{
+   background-color: var(--sweet-brown-dark);
+   border-color: var(--sweet-brown-dark);
+}
 
 
 
@@ -60,7 +95,7 @@ h2{
 }
 
 .paragraph{
-   font-size:1rem;
+   font-size:1.4rem;
 } 
 .order-1{
    order: 1;
@@ -133,6 +168,7 @@ h2{
 
 /* CONTENT */
 .card{
+   width:18rem;
    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card:hover{
@@ -196,9 +232,9 @@ h2{
    margin-right:auto;
    margin-left:auto;
 } */
-#content p {
+/* #content p {
    font-size: 1.4rem;
-}
+} */
 #welcome-img{
    position: relative;
    display: flex;
@@ -656,4 +692,3 @@ footer img{
       transform:scale(1) rotate(359deg);
    }
 }
-

@@ -3,13 +3,13 @@ mapboxgl.accessToken = API_KEY;
 const map = new mapboxgl.Map({
    container: 'map',
    style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
-   center: [21.2132904, 52.1622951],
+   center: [21.2123197, 52.1619951],
    zoom: 16.5 // starting zoom
 });
 
 
 new mapboxgl.Marker()
-   .setLngLat([21.2132904, 52.1622951])
+   .setLngLat([21.2123197, 52.1619951])
    // .setPopup(
    //    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: true, offset: 35, maxWidth: 'none' })
    //       .setHTML(`<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>`)
@@ -17,7 +17,7 @@ new mapboxgl.Marker()
    .addTo(map)
 
 new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: false, offset: 35, maxWidth: 'none' })
-   .setLngLat([21.2132904, 52.1622951])
+   .setLngLat([21.2123197, 52.1619951])
    .setHTML('<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>')
    .addTo(map);
 
