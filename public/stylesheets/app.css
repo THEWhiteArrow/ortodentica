@@ -488,10 +488,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 }
 
 /* CHECK THE SUPPORT IN DIFFERENT BROWSERS LATER */
-#mapa #map:hover::after{opacity: 1;}
-#mapa #map.map-activated::after{opacity:0;}
-#mapa #map.map-activated::before{opacity:0;}
-#mapa #map::before{
+#mapa #map:hover:after{opacity: 1;}
+#mapa #map.map-activated:after{opacity:0;}
+#mapa #map.map-activated:before{opacity:0;}
+#mapa #map:before{
    position: absolute;
    content:'';
 
