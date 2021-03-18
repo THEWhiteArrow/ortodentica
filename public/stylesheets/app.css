@@ -462,7 +462,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    background-color: rgb(191, 237, 255);
 
 
-   background-image: URL('../assets/ortodentica/map.png');
+   background-image: url('../assets/ortodentica/map.png');
    background-size: auto;
    background-position: center;
    /* border-left: 2px solid var(--sweet-brown); */
