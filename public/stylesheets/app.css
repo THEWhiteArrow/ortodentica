@@ -460,6 +460,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    height: 100%;
    content-visibility: auto;
    background-color: rgb(191, 237, 255);
+
+
+   background-image: URL('../assets/ortodentica/map.png');
+   background-size: auto;
+   background-position: center;
    /* border-left: 2px solid var(--sweet-brown); */
    /* border-left: none; */
    /* border-right: none; */
@@ -482,12 +487,33 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    margin: 0;
 }
 
-/* #mapa #map::after{
-   content:'Kliknij i odpuść drugim palcem aby przeciągąć. Używaj z conajmniej jednym palcem na ekranie';
+/* CHECK THE SUPPORT IN DIFFERENT BROWSERS LATER */
+#mapa #map:hover::after{opacity: 1;}
+#mapa #map.map-activated::after{opacity:0;}
+#mapa #map.map-activated::before{opacity:0;}
+#mapa #map::before{
+   position: absolute;
+   content:'';
+
+   background-image: url('../assets/ortodentica/controllers.png');
+   background-position: center;
+   
+   margin-top: 8px;
+   margin-left: 8px;
+
+   width:33px;
+   height: 91px;
+}
+#mapa #map::after{
+   position: absolute;
+   font-family: 'Roboto';
+   content:'Kliknij by aktywować mapę';
 
    text-align: center;
    line-height: 2rem;
-   opacity: var(--opacity,0);
+   text-transform: uppercase;
+   opacity: 0;
+   /* opacity: 1; */
    pointer-events: none;
 
    width:100%;
@@ -499,12 +525,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    position: absolute;
    padding-bottom: 20px;
    
-background: #6666667e;
+background: #0505051c;
   color: white; 
-  text-shadow: 0px 1px 10px #000000;
+  text-shadow: 0px 0px 5px #000000;
 
-  transition: opacity 0.35s ease-in-out;
-} */
+  transition: opacity 0.25s ease-in-out;
+
+  -webkit-box-shadow: inset 0px 0px 30px -1px rgba(50, 50, 50, 0.54);
+  -moz-box-shadow:    inset 0px 0px 30px -1px rgba(50, 50, 50, 0.54);
+  box-shadow:         inset 0px 0px 30px -1px rgba(50, 50, 50, 0.54);
+}
 
 
 

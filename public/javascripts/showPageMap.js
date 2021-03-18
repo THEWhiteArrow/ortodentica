@@ -56,7 +56,7 @@ map.on("wheel", event => {
 
 // const touchStopped = (e) => {
 //    if (e.touches.length === 0 || e.touches.length === 2) {
-//       mapElement.style.setProperty('--opacity', '0');
+//       mapElement.style.setProperty('--opacity', '0 !important');
 //       // map.scrollZoom.enable();
 //    }
 // }
