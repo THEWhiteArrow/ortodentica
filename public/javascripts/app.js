@@ -11,7 +11,7 @@ const shownMember = {
 
 
 // cursor.y = 0;
-let isMapAlreadyActivated = false;
+// let isMapAlreadyActivated = false;
 let e, breakPoint, scroll = 0;
 
 const init = () => {
@@ -19,7 +19,7 @@ const init = () => {
    document.location.hash = '';
 
    // window.onload = hideURLParams;
-   // restoreScroll();
+   restoreScroll();
 
    if (!isMobile()) {
       setUpSmoothScrollbars();
@@ -191,45 +191,45 @@ const checkForNavbarChangePoints = (scrollOffset) => {
       // console.log('removed solid-nav')
    }
 
-   if (scrollOffset > document.querySelector('#mapa').offsetTop - window.innerHeight && isMapAlreadyActivated === false) {
-      mapboxgl.accessToken = API_KEY;
+   // if (scrollOffset > document.querySelector('#mapa').offsetTop - window.innerHeight && isMapAlreadyActivated === false) {
+   //    mapboxgl.accessToken = API_KEY;
 
-      const map = new mapboxgl.Map({
-         container: 'map',
-         style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
-         center: [21.2123197, 52.1619951],
-         zoom: 16.5 // starting zoom
-      });
+   //    const map = new mapboxgl.Map({
+   //       container: 'map',
+   //       style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
+   //       center: [21.2123197, 52.1619951],
+   //       zoom: 16.5 // starting zoom
+   //    });
 
 
-      new mapboxgl.Marker()
-         .setLngLat([21.2123197, 52.1619951])
-         // .setPopup(
-         //    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: true, offset: 35, maxWidth: 'none' })
-         //       .setHTML(`<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>`)
-         // )
-         .addTo(map)
+   //    new mapboxgl.Marker()
+   //       .setLngLat([21.2123197, 52.1619951])
+   //       // .setPopup(
+   //       //    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: true, offset: 35, maxWidth: 'none' })
+   //       //       .setHTML(`<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>`)
+   //       // )
+   //       .addTo(map)
 
-      new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: false, offset: 35, maxWidth: 'none' })
-         .setLngLat([21.2123197, 52.1619951])
-         .setHTML('<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>')
-         .addTo(map);
+   //    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: false, offset: 35, maxWidth: 'none' })
+   //       .setLngLat([21.2123197, 52.1619951])
+   //       .setHTML('<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>')
+   //       .addTo(map);
 
-      map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-      map.scrollZoom.disable();
-      map.scrollZoom.setWheelZoomRate(0.01); // Default 1/450
+   //    map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+   //    map.scrollZoom.disable();
+   //    map.scrollZoom.setWheelZoomRate(0.01); // Default 1/450
 
-      map.on("wheel", event => {
-         if (event.originalEvent.ctrlKey) { // Check if CTRL key is pressed
-            event.originalEvent.preventDefault(); // Prevent chrome/firefox default behavior
-            if (!map.scrollZoom._enabled) map.scrollZoom.enable(); // Enable zoom only if it's disabled
-         } else {
-            if (map.scrollZoom._enabled) map.scrollZoom.disable(); // Disable zoom only if it's enabled
-         }
-      });
-      isMapAlreadyActivated = true;
-      console.log('is activated')
-   }
+   //    map.on("wheel", event => {
+   //       if (event.originalEvent.ctrlKey) { // Check if CTRL key is pressed
+   //          event.originalEvent.preventDefault(); // Prevent chrome/firefox default behavior
+   //          if (!map.scrollZoom._enabled) map.scrollZoom.enable(); // Enable zoom only if it's disabled
+   //       } else {
+   //          if (map.scrollZoom._enabled) map.scrollZoom.disable(); // Disable zoom only if it's enabled
+   //       }
+   //    });
+   //    isMapAlreadyActivated = true;
+   //    console.log('is activated')
+   // }
 
 }
 
