@@ -200,6 +200,9 @@ const checkForNavbarChangePoints = (scrollOffset) => {
 }
 
 const initMap = () => {
+   const loadDiv = document.querySelector('.load-div');
+   loadDiv.style.display = "flex";
+   loadDiv.style.opacity = "1";
    mapboxgl.accessToken = API_KEY;
 
    const map = new mapboxgl.Map({
@@ -241,6 +244,22 @@ const initMap = () => {
    mapa.removeEventListener('click', initMap);
    mapa.style.backgroundImage = 'none';
    mapa.classList.add('map-activated');
+
+   let checkLoading = true;
+   map.on('sourcedata', function (e) {
+      if (e.isSourceLoaded && checkLoading) {
+         checkLoading = false;
+         // Do something when the source has finished loading
+
+         loadDiv.style.opacity = '0';
+
+
+         // This removes loading animation elements
+         setTimeout(() => {
+            loadDiv.remove();
+         }, 500);
+      }
+   });
    // getComputedStyle(mapa, 'after').display = 'none';
 }
 
