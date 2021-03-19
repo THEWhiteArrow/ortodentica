@@ -459,7 +459,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    width:100% !important;
    height: 100%;
    content-visibility: auto;
-   background-color: rgb(191, 237, 255);
+   background-color: white;
+   /* background-color: rgb(191, 237, 255); */
 
 
    background-image: url('../assets/ortodentica/map.png');
@@ -541,8 +542,8 @@ background: #0505051c;
 
 
 #mapa #map .load-div{
-   /* pointer-events: none; */
-   display: none;
+   pointer-events: none;
+   display: flex;
    opacity: 0;
 
    z-index: 10;
@@ -553,7 +554,7 @@ background: #0505051c;
    justify-content: center;
    align-items: center;
 
-   transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+   transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #contact,
