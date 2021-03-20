@@ -34,7 +34,12 @@ textarea{
 
 h2{
    font-size: 2.2rem;
+   margin-bottom: 20px;
+   /* text-transform: uppercase; */
 }
+
+
+
 canvas{
    width:100% !important;
 }
@@ -81,8 +86,8 @@ button#submit:hover,
    /* position: relative; */
 }
 .py-adjusted{
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 
 .svg-experience,
@@ -168,7 +173,7 @@ button#submit:hover,
 
 /* CONTENT */
 .card{
-   width:18rem;
+   width:clamp(90%, 90%, 18rem);
    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card:hover{

@@ -239,7 +239,7 @@ const initMap = () => {
       }
    });
    isMapAlreadyActivated = true;
-   console.log('is activated');
+   console.log('map is being activated');
 
    mapa.removeEventListener('click', initMap);
    // mapa.style.backgroundImage = 'none';
@@ -252,7 +252,7 @@ const initMap = () => {
          // Do something when the source has finished loading
 
          loadDiv.style.opacity = '0';
-
+         console.log('map is activated');
 
          // This removes loading animation elements
          setTimeout(() => {

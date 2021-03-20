@@ -198,8 +198,9 @@ const appendCennikHideMain = function () {
       const returnBtn = document.createElement('button');
       const section = document.createElement('section');
 
-      returnBtn.innerHTML = `<svg class="svg-icon" viewBox="0 0 20 20">
-      <path d="M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10"></path>
+      returnBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+    </svg>
       <span>ZOBACZ INNE DZIAŁY STOMATOLOGII</span>`
       returnBtn.classList.add('return');
       section.setAttribute('id', 'ceny')
@@ -207,7 +208,7 @@ const appendCennikHideMain = function () {
       ceny.classList.add('container');
 
       for (let i in cennik[name]) {
-         ceny.innerHTML += `<li class="row"><span class="ps-4 action col-12 col-md-9">${i} </span> <span class="ps-4 price col-12 col-md-3 d-flex justify-content-start justify-content-md-end align-items-end">${cennik[name][i]}</span></li>`
+         ceny.innerHTML += `<li class="row"><span class="ps-4 action col-12 col-md-9">${i} </span> <span class="ps-4 price col-12 col-md-3 d-flex justify-content-end align-items-end">${cennik[name][i]}</span></li>`
       }
 
       section.append(returnBtn, ceny);

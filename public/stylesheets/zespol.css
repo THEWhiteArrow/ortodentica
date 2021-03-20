@@ -29,6 +29,7 @@ svg{
 
 
 
+
 footer{
    width:100%;
    bottom:0;
@@ -115,7 +116,7 @@ h1{
 }
 
 .w-90-till-sm{
-   width: 94%;
+   width: 87%;
 }
 
 .member{
@@ -131,7 +132,7 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 
 .member-data{
    background-color: white;
-   padding:1rem 1rem 1rem 1rem;
+   padding:1rem 1.5rem 1.5rem 1rem;
    border: 3px solid var(--sweet-brown);
 }
 
@@ -142,14 +143,20 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 }
 .member-data h5{
    color: var(--sweet-brown);
+   
+   margin-top: 14px;
+   margin-bottom: 14px;
+   
 }
 .member-pic{
-   object-fit: cover;
+   object-fit:cover;
+   /* height: 400px; */
 
-   margin-top:0 !important;
-   margin-bottom: 0 !important;
-   padding-top: 12.8px;
-   padding-bottom: 12.8px;
+
+
+   /* margin-top:0 !important;
+   margin-bottom: 0 !important; */
+   padding:6px !important;
 }
    
 
@@ -218,14 +225,11 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 }
 
 
+
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-   .member-pic{
 
-      margin-top: 12.8px;
-      margin-bottom: 16px;
-   }
    .w-90-till-sm{
       width:100%;
    }

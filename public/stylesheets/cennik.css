@@ -150,11 +150,18 @@ button.return{
    border: 2px solid var(--sweet-brown);
    padding: 10px 20px;
    font-size: 1.22rem;
+
+   transition: background-color 0.25s ease-in-out;
+}
+
+button.return:hover{
+   background-color: rgb(230, 230, 230)
 }
 
 button.return svg{
+   display: none;
    width:20px;
-   margin-top: 3px;
+   margin-top: 6px;
    margin-right: 10px;
 }
 
@@ -294,6 +301,10 @@ button.return svg{
    main{
       height:clamp(400px,75vh,800px);
    }
+   button.return svg{
+      display: flex;
+   }
+
    .grid-container{
       grid-template-columns:repeat(2,1fr);
       grid-template-rows: repeat(6, 1fr);
@@ -330,6 +341,7 @@ button.return svg{
       width:22px;
       height:22px;
    }
+
 
 }
 
