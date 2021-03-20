@@ -173,9 +173,15 @@ button#submit:hover,
 
 /* CONTENT */
 .card{
-   width:clamp(90%, 90%, 18rem);
+   width:19rem;
+   /* width:clamp(90%, 90%, 18rem) */
    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+   font-size: 18px !important;
 }
+.card h5{
+   padding-bottom: 6px;
+   border-bottom: 2px solid var(--sweet-brown);
+   }
 .card:hover{
    transform: translate3d(0,-10px,0);
 }
@@ -446,7 +452,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* content-visibility: auto; */
    height:clamp(420px,75vh,500px);
   
-   border:2px solid var(--sweet-brown);
+   border:3px solid var(--sweet-brown);
    /* border-left: none;
    border-right: none; */
    
