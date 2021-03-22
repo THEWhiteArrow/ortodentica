@@ -28,7 +28,16 @@ svg{
 }
 
 
+#logo{
+   width:130px;
+   height:55px;
 
+   object-fit: contain;
+   object-position: center;
+   /* background-position: center;
+   background-size: cover;
+   background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
+}
 
 footer{
    width:100%;

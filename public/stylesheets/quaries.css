@@ -18,6 +18,9 @@
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+   #title img{
+      width:300px;
+   }
 
    .row1-img{
       width:400px;
@@ -80,6 +83,9 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+   #title img{
+      width:400px;
+   }
    .w-md-50{
       width: 50% !important;
    }
@@ -238,6 +244,9 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+   #title img{
+      width:470px;
+   }
    .svg-doctors{
       width:600px;
       transform: translate3d(10%,-25.3%,0);

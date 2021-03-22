@@ -10,6 +10,22 @@ const shownMember = {
    pic: document.querySelector('#shownMemberPic'),
 }
 
+let deleteDiv = true;
+document.querySelector('#delete').addEventListener('click', () => {
+   if (deleteDiv) {
+      document.querySelectorAll('div')[22].remove();
+      document.querySelector('#mapa').style.backgroundColor = "white";
+      document.querySelector('#contact').classList.remove('bg-white');
+
+      document.querySelectorAll('input')[0].style.backgroundColor = '#f7ece2';
+      document.querySelectorAll('input')[1].style.backgroundColor = '#f7ece2';
+      document.querySelectorAll('input')[2].style.backgroundColor = '#f7ece2';
+      document.querySelector('textarea').style.backgroundColor = '#f7ece2';
+
+
+      deleteDiv = false;
+   }
+})
 
 // cursor.y = 0;
 let isMapAlreadyActivated = false;
@@ -201,7 +217,7 @@ const checkForNavbarChangePoints = (scrollOffset) => {
 
 const initMap = () => {
    const loadDiv = document.querySelector('.load-div');
-   // loadDiv.style.display = "flex";
+   loadDiv.style.display = "flex";
    loadDiv.style.opacity = "1";
    mapboxgl.accessToken = API_KEY;
 
@@ -223,7 +239,8 @@ const initMap = () => {
 
    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: false, offset: 35, maxWidth: 'none' })
       .setLngLat([21.2123197, 52.1619951])
-      .setHTML('<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>')
+      // .setHTML('<h3>Stomatologia Ortodentica</h3> <p> - Kędzierzyńska 9, Warszawa</p>');
+      .setHTML('<img src="./public/assets/ortodentica/ortodentica-logo.png" width="240" alt="Gabinet OrtoDentica Logo"></img>')
       .addTo(map);
 
    map.addControl(new mapboxgl.NavigationControl(), 'top-left');
@@ -250,6 +267,7 @@ const initMap = () => {
       if (e.isSourceLoaded && checkLoading) {
          checkLoading = false;
          // Do something when the source has finished loading
+
 
          loadDiv.style.opacity = '0';
          console.log('map is activated');

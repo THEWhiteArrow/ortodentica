@@ -126,7 +126,16 @@ footer img{
 
 
 
+#logo{
+   width:130px;
+   height:55px;
 
+   object-fit: contain;
+   object-position: center;
+   /* background-position: center;
+   background-size: cover;
+   background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
+}
 
 section{
    flex:1;
@@ -299,7 +308,7 @@ button.return svg{
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
    main{
-      height:clamp(400px,75vh,800px);
+      height:clamp(400px,72vh,800px);
    }
    button.return svg{
       display: flex;

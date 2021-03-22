@@ -69,6 +69,17 @@ div.scroll-content{
    /* align-items: space-between; */
 }
 
+#logo{
+   width:130px;
+   height:55px;
+
+   object-fit: contain;
+   object-position: center;
+   /* background-position: center;
+   background-size: cover;
+   background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
+}
+
 .color-sweet-brown{
    color: var(--sweet-brown);
 }
