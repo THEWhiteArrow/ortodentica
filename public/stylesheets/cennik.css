@@ -55,7 +55,7 @@ main button{
    display: flex;
    text-transform: uppercase;
    color:var(--sweet-brown);
-   background-color: var(--bone-trasparent);
+   background-color: var(--bone-trasparent-title);
    border:2px solid var(--sweet-brown);   
 
 }
@@ -68,6 +68,8 @@ main button span{
    text-align: center;
    top:50%;
    transform: translate3d(0,-50%,0);
+
+   font-size: 1.25rem;
 
 }
 
@@ -377,15 +379,26 @@ button.return svg{
      "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"
      "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"; */
    }
+   li{
+      font-size: 1.4rem !important;
+   }
+   .nav-link{
+      font-size: 1.15rem;
+   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
+   main button span{
+      font-size: 1.35rem;
+   }
  }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+   main button span{
+      font-size: 1.45rem;
+   }
  }
 
 /* XX-Large devices (larger desktops, 1400px and up) */

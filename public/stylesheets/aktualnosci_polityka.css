@@ -1,0 +1,274 @@
+@font-face {
+   font-family: 'Tinos';
+   src: url('../fonts/Tinos-Regular.ttf');
+}
+*{
+    box-sizing: border-box !important;
+}
+html{
+   scroll-behavior: auto;
+   scroll-behavior: smooth;
+   min-height: 100vh;
+   height: 100%;
+}
+
+body{
+   color:#222C00ff;
+   position: relative;
+   height: 100vh;
+   font-family: 'Tinos', serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+}
+svg{
+   height:auto;
+}
+footer{
+   /* position: fixed; */
+   width:100%;
+   bottom:0;
+   background-color: #444444;
+   color:white;
+}
+footer a{
+   color: white;
+   /* text-transform: uppercase; */
+   /* text-decoration: none;
+   border-bottom:1px solid white;
+   width:fit-content; */
+}
+
+footer a:hover{
+   color: var(--sweet-brown);
+}
+
+footer img{
+   margin-left: 2px;
+   margin-top: -4px;
+}
+
+button.shadow{
+   -webkit-box-shadow: 0px 8px 13px 0px rgba(50, 50, 50, 0.25);
+   -moz-box-shadow:    0px 8px 13px 0px rgba(50, 50, 50, 0.25);
+   box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
+}
+
+
+
+
+div.scroll-content{
+   min-height: 100vh !important;
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+
+   justify-content: space-between;
+   /* align-items: space-between; */
+}
+
+#logo{
+   width:130px;
+   height:55px;
+
+   object-fit: contain;
+   object-position: center;
+   /* background-position: center;
+   background-size: cover;
+   background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
+}
+
+.bg-transparent{
+   background-color: #f5d9bead !important;
+}
+.bg-transparent-body{
+   background-color: #fff6f0 !important;
+}
+
+.color-sweet-brown{
+   color: var(--sweet-brown);
+}
+.bg-bone{
+   background-color: var(--bone);
+}
+.bg-sweet-brown{
+   background-color: var(--sweet-brown);
+}
+.break{
+   height: 2rem !important;
+
+}
+.nav-gradient{
+   will-change: height, background-color, backdrop-filter, border-bottom;
+   width:100%;
+   z-index: 100;
+   align-items: flex-start;
+
+
+   background-color: rgba(255, 255, 255, 0.7);
+   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
+
+   transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+}
+.nav-link{
+   color:#222C00ff !important;
+}
+.nav-link.active{
+   color:#292d31 !important;
+}
+.solid-nav{
+   background-color:rgb(255, 255, 255);
+   border-bottom: 1px solid var(--sweet-brown);
+}
+
+main#aktualnosci{
+   /* flex:1; */
+   /* min-height:92vh; */
+   flex:1;
+   display: flex;
+   flex-direction: column;
+}
+
+/* ADVERTISEMENT */
+#ads{
+   /* border: 2px solid #222C00ff; */
+   border-left: none;
+   border-top: none;
+
+   opacity: 1;
+   font-size: 0.84rem;
+   /* font-size: 1rem; */
+   position: fixed;
+   left:0;  
+   top:100vh;
+   transform: translate3d(0,-130%,0);
+   display: flex;
+   flex-direction: column;
+   
+   z-index: 1000;
+   /* background-color: #f7ece2; */
+   background-color: var(--slate-gray);
+
+   height:min-content;
+   
+   transition: opacity 0.5s ease-in-out;
+}
+
+#ads a{
+   /* border-top: 2px solid #222C00ff; */
+   color:white;
+   display: flex;
+   justify-content: center !important;
+   align-items: center !important;
+   text-decoration: none;
+   /* padding:7px 7px 7px 5px; */
+   writing-mode: vertical-rl;
+   text-orientation: upright;
+
+}
+
+#ads a:nth-of-type(1){
+   padding:10px 2px;
+}
+#ads a:nth-of-type(2){
+   background-color: var(--slate-gray-dark);
+   height:24px;
+   
+}
+#ads a:nth-of-type(3){
+   background-color: var(--slate-gray-dark-extra);
+   height:24px;
+   
+}
+
+#ads svg{
+   /* box-sizing: content-box !important; */
+   /* padding:6px; */
+   /* display: flex; */
+   width:14px;
+   height:14px;
+
+   /* width:18px; */
+}
+
+
+/* DOKUMENTY */
+.bi-file-earmark-arrow-down{
+   margin:0.25rem 0 0 0.5rem;
+   width:15px;
+}
+.bi-search{
+   width: 35px;
+   height:35px;
+   opacity: 0;
+   color:#212529;
+   position: absolute;
+
+   top:50%;left:50%;
+      transform: translate3d(-40%,-40%,0);
+      transform-origin: center;
+
+   transition: all 0.20s ease-in-out;
+}
+
+
+
+/* #regulamin{
+   margin-bottom: 670px !important;
+} */
+
+
+/* MIN */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+   #ads a{
+      font-size: 1rem;
+      /* padding:7px 7px 7px 5px; */
+   }
+
+   #ads a:nth-of-type(1){
+      padding:10px 6px;
+   }
+   #ads a:nth-of-type(2){
+      height:36px;
+      
+   }
+   #ads a:nth-of-type(3){
+      height:36px;
+      
+   }
+
+   #ads svg{
+      width:22px;
+      height:22px;
+   }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+   .nav-link{
+      font-size: 1.15rem;
+   }
+   /* #regulamin{
+      margin-bottom: 400px !important;
+   } */
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }

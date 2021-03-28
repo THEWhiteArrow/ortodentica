@@ -32,6 +32,10 @@ textarea{
    height:150px;
 }
 
+/* textarea,input{
+   background-color: #ffffffad !important;
+} */
+
 h2{
    font-size: 2.2rem;
    margin-bottom: 20px;
@@ -50,6 +54,8 @@ canvas{
 
    object-fit: contain;
    object-position: center;
+
+
    /* background-position: center;
    background-size: cover;
    background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
@@ -85,10 +91,12 @@ button#submit:hover,
    z-index: 5 !important;
    /* position: relative; */
 }
+
 .py-adjusted{
-  padding-top: 75px;
-  padding-bottom: 75px;
-}
+   padding-top: 40px;
+   padding-bottom: 40px;
+ }
+
 
 .svg-experience,
 .svg-doctors,
@@ -138,7 +146,7 @@ button#submit:hover,
    flex-direction: column;
 }
 .bg-bone{
-   background-color: var(--bone);
+   background-color: var(--bone-trasparent);
 }
 .bg-bone-transparent{
    background-color: var(--bone-transparent);
@@ -173,25 +181,30 @@ button#submit:hover,
 
 /* CONTENT */
 .card{
-   width:19rem;
+   width:min(19rem,100%);
    /* width:clamp(90%, 90%, 18rem) */
    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
    font-size: 18px !important;
 }
+
+
 .card h5{
    padding-bottom: 6px;
    border-bottom: 2px solid var(--sweet-brown);
    }
-.card:hover{
+/* .card:hover{
    transform: translate3d(0,-10px,0);
-}
+} */
+
+
 
 #title{
-   transform: translateY(-35%);
-   background-color: var(--bone-trasparent);
+   transform: translateY(-15%);
+   background-color: var(--bone-trasparent-title) !important;
    border: 2px solid var(--sweet-brown);
    border-radius: 8px;
    backdrop-filter: blur(3px);
+   
 }
 #title img{
    width:180px;
@@ -202,14 +215,14 @@ button#submit:hover,
    -webkit-box-shadow: 0px 0px 10px 2px rgba(110, 109, 109, 0.048);
    box-shadow: 0px 0px 10px 2px rgba(110, 109, 109, 0.048);
    border-radius: 50%;
-   border:1px solid var(--sweet-brown);
+   border:2px solid var(--sweet-brown);
    width:70px;
    height: 70px;
    position: absolute;
    bottom:10%;left:50%;
 
    color: var(--sweet-brown);
-   background-color: var(--bone-trasparent);
+   background-color: var(--bone-trasparent-title);
    backdrop-filter: blur(3px);
 
    display: flex;
@@ -218,12 +231,23 @@ button#submit:hover,
 
    animation:moveDown 6s ease-in-out 0.5s infinite both;
 }
-#showMore svg{
-   width:100%;
-   height: 65%;
+#showMore .arrow{
+   width:55%;
+   height:55%;
+
+   /* height: 65%; */
+   margin: auto auto auto auto !important;
+   background-image: url('../svgs/down_arrow_empty.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   transform: translate3d(0,2.5px,0);
+
+   transition: background-image 0.1s ease-in-out;
 }
-#showMore svg:hover{
-   animation:rotateHover 1s ease-out;
+#showMore:hover .arrow{
+   background-image: url('../svgs/down_arrow_filled.svg');
+   /* animation:rotateHover 1s ease-out; */
 }
 #showMore:hover{
    animation-play-state:paused;
@@ -290,16 +314,16 @@ button#submit:hover,
 
 .space{
    width:100%;
-   height: 20px;
+   height: 50px;
    /* background: rgb(255,255,255);
 background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235, 215, 196, 0) 100%);
 background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,0) 100%);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,0) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebd7c4",GradientType=1); */
-background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebd7c4",GradientType=1);
+background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, #f5d9bead 100%);
+background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, #f5d9bead 100%);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #f5d9bead 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f5d9bead",GradientType=1);
 }
 
 .upsidedown{
@@ -479,7 +503,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    /* background-color: rgb(191, 237, 255); */
 
 
-   background-image: url('../assets/ortodentica/map.png');
+   background-image: url('../assets/ortodentica/map-img.png');
    background-size: auto;
    background-position: center;
    /* border-left: 2px solid var(--sweet-brown); */
@@ -528,7 +552,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    z-index: 20 !important;
    position: absolute;
    font-family: 'Roboto';
+   
    content:'Kliknij by aktywować mapę';
+
+   
 
    text-align: center;
    line-height: 2rem;

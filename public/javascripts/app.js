@@ -3,33 +3,15 @@ const mapa = document.querySelector('#map');
 const ads = document.querySelector('#ads');
 const welcomeImg = document.querySelector('#welcome-img');
 const cursor = document.querySelector('#cursor');
-const members = document.querySelectorAll('.member');
-const shownMember = {
-   name: document.querySelector('#shownMemberName'),
-   info: document.querySelector('#shownMemberInfo'),
-   pic: document.querySelector('#shownMemberPic'),
-}
-
-let deleteDiv = true;
-document.querySelector('#delete').addEventListener('click', () => {
-   if (deleteDiv) {
-      document.querySelectorAll('div')[22].remove();
-      document.querySelector('#mapa').style.backgroundColor = "white";
-      document.querySelector('#contact').classList.remove('bg-white');
-
-      document.querySelectorAll('input')[0].style.backgroundColor = '#f7ece2';
-      document.querySelectorAll('input')[1].style.backgroundColor = '#f7ece2';
-      document.querySelectorAll('input')[2].style.backgroundColor = '#f7ece2';
-      document.querySelector('textarea').style.backgroundColor = '#f7ece2';
 
 
-      deleteDiv = false;
-   }
-})
+
 
 // cursor.y = 0;
 let isMapAlreadyActivated = false;
 let e, breakPoint, scroll = 0;
+
+let defaultOffsetTop = 40;
 
 const init = () => {
    // DELETE ALL THE HASHES
@@ -40,12 +22,12 @@ const init = () => {
 
    if (!isMobile()) {
       setUpSmoothScrollbars();
-
       // setUpCursor();
       console.log('mouse device');
    } else {
       setUpScrollListener(document);
       scrollOnQuery(window);
+      setUpLinks(window);
       // cursor.removed = true;
       // cursor.remove();
       console.log('touch device');
@@ -65,25 +47,37 @@ const scrollOnQuery = (scrollbar) => {
 
       setTimeout(() => {
          if (urlParam.indexOf('q=aktualnosci') !== -1) {
-            scrollbar.scrollIntoView(document.querySelector('#aktualnosci'));
+            scrollbar.scrollIntoView(document.querySelector('#aktualnosci'), {
+               offsetTop: defaultOffsetTop,
+               alignToTop: true,
+            });
          } else if (urlParam.indexOf('q=o-nas') !== -1) {
-            scrollbar.scrollIntoView(document.querySelector('#o-nas'));
+            scrollbar.scrollIntoView(document.querySelector('#content'), {
+               offsetTop: defaultOffsetTop,
+               alignToTop: true,
+            });
          } else if (urlParam.indexOf('q=mapa') !== -1) {
-            scrollbar.scrollIntoView(document.querySelector('#mapa'));
+            scrollbar.scrollIntoView(document.querySelector('#mapa'), {
+               offsetTop: defaultOffsetTop,
+               alignToTop: true,
+            });
          } else if (urlParam.indexOf('q=contact') !== -1) {
-            scrollbar.scrollIntoView(document.querySelector('#contact'));
+            scrollbar.scrollIntoView(document.querySelector('#contact'), {
+               offsetTop: defaultOffsetTop,
+               alignToTop: true,
+            });
          }
       }, 500);
    } else {
       setTimeout(() => {
          if (urlParam.indexOf('q=aktualnosci') !== -1) {
-            scrollbar.scroll(0, document.querySelector('#aktualnosci').offsetTop + window.innerHeight);
+            scrollbar.scroll(0, document.querySelector('#aktualnosci').offsetTop - defaultOffsetTop);
          } else if (urlParam.indexOf('q=o-nas') !== -1) {
-            scrollbar.scroll(0, document.querySelector('#o-nas').offsetTop + window.innerHeight);
+            scrollbar.scroll(0, document.querySelector('#content').offsetTop - defaultOffsetTop);
          } else if (urlParam.indexOf('q=mapa') !== -1) {
-            scrollbar.scroll(0, document.querySelector('#mapa').offsetTop + window.innerHeight);
+            scrollbar.scroll(0, document.querySelector('#mapa').offsetTop - defaultOffsetTop);
          } else if (urlParam.indexOf('q=contact') !== -1) {
-            scrollbar.scroll(0, document.querySelector('#contact').offsetTop + window.innerHeight);
+            scrollbar.scroll(0, document.querySelector('#contact').offsetTop - defaultOffsetTop);
          }
       }, 500);
    }
@@ -101,29 +95,6 @@ const hideURLParams = () => {
          history.replaceState(null, document.getElementsByTagName("title")[0].innerHTML, window.location.pathname);
       }
    }
-}
-
-const setUpShownMember = () => {
-   let n = 0;
-   shownMember.pic.style.backgroundImage = getComputedStyle(members[n]).backgroundImage;
-   shownMember.name.innerText = data[`member${n + 1}`].name;
-   shownMember.info.innerText = data[`member${n + 1}`].info;
-}
-
-const setUpMembersTiles = () => {
-   members.forEach((member, i) => {
-      // member.style.backgroundImage = `url("./public/assets/team/${i + 1}-min.jpg")`;
-      member.addEventListener('click', () => {
-
-         shownMember.pic.style.backgroundImage = getComputedStyle(member).backgroundImage;
-         // shownMember.pic.style.backgroundPositionX = getComputedStyle(member).backgroundPositionX;
-         // shownMember.pic.style.backgroundPositionY = getComputedStyle(member).backgroundPositionY;
-
-         shownMember.name.innerText = data[`member${i + 1}`].name;
-         shownMember.info.innerText = data[`member${i + 1}`].info;
-
-      })
-   })
 }
 
 const setUpSmoothScrollbars = () => {
@@ -174,14 +145,16 @@ const setUpLinks = (scrollbar) => {
       if (!link.classList.contains('not-scroll')) {
          link.addEventListener('click', (e) => {
             e.preventDefault();
-            let offsetTop = 0;
             // link.getAttribute('href') === '#o-nas' ? offsetTop = 100 : null;
-            scrollbar.scrollIntoView(document.querySelector(link.getAttribute('href')), {
-               // offsetLeft: 34,
-               offsetTop: offsetTop || 0,
-               alignToTop: true,
-               // onlyScrollIfNeeded: true,
-            });
+            if (scrollbar !== window) {
+               scrollbar.scrollIntoView(document.querySelector(link.getAttribute('href')), {
+                  offsetTop: defaultOffsetTop,
+                  alignToTop: true,
+               });
+            } else {
+               const href = link.getAttribute('href');
+               scrollbar.scroll(0, document.querySelector(`${href}`).offsetTop - defaultOffsetTop);
+            }
          })
       }
    }
@@ -229,7 +202,7 @@ const initMap = () => {
    });
 
 
-   new mapboxgl.Marker()
+   const marker = new mapboxgl.Marker()
       .setLngLat([21.2123197, 52.1619951])
       // .setPopup(
       //    new mapboxgl.Popup({ closeOnClick: false, closeButton: false, closeOnMove: false, focusAfterOpen: true, offset: 35, maxWidth: 'none' })
@@ -257,6 +230,16 @@ const initMap = () => {
    });
    isMapAlreadyActivated = true;
    console.log('map is being activated');
+
+   const setMarkerColor = (marker, color) => {
+      let markerElement = marker.getElement();
+      markerElement
+         .querySelectorAll('svg g[fill="' + marker._color + '"]')[0]
+         .setAttribute("fill", color);
+      marker._color = color;
+   }
+
+   setMarkerColor(marker, '#9D3C31');
 
    mapa.removeEventListener('click', initMap);
    // mapa.style.backgroundImage = 'none';
@@ -305,22 +288,7 @@ const setUpScrollListener = (scrollbar) => {
    }
 }
 
-const setUpCursor = () => {
-   document.addEventListener('mousemove', () => {
-      e = window.event;
-      cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
-      cursor.style.setProperty('--mleft', e.clientX - 22.5 + 'px');
 
-   });
-
-   document.addEventListener('mousedown', () => {
-      cursor.classList.add('mouse-down');
-   });
-
-   document.addEventListener('mouseup', () => {
-      cursor.classList.remove('mouse-down');
-   });
-}
 
 const isMobile = () => {
    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -329,5 +297,11 @@ const isMobile = () => {
 const easyMode = () => {
    Scrollbar.destroyAll();
 }
+
+// const updateOnResize = () => {
+//    window.addEventListener('resize', () => {
+//       window.innerWidth >= 768 ? defaultOffsetTop = 0 : defaultOffsetTop = 50;
+//    })
+// }
 
 init();

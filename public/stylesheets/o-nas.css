@@ -49,11 +49,6 @@ footer img{
    margin-top: -4px;
 }
 
-button.shadow{
-   -webkit-box-shadow: 0px 8px 13px 0px rgba(50, 50, 50, 0.25);
-   -moz-box-shadow:    0px 8px 13px 0px rgba(50, 50, 50, 0.25);
-   box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
-}
 
 
 
@@ -78,6 +73,47 @@ div.scroll-content{
    /* background-position: center;
    background-size: cover;
    background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
+}
+
+hr[role="tournament6"] {
+   border: 0px solid;
+   height: 2px;
+   background-color: #9D3C31ff;
+   /* background-image: linear-gradient(to right, rgb(157, 60, 49), var(--sweet-brown), rgb(157, 60, 49)); */
+   margin: 32px 0px;
+   display: block;
+}
+hr[role="tournament6"]::before {
+   position: absolute;
+   background-color: #f7ece2e0;
+   border: 2px solid;
+   border-color: var(--sweet-brown);
+   padding: 10px;
+   transform: rotate(45deg);
+   left: 50%;
+   margin: -11px 0px 0px -22px;
+   content: "";
+}
+
+.maszyna{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.my-auto{
+   margin-top: auto !important;
+   margin-bottom: auto !important;
+}
+.border-sweet{
+   border: 2px solid var(--sweet-brown);
+}
+
+.bg-transparent{
+   background-color: #f5d9bead !important;
+}
+.bg-transparent-body{
+   background-color: #fff6f0 !important;
 }
 
 .color-sweet-brown{
@@ -119,12 +155,6 @@ div.scroll-content{
    border-bottom: 1px solid var(--sweet-brown);
 }
 
-main#aktualnosci{
-   /* flex:1; */
-   flex:1;
-   display: flex;
-   flex-direction: column;
-}
 
 /* ADVERTISEMENT */
 #ads{
@@ -188,36 +218,79 @@ main#aktualnosci{
    /* width:18px; */
 }
 
-
-/* DOKUMENTY */
-.bi-file-earmark-arrow-down{
-   margin:0.25rem 0 0 0.5rem;
-   width:15px;
-}
-.bi-search{
-   width: 35px;
-   height:35px;
-   opacity: 0;
-   color:#212529;
-   position: absolute;
-
-   top:50%;left:50%;
-      transform: translate3d(-40%,-40%,0);
-      transform-origin: center;
-
-   transition: all 0.20s ease-in-out;
+.row{
+   padding-top: 50px;
+   padding-bottom: 50px;
 }
 
+.pic{
+   /* min-height: 400px; */
+   height: 100%;
+   background-position: center;
+   /* background-size: cover; */
+   background-size: contain;
+   background-repeat: no-repeat;
+}
 
+.data{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.data h3{
+   color: var(--sweet-brown);
+}
+.data p{
+   font-size: 18px;
+}
+
+.tomograf{
+   background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0001.jpg');
+}
+
+.mikroskop{
+   background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0006.jpg');
+}
+.kamera{
+   background-image: url('../assets/maszyny/orginal/kamera_C-U2_03.png');
+}
+.endoradar{
+   background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0007.jpg');
+}
+.lampa{
+   background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0005.jpg');
+}
+.stern{
+   background-image: url('../assets/maszyny/orginal/IMG-20210319-WA0008.jpg');
+}
+.radio{
+   background-image: url('../assets/maszyny/orginal/RXDC_Extend_01.png');
+}
+.pic-container{
+   height:300px;
+}
 
 /* #regulamin{
    margin-bottom: 670px !important;
 } */
-
+.width-till-md-90{
+   width:90%;
+   margin-left: auto;
+   margin-right: auto;
+}
 
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+   .pic-container{
+      height:350px;
+   }
+
+   
+
+   .width-till-sm-90{
+      width:100%;
+   }
    #ads a{
       font-size: 1rem;
       /* padding:7px 7px 7px 5px; */
@@ -247,7 +320,15 @@ main#aktualnosci{
    /* #regulamin{
       margin-bottom: 400px !important;
    } */
-
+   .nav-link{
+      font-size: 1.15rem;
+   }
+   .data h3{
+      font-size: 2.1rem;
+   }
+   .data p{
+      font-size: 22px;
+   }
 }
 
 /* Large devices (desktops, 992px and up) */

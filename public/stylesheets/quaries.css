@@ -15,6 +15,8 @@
 
 }
 
+
+
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -83,15 +85,27 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+
+   .py-adjusted{
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+
+
+   .card-body{
+   
+      min-height: 370px;
+   }
+
    #title img{
       width:400px;
    }
    .w-md-50{
       width: 50% !important;
    }
-   /* .nav-link{
-      font-size: 1.2rem;
-   } */
+   .nav-link{
+      font-size: 1.15rem;
+   }
 
    .svg-doctors{
       z-index: 1 !important;
