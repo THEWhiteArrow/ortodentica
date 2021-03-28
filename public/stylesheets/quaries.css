@@ -19,6 +19,18 @@
 
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 264px) { 
+   #title img{
+      width:200px;
+   }
+}
+@media (min-width: 364px) { 
+   #title img{
+      width:300px;
+   }
+}
+
+
 @media (min-width: 576px) { 
    #title img{
       width:300px;
