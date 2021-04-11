@@ -1,4 +1,7 @@
 const navbar = document.querySelector('#navbar');
+const navbarCollapse = document.querySelector('#navbarNavAltMarkup');
+const navbarToggler = document.querySelector('.navbar-toggler');
+
 const mapa = document.querySelector('#map');
 const ads = document.querySelector('#ads');
 const welcomeImg = document.querySelector('#welcome-img');
@@ -9,7 +12,7 @@ const cursor = document.querySelector('#cursor');
 
 // cursor.y = 0;
 let isMapAlreadyActivated = false;
-let e, breakPoint, scroll = 0;
+let e, breakPoint = welcomeImg.offsetHeight - 456, scroll = 0;
 
 let defaultOffsetTop = 40;
 
@@ -140,11 +143,16 @@ const setUpSmoothScrollbars = () => {
 }
 
 const setUpLinks = (scrollbar) => {
+   navbarToggler.addEventListener('click', () => {
+      scroll < breakPoint ? navbar.classList.toggle('solid-nav') : null;
+   });
+
    const links = document.querySelectorAll('a');
    for (let link of links) {
       if (!link.classList.contains('not-scroll')) {
          link.addEventListener('click', (e) => {
             e.preventDefault();
+            navbarCollapse.classList.remove('show');
             // link.getAttribute('href') === '#o-nas' ? offsetTop = 100 : null;
             if (scrollbar !== window) {
                scrollbar.scrollIntoView(document.querySelector(link.getAttribute('href')), {
@@ -270,6 +278,7 @@ const initMap = () => {
 const setUpScrollListener = (scrollbar) => {
 
    if (scrollbar === document) {
+
       document.addEventListener('scroll', () => {
          scroll = this.scrollY;
          checkForNavbarChangePoints(scroll);

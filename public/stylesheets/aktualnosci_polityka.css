@@ -216,7 +216,9 @@ main#aktualnosci{
    transition: all 0.20s ease-in-out;
 }
 
-
+.w-90-till-sm{
+   width: 87%;
+}
 
 /* #regulamin{
    margin-bottom: 670px !important;
@@ -226,6 +228,9 @@ main#aktualnosci{
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+   .w-90-till-sm{
+      width: 100%;
+   }
    #ads a{
       font-size: 1rem;
       /* padding:7px 7px 7px 5px; */

@@ -27,6 +27,10 @@ svg{
    height:auto;
 }
 
+h1{
+   /* text-transform: uppercase; */
+   color:var(--sweet-brown);
+}
 
 #logo{
    width:130px;
@@ -63,7 +67,7 @@ footer img{
    margin-top: -4px;
 }
 
-p{font-size: 1.1rem;}
+.member-data p{font-size: 1.1rem;}
 
 .bg-sweet-brown{
    background-color: var(--sweet-brown);
@@ -121,10 +125,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebd7c4",GradientType=1);
 }
 
-h1{
-   text-transform: uppercase;
-   color:var(--sweet-brown);
-}
+
 
 .w-90-till-sm{
    width: 87%;
@@ -282,7 +283,7 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
-   p{font-size: 1.15rem;}
+   .member-data p{font-size: 1.15rem;}
 
    .w-90-till-sm{
       width:100%;
@@ -331,7 +332,7 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-   p{
+   .member-data p{
       font-size: 1.18rem;
    }
    h3{
@@ -354,7 +355,7 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-   p{
+   .member-data p{
       margin-top:2rem;
       margin-bottom:4px;
       font-size: 1.2rem;
@@ -363,7 +364,7 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {  
-   p{
+   .member-data p{
       font-size: 1.3rem;
    }
 }

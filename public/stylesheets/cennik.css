@@ -57,8 +57,16 @@ main button{
    color:var(--sweet-brown);
    background-color: var(--bone-trasparent-title);
    border:2px solid var(--sweet-brown);   
-
+transition: 0.10s ease-in-out;
 }
+
+.grid-container button:hover{
+   background-color: var(--sweet-brown);
+   /* color: var(--bone); */
+   color: white;
+   transition: 0.25s ease-in-out;
+}
+
 
 main button span{
    position: absolute;
@@ -287,7 +295,6 @@ button.return svg{
    "jedenascie"
    "dwanascie";
 
-
  }
  .jeden { grid-area: jeden; }
  .dwa { grid-area: dwa; }
@@ -301,7 +308,6 @@ button.return svg{
  .dziesiec { grid-area: dziesiec; }
  .jedenascie { grid-area: jedenascie; }
  .dwanascie { grid-area: dwanascie; }
-
 
 
 

@@ -240,7 +240,7 @@ hr[role="tournament6"]::before {
 .data h3{
    color: var(--sweet-brown);
 }
-.data p{
+.data p,p.intro{
    font-size: 18px;
 }
 
@@ -326,7 +326,7 @@ hr[role="tournament6"]::before {
    .data h3{
       font-size: 2.1rem;
    }
-   .data p{
+   .data p,p.intro{
       font-size: 22px;
    }
 }
