@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
    font-family: 'Tinos';
    src: url('../fonts/Tinos-Regular.ttf');
 }
 *{
-    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
 }
 html{
    scroll-behavior: auto;
@@ -36,8 +44,11 @@ h1{
    width:130px;
    height:55px;
 
-   object-fit: contain;
-   object-position: center;
+   -o-object-fit: contain;
+
+      object-fit: contain;
+   -o-object-position: center;
+      object-position: center;
    /* background-position: center;
    background-size: cover;
    background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
@@ -77,8 +88,14 @@ footer img{
    will-change: height, background-color, backdrop-filter, border-bottom;
    width:100%;
    z-index: 100;
-   align-items: flex-start;
+   -webkit-box-align: start;
+       -ms-flex-align: start;
+           align-items: flex-start;
    background-color: rgba(255, 255, 255, 1);
+
+   -webkit-transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+
+   -o-transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
 
    transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
 }
@@ -106,7 +123,9 @@ hr[role="tournament6"]::before {
    border: 1px solid;
    border-color: var(--sweet-brown);
    padding: 10px;
-   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+       -ms-transform: rotate(45deg);
+           transform: rotate(45deg);
    left: 50%;
    margin: -10px 0px 0px -22px;
    content: "";
@@ -119,8 +138,8 @@ background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235, 215, 
 background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,0) 100%);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,0) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebd7c4",GradientType=1); */
-background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(235,215,196,1)));
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,215,196,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebd7c4",GradientType=1);
 }
@@ -141,7 +160,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    
    background-color: var(--sweet-brown);
    -webkit-box-shadow: 0px 8px 13px 0px rgba(50, 50, 50, 0.25);
--moz-box-shadow:    0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 }
 
@@ -169,7 +187,8 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 }
 .member-pic{
    /* display: none; */
-   object-fit:cover;
+   -o-object-fit:cover;
+      object-fit:cover;
    height: 250px;
    width:100%;
 
@@ -183,13 +202,16 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 .obj-top{
    
    /* height: 400px; */
-   object-position: top;
+   -o-object-position: top;
+      object-position: top;
    
 }
 
 .obj-agn{
 
-   object-position: top left;
+   -o-object-position: top left;
+
+      object-position: top left;
 }
 
 
@@ -205,13 +227,23 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
    position: fixed;
    left:0;  
    top:100vh;
-   transform: translate3d(0,-130%,0);
+   -webkit-transform: translate3d(0,-130%,0);
+           transform: translate3d(0,-130%,0);
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    
    z-index: 1000;
    /* background-color: #f7ece2; */
    background-color: var(--slate-gray);
+
+   height:-webkit-min-content;
+
+   height:-moz-min-content;
 
    height:min-content;
    
@@ -221,13 +253,22 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 #ads a{
    /* border-top: 2px solid #222C00ff; */
    color:white;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: center !important;
-   align-items: center !important;
+   -webkit-box-pack: center !important;
+       -ms-flex-pack: center !important;
+           justify-content: center !important;
+   -webkit-box-align: center !important;
+       -ms-flex-align: center !important;
+           align-items: center !important;
    text-decoration: none;
    /* padding:7px 7px 7px 5px; */
-   writing-mode: vertical-rl;
-   text-orientation: upright;
+   -webkit-writing-mode: vertical-rl;
+       -ms-writing-mode: tb-rl;
+           writing-mode: vertical-rl;
+   -webkit-text-orientation: upright;
+           text-orientation: upright;
 
 }
 

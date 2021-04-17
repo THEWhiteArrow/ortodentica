@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
    font-family: 'Tinos';
    src: url('../fonts/Tinos-Regular.ttf');
 }
 *{
-    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
 }
 html{
    scroll-behavior: auto;
@@ -17,9 +25,16 @@ body{
    position: relative;
    height: 100vh;
    font-family: 'Tinos', serif;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
 
 }
 svg{
@@ -51,7 +66,6 @@ footer img{
 
 button.shadow{
    -webkit-box-shadow: 0px 8px 13px 0px rgba(50, 50, 50, 0.25);
-   -moz-box-shadow:    0px 8px 13px 0px rgba(50, 50, 50, 0.25);
    box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 }
 
@@ -62,10 +76,21 @@ div.scroll-content{
    min-height: 100vh !important;
    position: relative;
 
-   display: flex;
-   flex-direction: column;
+   display: -webkit-box;
 
-   justify-content: space-between;
+   display: -ms-flexbox;
+
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+
+   -webkit-box-pack: justify;
+
+       -ms-flex-pack: justify;
+
+           justify-content: space-between;
    /* align-items: space-between; */
 }
 
@@ -73,8 +98,11 @@ div.scroll-content{
    width:130px;
    height:55px;
 
-   object-fit: contain;
-   object-position: center;
+   -o-object-fit: contain;
+
+      object-fit: contain;
+   -o-object-position: center;
+      object-position: center;
    /* background-position: center;
    background-size: cover;
    background-image: url('../assets/ortodentica/Ortodentica-logo-czarne\ \(1\)-1.jpg'); */
@@ -104,14 +132,20 @@ div.scroll-content{
    will-change: height, background-color, backdrop-filter, border-bottom;
    width:100%;
    z-index: 100;
-   align-items: flex-start;
+   -webkit-box-align: start;
+       -ms-flex-align: start;
+           align-items: flex-start;
 
 
    background-color: rgba(255, 255, 255, 0.7);
-   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
-   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+   background: -o-linear-gradient(top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
    background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
+
+   -webkit-transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+
+   -o-transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
 
    transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
 }
@@ -129,9 +163,16 @@ div.scroll-content{
 main#aktualnosci{
    /* flex:1; */
    /* min-height:92vh; */
-   flex:1;
+   -webkit-box-flex:1;
+       -ms-flex:1;
+           flex:1;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
 }
 
 /* ADVERTISEMENT */
@@ -146,15 +187,29 @@ main#aktualnosci{
    position: fixed;
    left:0;  
    top:100vh;
-   transform: translate3d(0,-130%,0);
+   -webkit-transform: translate3d(0,-130%,0);
+           transform: translate3d(0,-130%,0);
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    
    z-index: 1000;
    /* background-color: #f7ece2; */
    background-color: var(--slate-gray);
 
+   height:-webkit-min-content;
+
+   height:-moz-min-content;
+
    height:min-content;
+   
+   -webkit-transition: opacity 0.5s ease-in-out;
+   
+   -o-transition: opacity 0.5s ease-in-out;
    
    transition: opacity 0.5s ease-in-out;
 }
@@ -162,13 +217,22 @@ main#aktualnosci{
 #ads a{
    /* border-top: 2px solid #222C00ff; */
    color:white;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: center !important;
-   align-items: center !important;
+   -webkit-box-pack: center !important;
+       -ms-flex-pack: center !important;
+           justify-content: center !important;
+   -webkit-box-align: center !important;
+       -ms-flex-align: center !important;
+           align-items: center !important;
    text-decoration: none;
    /* padding:7px 7px 7px 5px; */
-   writing-mode: vertical-rl;
-   text-orientation: upright;
+   -webkit-writing-mode: vertical-rl;
+       -ms-writing-mode: tb-rl;
+           writing-mode: vertical-rl;
+   -webkit-text-orientation: upright;
+           text-orientation: upright;
 
 }
 
@@ -210,8 +274,15 @@ main#aktualnosci{
    position: absolute;
 
    top:50%;left:50%;
-      transform: translate3d(-40%,-40%,0);
-      transform-origin: center;
+      -webkit-transform: translate3d(-40%,-40%,0);
+              transform: translate3d(-40%,-40%,0);
+      -webkit-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+
+   -webkit-transition: all 0.20s ease-in-out;
+
+   -o-transition: all 0.20s ease-in-out;
 
    transition: all 0.20s ease-in-out;
 }
