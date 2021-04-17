@@ -36,7 +36,7 @@ h1{
    text-align: center;
    text-transform: uppercase;
    margin:0;
-   padding-top:45px;
+   padding-top:25px;
    padding-bottom:20px;
 }
 
@@ -50,7 +50,7 @@ main{
    transition: all ease-in-out 0.4s;
 }
 
-main button{
+main a{
    position: relative;
    display: flex;
    text-transform: uppercase;
@@ -60,7 +60,7 @@ main button{
 transition: 0.10s ease-in-out;
 }
 
-.grid-container button:hover{
+.grid-container a:hover{
    background-color: var(--sweet-brown);
    /* color: var(--bone); */
    color: white;
@@ -68,7 +68,7 @@ transition: 0.10s ease-in-out;
 }
 
 
-main button span{
+main a span{
    position: absolute;
    display: flex;
    width:100%;
@@ -95,6 +95,7 @@ ul{
 
 ul li{
    font-size: 1.19rem;
+   padding-top: 5px;
    display: flex;
    flex-direction: row;
    justify-content:space-between;
@@ -162,29 +163,35 @@ section{
 }
 
 
-button.return{
+.return{
    margin-top: 1rem;
    display: flex;
    width:100%;
    border: 2px solid var(--sweet-brown);
    padding: 10px 20px;
    font-size: 1.22rem;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+   color:white;
 
-   transition: background-color 0.25s ease-in-out;
+   transition: all 0.25s ease-in-out;
 }
 
-button.return:hover{
-   background-color: rgb(230, 230, 230)
+.return:hover{
+   background-color:rgb(180, 84, 74);
+   color:white;
 }
 
-button.return svg{
+
+.return svg{
    display: none;
    width:20px;
    margin-top: 6px;
    margin-right: 10px;
 }
 
-.bg-sweet-brown{
+
+.bg-sweet-brown{ 
    background-color: var(--sweet-brown);
 }
 
@@ -315,10 +322,13 @@ button.return svg{
 /* MIN */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+   h1{
+      padding-top:35px;
+   }
    main{
       height:clamp(400px,72vh,800px);
    }
-   button.return svg{
+   .return svg{
       display: flex;
    }
 
@@ -395,14 +405,14 @@ button.return svg{
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-   main button span{
+   main a span{
       font-size: 1.35rem;
    }
  }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-   main button span{
+   main a span{
       font-size: 1.45rem;
    }
  }

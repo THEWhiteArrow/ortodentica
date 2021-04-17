@@ -27,22 +27,10 @@ const setUpSmoothScrollbars = () => {
       alwaysShowTracks: true
    };
 
-   Scrollbar.use(OverscrollPlugin);
-   const overscrollOptions = {
-      enable: true,
-      effect: navigator.userAgent.match(/Android/) ? 'glow' : 'bounce',
-      damping: 0,
-      maxOverscroll: navigator.userAgent.match(/Android/) ? 150 : 100,
-      glowColor: mainElem.dataset.glowColor,
-   };
-
 
    const bodyScrollbar = Scrollbar.init(mainElem, {
       ...options,
       delegateTo: document,
-      plugins: {
-         overscroll: { ...overscrollOptions },
-      },
    })
    setUpScrollListener(bodyScrollbar);
    setUpLinks(bodyScrollbar);

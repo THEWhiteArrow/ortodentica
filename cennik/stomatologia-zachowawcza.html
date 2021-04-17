@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Aktualności</title>
-
-   <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
-   <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
-   <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
-   <link rel="stylesheet" href="./public/stylesheets/aktualnosci_polityka.css">
-   <!-- <link rel="stylesheet" href="./public/stylesheets/app.css"> -->
-   <!-- <link rel="stylesheet" href="./public/stylesheets/quaries.css"> -->
+   <title>Stomatologia zachowawcza</title>
+   <link rel="stylesheet" href="../public/stylesheets/bootstrap.min.css">
+   <link rel="stylesheet" href="../public/stylesheets/colorPallete.css">
+   <link rel="stylesheet" href="../public/stylesheets/cennik.css">
 </head>
 
 <body id="scroll-container" data-scrollbar>
-
    <section id="ads">
       <a class="not-scroll" href="/?q=contact">
          <span>UMÓW WIZYTĘ</span>
@@ -38,10 +33,10 @@
       </a>
    </section>
 
-   <nav id="navbar" class="solid-nav fixed-top navbar navbar-expand-md navbar-light nav-gradient">
+   <nav id="navbar" class="solid-nav sitcky-top navbar navbar-expand-md navbar-light nav-gradient">
       <div class="container-fluid ">
          <a class="navbar-brand py-0 not-scroll" href="/" aria-current="page">
-            <img id="logo" src="./public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
+            <img id="logo" src="../public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
          </a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +46,8 @@
             <div class="navbar-nav" id="navbarLinks">
                <a class="nav-link not-scroll" href="/aktualnosci.html">Aktualności</a>
                <a class="nav-link not-scroll" href="/o-nas.html">O Nas</a>
-               <a class="nav-link not-scroll" href="/zespol.html">Nasz Zespół</a>
+               <a class="nav-link not-scroll" href="/zespol.html">Nasz
+                  Zespół</a>
                <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
                <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
             </div>
@@ -59,53 +55,33 @@
       </div>
    </nav>
 
-   <main id="aktualnosci" class="container w-90-till-sm mx-auto">
-      <h1 class="display-4 mt-5 pt-5 color-sweet-brown">Aktualności</h1>
-      <h3>Czyli co mogło Państwa ominąć!</h3>
+   <h1>Stomatologia zachowawcza</h1>
 
-      <div class="card my-5 bg-transparent-body">
-         <div class="card-body">
+   <section id="ceny" class="container fadeIn pb-5">
+      <a class="not-scroll return btn bg-sweet-brown" href="/cennik.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+               d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z">
+            </path>
+         </svg>
+         <span>ZOBACZ INNE DZIAŁY STOMATOLOGII</span>
+      </a>
+      <ul class="container">
+         <li class="row"><span class="ps-4 action col-12 col-md-9">Przegląd stomatologiczny </span> <span
+               class="ps-4 price col-12 col-md-3 d-flex justify-content-end align-items-end">50 PLN</span></li>
+         <li class="row"><span class="ps-4 action col-12 col-md-9">Wypełnienie kompozytowe </span> <span
+               class="ps-4 price col-12 col-md-3 d-flex justify-content-end align-items-end">150 - 250 PLN</span></li>
+         <li class="row"><span class="ps-4 action col-12 col-md-9">Opatrunek leczniczy </span> <span
+               class="ps-4 price col-12 col-md-3 d-flex justify-content-end align-items-end">100 - 150 PLN</span></li>
+         <li class="row"><span class="ps-4 action col-12 col-md-9">Znieczulenie </span> <span
+               class="ps-4 price col-12 col-md-3 d-flex justify-content-end align-items-end">30 - 50 PLN</span></li>
+         <li class="row"><span class="ps-4 action col-12 col-md-9">Włókno szklane </span> <span
+               class="ps-4 price col-12 col-md-3 d-flex justify-content-end align-items-end">100 PLN</span></li>
+      </ul>
+   </section>
 
-            <p class="lead">
-               OFERTA PROMOCYJNA:
-            </p>
-            <p class="lead">
-               Wybielanie przy pomocy najnowocześniejszej lampy na rynku BEYOND POLUS AVANCED
-            </p>
-            <p class="lead mb-1">
-               Wiosenna promocja
-            </p>
-            <ul class="lead">
-               <li>wybielanie dla dwojga – umów się na wybielanie z bliską osobą i zapłaćcie tylko 1800zł. (zamiast
-                  2400zł.)!</li>
-               <li>konsultacja ortodontyczna 50 złotych.</li>
-               <li>aparat stały kryształowy 2500 złotych (2600 złotych) za jeden łuk.</li>
-               <li>PIASKOWANIE + CZYSZCZENIE ZĘBÓW+ FLUORYZACJA 250 ZŁ.</li>
-            </ul>
-
-         </div>
-      </div>
-
-      <p>
-         Drodzy Pacjeci!
-         Z uwagi na bezpieczeństwo swoje, innych pacjentow i personelu w przypadku podejrzenia lub
-         infekcji COVID - 19 prosimy o zmianę terminu wizyty.
-         Jeśli obserwujesz u siebie gorączkę, kaszel, duszności i problemy z oddychaniem- zadzwoń i
-         odwołaj swoją wizytę oraz powiadom odpowiednie służby telefonicznie.
-         Uprzejmie informujemy, iż osoby towarzyszące Pacjentom nieletnim także powinny być zdrowe.
-         Uprzejmie prosimy, byście przed wejściem do gabinetu zdezynfekowali ręce.
-         Zapewniamy Was także, że w Gabinecie stosujemy i spełniamy najwyższe rygorystyczne warunki
-         bezpieczeństwa naszych Pacjentów, stosując zasady aseptyki i antyseptyki, dezynfekcje gabinetów
-         pomiędzy Pacjentami jak i po całym dniu pracy, sterylność pakietów i najwyższe normy
-         sterylizacji.
-         Zachęcamy Was do świadomego i równocześnie rozsądnego podejścia do kwestii zagrożenia
-         koronawirusem.
-      </p>
-      <p>Zespół OrtoDentica</p>
-
-   </main>
-
-   <footer class="pt-2 px-3">
+   <footer class="mt-5 pt-2 px-3">
       <div class="container p-2">
          <div class="row">
 
@@ -127,9 +103,9 @@
                <p class="lead d-flex flex-column bg-sweet-brown p-2 rounded">ORTODENTICA.ORG</p>
                <p class=" px-2">ul. Kędzierzyńska 9/11, I piętro, 04-915 Warszawa-Falenica</p>
 
-               <p class=" px-2">Email: gabinet@ortodentica.org <img src="./public/svgs/email_icon.svg"
+               <p class=" px-2">Email: gabinet@ortodentica.org <img src="../public/svgs/email_icon.svg"
                      alt="Kontakt mailowy"></p>
-               <p class=" px-2">Telefon: +48 604 53 22 02 <img src="./public/svgs/phone_icon.svg"
+               <p class=" px-2">Telefon: +48 604 53 22 02 <img src="../public/svgs/phone_icon.svg"
                      alt="Kontakt telefoniczny"></p>
             </div>
 
@@ -140,13 +116,11 @@
       </div>
    </footer>
 
-   <script src="./public/javascripts/popper.min.js"></script>
-   <script src="./public/javascripts/bootstrap.min.js"></script>
+   <script src="../public/javascripts/popper.min.js"></script>
+   <script src="../public/javascripts/bootstrap.min.js"></script>
 
-   <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
-   <script src="./public/javascripts/overscroll.min.js"></script>
-   <script src="./public/javascripts/scrollbarInit.js"></script>
-
+   <script src="../public/javascripts/smooth-scrollbar.min.js"></script>
+   <script src="../public/javascripts/scrollbarInit.js"></script>
 </body>
 
 </html>
