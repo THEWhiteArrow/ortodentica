@@ -317,7 +317,9 @@ button#submit:hover,
    max-width:400px;
    width:80%;
    border: 5px solid var(--sweet-brown);
-   height:auto;
+   height: auto;
+   object-fit: contain;
+   -o-object-fit: contain;
 }
 
 
