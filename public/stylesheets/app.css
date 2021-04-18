@@ -99,6 +99,13 @@ button#submit:hover,
 
 
 /* AKSJOMATY */
+/* .ovflow-hidden{
+   overflow: hidden !important;
+} */
+.tel{
+   text-decoration: none;
+}
+
 .zIndex-5{
    z-index: 5 !important;
    /* position: relative; */
@@ -310,6 +317,7 @@ button#submit:hover,
    max-width:400px;
    width:80%;
    border: 5px solid var(--sweet-brown);
+   height:auto;
 }
 
 
