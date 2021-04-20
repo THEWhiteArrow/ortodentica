@@ -318,8 +318,10 @@ button#submit:hover,
    width:80%;
    border: 5px solid var(--sweet-brown);
    height: auto;
-   object-fit: contain;
-   -o-object-fit: contain;
+   object-fit: cover;
+   -o-object-fit: cover;
+
+   height:155px;
 }
 
 
