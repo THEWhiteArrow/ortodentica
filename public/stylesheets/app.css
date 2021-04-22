@@ -825,9 +825,12 @@ background: #0505051c;
 
 /* ADVERTISEMENT */
 #ads{
+   display: none;
+   width:36px;
    /* border: 2px solid #222C00ff; */
    border-left: none;
    border-top: none;
+
 
    opacity: 0;
    font-size: 0.84rem;
@@ -837,9 +840,8 @@ background: #0505051c;
    top:100vh;
    -webkit-transform: translate3d(0,-130%,0);
            transform: translate3d(0,-130%,0);
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
+           display: none;
+
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
        -ms-flex-direction: column;
@@ -854,6 +856,8 @@ background: #0505051c;
    height:-moz-min-content;
 
    height:min-content;
+
+
    
    -webkit-transition: opacity 0.5s ease-in-out;
    

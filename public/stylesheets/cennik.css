@@ -221,6 +221,8 @@ section{
 
 /* ADVERTISEMENT */
 #ads{
+   display:none;
+   width:36px;
    /* border: 2px solid #222C00ff; */
    border-left: none;
    border-top: none;
@@ -232,7 +234,6 @@ section{
    left:0;  
    top:100vh;
    transform: translate3d(0,-130%,0);
-   display: flex;
    flex-direction: column;
    
    z-index: 1000;
@@ -374,6 +375,11 @@ section{
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+   #ads{
+      display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+}
    .grid-container{
       grid-template-columns: repeat(9,1fr);
       grid-template-rows: repeat(8, 1fr);

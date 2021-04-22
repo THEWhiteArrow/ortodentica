@@ -217,6 +217,8 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 
 /* ADVERTISEMENT */
 #ads{
+   display: none;
+   width:36px;
    /* border: 2px solid #222C00ff; */
    border-left: none;
    border-top: none;
@@ -229,9 +231,7 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
    top:100vh;
    -webkit-transform: translate3d(0,-130%,0);
            transform: translate3d(0,-130%,0);
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
+
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
        -ms-flex-direction: column;
@@ -356,6 +356,12 @@ box-shadow:         0px 8px 13px 0px rgba(50, 50, 50, 0.25);
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+   #ads{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+   }
+
    .nav-link{
       font-size: 1.15rem;
    }
