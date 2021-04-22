@@ -123,9 +123,9 @@ hr[role="tournament6"]::before {
    border: 1px solid;
    border-color: var(--sweet-brown);
    padding: 10px;
-   -webkit-transform: rotate(45deg);
-       -ms-transform: rotate(45deg);
-           transform: rotate(45deg);
+   -webkit-transform: translate3d(50%,0,0) rotate(45deg);
+       -ms-transform: translate3d(50%,0,0) rotate(45deg);
+           transform: translate3d(50%,0,0) rotate(45deg);
    left: 50%;
    margin: -10px 0px 0px -22px;
    content: "";

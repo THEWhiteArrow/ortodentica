@@ -118,9 +118,9 @@ hr[role="tournament6"]::before {
    border: 2px solid;
    border-color: var(--sweet-brown);
    padding: 10px;
-   -webkit-transform: rotate(45deg);
-       -ms-transform: rotate(45deg);
-           transform: rotate(45deg);
+   -webkit-transform: translate3d(50%,0,0) rotate(45deg);
+       -ms-transform: translate3d(50%,0,0) rotate(45deg);
+           transform: translate3d(50%,0,0) rotate(45deg);
    left: 50%;
    margin: -11px 0px 0px -22px;
    content: "";
@@ -334,7 +334,7 @@ hr[role="tournament6"]::before {
    background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0005.jpg');
 }
 .stern{
-   background-image: url('../assets/maszyny/orginal/IMG-20210319-WA0008.jpg');
+   background-image: url('../assets/maszyny/orginal/unit.jpg');
 }
 .radio{
    background-image: url('../assets/maszyny/orginal/RXDC_Extend_01.png');
