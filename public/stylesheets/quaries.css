@@ -122,6 +122,10 @@ display: flex;
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
+   .nav-link{
+      border-bottom: none;
+   }
+
    .py-adjusted{
       padding-top: 80px;
       padding-bottom: 60px;

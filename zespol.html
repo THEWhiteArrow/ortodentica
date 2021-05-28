@@ -6,10 +6,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Nasz Zespół | OrtoDentica.org</title>
+   <link rel="shortcut icon" type="image/png" href="./public/assets/icon/favicon.png" />
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
-   <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
+   <link rel="stylesheet" href="./public/stylesheets/root.css">
    <link rel="stylesheet" href="./public/stylesheets/zespol.css">
-   <!-- <link rel="stylesheet" href="./public/stylesheets/quaries-zespol.css"> -->
+
 
    <meta name="description"
       content="&nbsp; Magdalena Orczykowska - ortodoncja &nbsp; Agnieszka Przybysz - stomatologia zachowawcza, dziecięca i protetyka &nbsp; Monika Dworakowska - ortodoncja &nbsp; Katarzyna Mąkosa - ortodoncja &nbsp; Urszula Olszak - ortodoncja &nbsp; Izabela Sierpińska - endodoncja &nbsp; Mirosława Bodalska - logopedia &nbsp; Tobiasz Podlaski - chirurg &nbsp; Sylwia Przybylska - menadżer &nbsp; Aleksandra Szefer - asystentka stomatologiczna &nbsp; Anita Kozłowska - higienistka &nbsp; Paulina Ziarek - asystentka stomatologiczna &nbsp; Dominika Stanaszek = asystentka stomatologiczna">
@@ -21,7 +22,7 @@
 <body id="scroll-container" data-scrollbar>
 
    <section id="ads">
-      <a class="not-scroll" href="/?q=contact">
+      <a class="not-scroll" href="/?q=kontakt">
          <span>UMÓW WIZYTĘ</span>
       </a>
       <a class="not-scroll" href="/?q=mapa">
@@ -42,22 +43,29 @@
    </section>
 
    <nav id="navbar" class="solid-nav sitcky-top navbar navbar-expand-md navbar-light nav-gradient">
-      <div class="container-fluid ">
+      <div id="menuToggle" class="container-fluid ">
          <a class="navbar-brand py-0 not-scroll" href="/" aria-current="page">
             <img id="logo" src="./public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
          </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <input class="navbar-checkbox" type="checkbox" />
+            <span class="mt-1"></span>
+            <span></span>
+            <span></span>
          </button>
+
+
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link not-scroll" href="/aktualnosci.html">Aktualności</a>
-               <a class="nav-link not-scroll" href="/o-nas.html">O Nas</a>
-               <a class="nav-link not-scroll" href="/zespol.html">Nasz
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/aktualnosci.html">Aktualności</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/o-nas.html">O Nas</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
-               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
-               <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
+               <a class="nav-link my-1 my-md-0  not-scroll" href="/cennik.html">Cennik</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/?q=kontakt">Kontakt</a>
             </div>
          </div>
       </div>
@@ -70,14 +78,12 @@
             temu rozumiemy się bez słów. Dzięki wzajemnej, multidyscyplinarnej współpracy, jesteśmy w stanie poradzić
             sobie ze złożonymi problemami, aby każdy Pacjent mógł się cieszyć pięknym i zdrowym uśmiechem.</h4>
       </div>
-      <!-- <div class="space"></div> -->
 
-      <!-- <img src="./public/svgs/team4.svg" class="svg-team" alt="Zespół OrtoDentica"> -->
       <div class="container  mb-4 pb-4">
 
          <div class="member row mt-4">
             <div class="col-12  col-lg-5 px-0">
-               <img src="./public/assets/team/1-new2-min.jpg" alt="Magdalena Orczykowska" class="member-pic  my-0">
+               <img src="./public/assets/team/1-min.jpg" alt="Magdalena Orczykowska" class="member-pic  my-0">
 
             </div>
             <div class="col-12  col-lg-7 member-data">
@@ -99,7 +105,7 @@
          <div class="member row">
             <div class="col-12  col-lg-5 px-0">
 
-               <img src="./public/assets/team/2-new-min.jpg" alt="Agnieszka Przybysz" class="member-pic ">
+               <img src="./public/assets/team/2-min.jpg" alt="Agnieszka Przybysz" class="member-pic ">
             </div>
             <div class="col-12  col-lg-7 member-data">
                <h3>Agnieszka Przybysz</h3>
@@ -120,7 +126,7 @@
          <div class="member row">
             <div class="col-12  col-lg-5 px-0">
 
-               <img src="./public/assets/team/3-new-min.jpg" alt="Monika Dworakowska" class="member-pic ">
+               <img src="./public/assets/team/3-min.jpg" alt="Monika Dworakowska" class="member-pic ">
             </div>
             <div class="col-12  col-lg-7 member-data">
                <h3>Monika Dworakowska</h3>
@@ -140,29 +146,6 @@
          </div>
          <hr role=tournament6>
 
-         <div class="member row">
-            <div class="col-12  col-lg-5 px-0">
-
-               <img src="./public/assets/team/4-new-min.jpg" alt="Katarzyna Mąkosa" class="member-pic  obj-top">
-            </div>
-            <div class="col-12  col-lg-7 member-data">
-               <h3>Katarzyna Mąkosa</h3>
-               <h5>Ortodoncja</h5>
-               <p>Jestem absolwentką Uniwersytetu Medycznego w Lublinie. Staż podyplomowy odbyłam w Mazowieckim Centrum
-                  Stomatologii w Warszawie. Praktyka z zakresu stomatologii zachowawczej i estetycznej, skłoniła mnie do
-                  zgłębienia tematu ortodoncji, dziś niezbędnego do uzyskania doskonałego uśmiechu. Swoją wiedzę
-                  kliniczną uzyskiwałam odbywając wolontariat przy doświadczonych specjalistach.
-
-                  Moi Pacjenci motywują mnie do doskonalenia umiejętności poprzez kursy i szkolenia z udziałem
-                  największych autorytetów polskiej światowej ortodoncji.
-
-                  Zajmuję się leczeniem wad zgryzu u dzieci i dorosłych aparatami stałymi i ruchomymi. Do każdego z
-                  moich Pacjentów podchodzę indywidualnie, dobierając odpowiednie metody oraz plan leczenia,
-                  jednocześnie utrzymując miłą i przyjazną atmosferę. Leczenie ukierunkowane na efekt estetyczny,
-                  prawidłową okluzję oraz jednoczesnie na zadowolenie pacjenta.</p>
-            </div>
-         </div>
-         <hr role=tournament6>
 
          <div class="member row">
             <div class="col-12  col-lg-5 px-0">
@@ -230,7 +213,7 @@
 
          <div class="member row">
             <div class="col-12  col-lg-5 px-0">
-               <img src="./public/assets/team/8-new-min.jpg" alt="Tobiasz Podlaski" class="member-pic obj-top">
+               <img src="./public/assets/team/8-min.jpg" alt="Tobiasz Podlaski" class="member-pic obj-top">
 
             </div>
             <div class="col-12  col-lg-7 member-data">
@@ -253,7 +236,7 @@
 
          <div class="member row">
             <div class="col-12  col-lg-5 px-0">
-               <img src="./public/assets/team/9-new-min.jpg" alt="Sylwia Przybylska" class="member-pic ">
+               <img src="./public/assets/team/9-min.jpg" alt="Sylwia Przybylska" class="member-pic ">
 
             </div>
             <div class="col-12  col-lg-7 member-data">
@@ -272,7 +255,7 @@
 
          <div class="member row">
             <div class="col-12  col-lg-5 px-0">
-               <img src="./public/assets/team/10-new-min.jpg" alt="Aleksandra Szefer" class="member-pic ">
+               <img src="./public/assets/team/10-min.jpg" alt="Aleksandra Szefer" class="member-pic ">
 
             </div>
             <div class="col-12  col-lg-7 member-data">
@@ -343,8 +326,6 @@
                   filmów, kolekcjonerstwo oraz rzeźbiarstwo miniaturowych przedmiotów.</p>
             </div>
          </div>
-         <!-- <hr role=tournament6> -->
-
 
 
 
@@ -362,7 +343,7 @@
                <a class="not-scroll px-2" href="/o-nas.html">O Nas</a>
                <a class="not-scroll px-2" href="/zespol.html">Zespół</a>
                <a class="not-scroll px-2" href="/cennik.html">Cennik</a>
-               <a class="not-scroll px-2" href="/?q=contact">Kontakt</a>
+               <a class="not-scroll px-2" href="/?q=kontakt">Kontakt</a>
             </div>
 
             <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
@@ -392,7 +373,6 @@
    <script src="./public/javascripts/bootstrap.min.js"></script>
 
    <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
-   <script src="./public/javascripts/overscroll.min.js"></script>
    <script src="./public/javascripts/scrollbarInit.js"></script>
 </body>
 

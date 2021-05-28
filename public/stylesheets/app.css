@@ -51,11 +51,6 @@ h2{
 }
 
 
-
-canvas{
-   width:100% !important;
-}
-
 #logo{
    width:130px;
    height:55px;
@@ -99,16 +94,13 @@ button#submit:hover,
 
 
 /* AKSJOMATY */
-/* .ovflow-hidden{
-   overflow: hidden !important;
-} */
+
 .tel{
    text-decoration: none;
 }
 
 .zIndex-5{
    z-index: 5 !important;
-   /* position: relative; */
 }
 
 .py-adjusted{
@@ -139,10 +131,10 @@ button#submit:hover,
        -ms-flex-order: 2;
            order: 2;
 }
-.member,
+/* .member,
 .not-scroll{
    content-visibility: auto ;
-}
+} */
 .content-box{
    -webkit-box-sizing: content-box;
            box-sizing: content-box;
@@ -174,7 +166,6 @@ button#submit:hover,
    -webkit-box-align: center;
        -ms-flex-align: center;
            align-items: center;
-   /* text-align: center; */
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
        -ms-flex-direction: column;
@@ -207,18 +198,10 @@ button#submit:hover,
 
 
 
-/* input,textarea{
-   background-color: white !important;
-} */
-
-
-
-
 
 /* CONTENT */
 .card{
    width:min(19rem,100%);
-   /* width:clamp(90%, 90%, 18rem) */
    -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
    transition: -webkit-transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
    -o-transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -232,9 +215,7 @@ button#submit:hover,
    padding-bottom: 6px;
    border-bottom: 2px solid var(--sweet-brown);
    }
-/* .card:hover{
-   transform: translate3d(0,-10px,0);
-} */
+
 
 
 
@@ -306,7 +287,6 @@ button#submit:hover,
 }
 #showMore:hover .arrow{
    background-image: url('../svgs/down_arrow_filled.svg');
-   /* animation:rotateHover 1s ease-out; */
 }
 #showMore:hover{
    -webkit-animation-play-state:paused;
@@ -327,19 +307,7 @@ button#submit:hover,
 
 
 
-/* #row2-img{
-   background-image: url("../assets/ortodentica/img_3728_dxo.jpg");
-   background-position: center;
-   background-size: cover;
-   border: 5px solid var(--sweet-brown);
-   flex:1;
-   width:80%;
-   margin-right:auto;
-   margin-left:auto;
-} */
-/* #content p {
-   font-size: 1.4rem;
-} */
+
 #welcome-img{
    position: relative;
    display: -webkit-box;
@@ -359,6 +327,12 @@ button#submit:hover,
    background-image: linear-gradient(rgba(255, 255, 255, 0.39), rgba(255, 255, 255, 0)),url("../assets/ortodentica/img_3731_dxo.jpg");
 }
 
+
+/* NAVBAR */
+.vanbar-collapse{
+   transition: all var(--navbar-timing) ease-in;
+}
+
 .nav-gradient{
    will-change: height, background-color, backdrop-filter, border-bottom;
    width:100%;
@@ -374,14 +348,15 @@ button#submit:hover,
    background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
 
-   -webkit-transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+   -webkit-transition: all var(--navbar-timing) ease-in, border-bottom-color 0s linear, top 0s linear;
 
-   -o-transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+   -o-transition: all var(--navbar-timing) ease-in, border-bottom-color 0s linear, top 0s linear;
 
-   transition: background-color .4s ease-in-out, border-bottom .4s ease-in-out, border-bottom-color 0s linear;
+   transition: all var(--navbar-timing) ease-in, border-bottom-color 0s linear, top 0s linear;
 }
 .nav-link{
    color:#222C00ff !important;
+   border-bottom: 1px solid  var(--sweet-brown);
 }
 .nav-link.active{
    color:#292d31 !important;
@@ -390,6 +365,99 @@ button#submit:hover,
    background-color:rgb(255, 255, 255);
    border-bottom: 1px solid var(--sweet-brown);
 }
+
+#menuToggle button{
+   position: relative;
+}
+
+#menuToggle input
+{
+   position: absolute;
+  display: block;
+  width: 57px;
+  height: 39px;
+  top: 0px;
+  right: 0px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #888888;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform: 4px 0px;
+  
+  transition: transform var(--navbar-timing) ease,
+              background var(--navbar-timing) ease,
+              opacity var(--navbar-timing) ease;
+}
+
+#menuToggle span:first-child
+{
+  transform: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform:translate(0px, -8px) rotate(45deg) ;
+  /* background: #232323; */
+  background: #707070;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: translate(0px,25px) rotate(45deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform:translate(0, 0px) rotate(-45deg) ;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .space{
    width:100%;
@@ -410,162 +478,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
        -ms-transform: rotate(180deg);
            transform: rotate(180deg);
 }
-
-
-
-
-
-
-
-
-
-
-/* TEAM */
-/* #team{
-   margin-bottom: 35px !important;
-} */
-.member{
-   position: relative;
-   height: 100%;
-   width:76.52px;
-   margin:5px;
-   
-   background-size: cover;
-   background-position: center;
-   border-radius: 3px;
-   
-   -webkit-box-shadow:  0px 0px 5px 1px rgba(0,0,0,0.51); 
-   box-shadow:  0px 0px 5px 1px rgba(0,0,0,0.51);
-   
-   cursor: pointer;
-   -webkit-transition: all 0.15s ease-in-out;
-   -o-transition: all 0.15s ease-in-out;
-   transition: all 0.15s ease-in-out;
-}
-#members{
-   height:110px;
-
-   margin:0 auto;
-   overflow-y: hidden;
-   overflow-x: scroll;
-   
-   background-color:rgba(206, 171, 139, 0.58);
-   -webkit-box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4); 
-   box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4);
-} 
-#members .scroll-content{
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: nowrap;
-       flex-wrap: nowrap;
-   height:100%;
-   margin-bottom: 15px;
-}
-
-#shownMemberPic{
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-
-   width: min(100%,500px);
-   padding-bottom: min(100%,500px);
-   justify-self: center;
-   -ms-flex-item-align: center;
-       align-self: center;
-
-   -webkit-transition: all 0.20s ease-in-out;
-
-   -o-transition: all 0.20s ease-in-out;
-
-   transition: all 0.20s ease-in-out;
-}
-#shownMemberInfo,#shownMemberName{
-   line-height: 1.1em;
-   width: min(100%,500px);
-   -ms-grid-column-align: center;
-       justify-self: center;
-   -ms-flex-item-align: center;
-       -ms-grid-row-align: center;
-       align-self: center; 
-}
-.whiten{
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   background-color: transparent;
-
-   -webkit-transition: background-color 0.3s ease-in-out;
-
-   -o-transition: background-color 0.3s ease-in-out;
-
-   transition: background-color 0.3s ease-in-out;
-}
-.member:hover .whiten{
-   background-color: rgba(255, 255, 255, 0.5);
-}
-
-.member:hover .bi-search{
-   opacity: 1;
-   -webkit-transform: translate3d(-40%,-40%,0) scale(1.5);
-           transform: translate3d(-40%,-40%,0) scale(1.5);
-}
-
-.member:nth-of-type(1){
-   background-image: url('../assets/team/1-min.jpg');
-}
-.member:nth-of-type(2){
-   background-image: url('../assets/team/2-min.jpg');
-}
-.member:nth-of-type(3){
-   background-image: url('../assets/team/3-min.jpg');
-}
-.member:nth-of-type(4){
-   background-image: url('../assets/team/4-min.jpg');
-}
-.member:nth-of-type(5){
-   background-image: url('../assets/team/5-min.jpg');
-}
-.member:nth-of-type(6){
-   background-image: url('../assets/team/6-min.jpg');
-}
-.member:nth-of-type(7){
-   background-image: url('../assets/team/7-min.jpg');
-}
-.member:nth-of-type(8){
-   background-image: url('../assets/team/8-min.jpg');
-}
-.member:nth-of-type(9){
-   background-image: url('../assets/team/9-min.jpg');
-}
-.member:nth-of-type(10){
-   background-image: url('../assets/team/10-min.jpg');
-}
-.member:nth-of-type(11){
-   background-image: url('../assets/team/11-min.jpg');
-}
-.member:nth-of-type(12){
-   background-image: url('../assets/team/12-min.jpg');
-}
-.member:nth-of-type(13){
-   background-image: url('../assets/team/13-min.jpg');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -681,7 +593,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
    position: absolute;
    padding-bottom: 20px;
    
-background: #0505051c;
+   background: #0505051c;
   color: white; 
   text-shadow: 0px 0px 5px #000000;
 
@@ -720,7 +632,7 @@ background: #0505051c;
    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#contact,
+#kontakt,
 #mapa{
    overflow-x: hidden;
 }
@@ -762,61 +674,6 @@ background: #0505051c;
               transform: rotate(359deg);
    }
 }
-
-
-
-/* KURSOR */
-#cursor{
-   pointer-events: none;
-   position: fixed;
-   width:45px;
-   height: 45px;
-   z-index: 1000;
-   top:var(--mtop);
-   left:var(--mleft);
-   border: 4px solid var(--sweet-brown);
-   -webkit-transform:translate3d(0,0,0) ;
-           transform:translate3d(0,0,0) ;
-
-   -webkit-animation: cursorRotate 10s linear infinite;
-
-           animation: cursorRotate 10s linear infinite;
-}
-#cursor.mouse-down{
-   -webkit-animation-play-state: paused;
-           animation-play-state: paused;
-}
-
-/* #members .scroll-content{
-   display: flex;
-   flex-wrap: nowrap;
-   height:100%;
-   margin-bottom: 15px;
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* GALERIA ZDJĘĆ */
-#carousel{
-   background-color: white;
-}
-.carousel-inner{
-   border:5px solid var(--sweet-brown);
-}
-#carouselImages,.carousel-item,.arousel-inner{
-   max-height: min(600px,70vh);
-}
-
-
-
 
 
 
@@ -967,50 +824,4 @@ footer img{
    60%{-webkit-transform: rotate(5deg);transform: rotate(5deg)}
    80%{-webkit-transform: rotate(-2.5deg);transform: rotate(-2.5deg)}
    100%{-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-}
-
-@-webkit-keyframes cursorRotate{
-   0%{
-      -webkit-transform:scale(1) rotate(0deg);
-              transform:scale(1) rotate(0deg);
-   }
-   25%{
-      -webkit-transform:scale(0.7) rotate(90deg);
-              transform:scale(0.7) rotate(90deg);
-   }
-   50%{
-      -webkit-transform:scale(1) rotate(180deg);
-              transform:scale(1) rotate(180deg);
-   }
-   75%{
-      -webkit-transform:scale(0.7) rotate(270deg);
-              transform:scale(0.7) rotate(270deg);
-   }
-   100%{
-      -webkit-transform:scale(1) rotate(359deg);
-              transform:scale(1) rotate(359deg);
-   }
-}
-
-@keyframes cursorRotate{
-   0%{
-      -webkit-transform:scale(1) rotate(0deg);
-              transform:scale(1) rotate(0deg);
-   }
-   25%{
-      -webkit-transform:scale(0.7) rotate(90deg);
-              transform:scale(0.7) rotate(90deg);
-   }
-   50%{
-      -webkit-transform:scale(1) rotate(180deg);
-              transform:scale(1) rotate(180deg);
-   }
-   75%{
-      -webkit-transform:scale(0.7) rotate(270deg);
-              transform:scale(0.7) rotate(270deg);
-   }
-   100%{
-      -webkit-transform:scale(1) rotate(359deg);
-              transform:scale(1) rotate(359deg);
-   }
 }

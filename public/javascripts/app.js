@@ -1,6 +1,7 @@
 const navbar = document.querySelector('#navbar');
 const navbarCollapse = document.querySelector('#navbarNavAltMarkup');
 const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCheckbox = document.querySelector('.navbar-checkbox');
 
 const mapa = document.querySelector('#map');
 const ads = document.querySelector('#ads');
@@ -64,8 +65,8 @@ const scrollOnQuery = (scrollbar) => {
                offsetTop: defaultOffsetTop,
                alignToTop: true,
             });
-         } else if (urlParam.indexOf('q=contact') !== -1) {
-            scrollbar.scrollIntoView(document.querySelector('#contact'), {
+         } else if (urlParam.indexOf('q=kontakt') !== -1) {
+            scrollbar.scrollIntoView(document.querySelector('#kontakt'), {
                offsetTop: defaultOffsetTop,
                alignToTop: true,
             });
@@ -79,8 +80,8 @@ const scrollOnQuery = (scrollbar) => {
             scrollbar.scroll(0, document.querySelector('#content').offsetTop - defaultOffsetTop);
          } else if (urlParam.indexOf('q=mapa') !== -1) {
             scrollbar.scroll(0, document.querySelector('#mapa').offsetTop - defaultOffsetTop);
-         } else if (urlParam.indexOf('q=contact') !== -1) {
-            scrollbar.scroll(0, document.querySelector('#contact').offsetTop - defaultOffsetTop);
+         } else if (urlParam.indexOf('q=kontakt') !== -1) {
+            scrollbar.scroll(0, document.querySelector('#kontakt').offsetTop - defaultOffsetTop);
          }
       }, 500);
    }

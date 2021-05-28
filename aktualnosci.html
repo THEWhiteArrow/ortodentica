@@ -6,10 +6,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Aktualności | OrtoDentica.org</title>
+   <link rel="shortcut icon" type="image/png" href="./public/assets/icon/favicon.png" />
 
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
    <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
-   <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
+   <link rel="stylesheet" href="./public/stylesheets/root.css">
    <link rel="stylesheet" href="./public/stylesheets/aktualnosci.css">
 
    <meta name="description"
@@ -19,7 +20,7 @@
 <body id="scroll-container" data-scrollbar>
 
    <section id="ads">
-      <a class="not-scroll" href="/?q=contact">
+      <a class="not-scroll" href="/?q=kontakt">
          <span>UMÓW WIZYTĘ</span>
       </a>
       <a class="not-scroll" href="/?q=mapa">
@@ -40,21 +41,29 @@
    </section>
 
    <nav id="navbar" class="solid-nav fixed-top navbar navbar-expand-md navbar-light nav-gradient">
-      <div class="container-fluid ">
+      <div id="menuToggle" class="container-fluid ">
          <a class="navbar-brand py-0 not-scroll" href="/" aria-current="page">
             <img id="logo" src="./public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
          </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <input class="navbar-checkbox" type="checkbox" />
+            <span class="mt-1"></span>
+            <span></span>
+            <span></span>
          </button>
+
+
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link not-scroll" href="/aktualnosci.html">Aktualności</a>
-               <a class="nav-link not-scroll" href="/o-nas.html">O Nas</a>
-               <a class="nav-link not-scroll" href="/zespol.html">Nasz Zespół</a>
-               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
-               <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/aktualnosci.html">Aktualności</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/o-nas.html">O Nas</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/zespol.html">Nasz
+                  Zespół</a>
+               <a class="nav-link my-1 my-md-0  not-scroll" href="/cennik.html">Cennik</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/?q=kontakt">Kontakt</a>
             </div>
          </div>
       </div>
@@ -81,29 +90,6 @@
             </ul>
          </div>
       </div>
-      <!-- 
-      <div class="card my-5 bg-transparent-body">
-         <div class="card-body">
-
-            <p class="lead">
-               OFERTA PROMOCYJNA:
-            </p>
-            <p class="lead">
-               Wybielanie przy pomocy najnowocześniejszej lampy na rynku BEYOND POLUS AVANCED
-            </p>
-            <p class="lead mb-1">
-               Wiosenna promocja
-            </p>
-            <ul class="lead">
-               <li>wybielanie dla dwojga – umów się na wybielanie z bliską osobą i zapłaćcie tylko 1800zł. (zamiast
-                  2400zł.)!</li>
-               <li>konsultacja ortodontyczna 50 złotych.</li>
-               <li>aparat stały kryształowy 2500 złotych (2600 złotych) za jeden łuk.</li>
-               <li>PIASKOWANIE + CZYSZCZENIE ZĘBÓW+ FLUORYZACJA 250 ZŁ.</li>
-            </ul>
-
-         </div>
-      </div> -->
 
       <p>
          Drodzy Pacjeci!
@@ -134,7 +120,7 @@
                <a class="not-scroll px-2" href="/o-nas.html">O Nas</a>
                <a class="not-scroll px-2" href="/zespol.html">Zespół</a>
                <a class="not-scroll px-2" href="/cennik.html">Cennik</a>
-               <a class="not-scroll px-2" href="/?q=contact">Kontakt</a>
+               <a class="not-scroll px-2" href="/?q=kontakt">Kontakt</a>
             </div>
 
             <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">

@@ -6,20 +6,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Gabinet stomatologiczny OrtoDentica.org - Magdalena Orczykowska, Warszawa, Wawer, Falenica, ul. Kędzierzyńska
       9</title>
+   <link rel="shortcut icon" type="image/png" href="./public/assets/icon/favicon.png" />
    <meta name="description"
       content="Gabinet stomatologiczny OrtoDentica.org - Magdalena Orczykowska, Warszawa, Wawer, Falenica, ul. Kędzierzyńska 9, tel. 604532202">
 
    <meta name="keywords"
       content="ortodoncja Warszawa, Ortodonta Warszawa, ortodoncja Wawer, Ortodonta Wawer, Gabinet stomatologiczny Warszawa Wawer, ortodentica,   Magdalena Orczykowska, dobry dentysta Warszawa, implanty Warszawa, stomatologia dziecięca Warszawa, dobry stomatolog Warszawa, dobry ortodonta Warszawa,  stomatolog Warszawa, stomatolog Wawer">
 
+
+   <!-- MAP STYLES -->
    <link rel="stylesheet" href="./public/stylesheets/mapbox-gl.css">
 
-   <!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' /> -->
-   <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script> -->
-
+   <!-- APP STYLES -->
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
    <link rel="stylesheet" href="./public/stylesheets/scrollbar.css">
-   <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
+   <link rel="stylesheet" href="./public/stylesheets/root.css">
    <link rel="stylesheet" href="./public/stylesheets/app.css">
    <link rel="stylesheet" href="./public/stylesheets/quaries.css">
 
@@ -29,7 +30,7 @@
 <body id="scroll-container" class="bg-bone" data-scrollbar>
 
    <section id="ads">
-      <a href="#contact"><span>UMÓW WIZYTĘ</span></a>
+      <a href="#kontakt"><span>UMÓW WIZYTĘ</span></a>
       <a href="#mapa">
          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
             viewBox="0 0 16 16">
@@ -48,45 +49,54 @@
    </section>
 
    <nav id="navbar" class="fixed-top navbar navbar-expand-md navbar-light nav-gradient">
-      <div class="container-fluid ">
+
+      <div id="menuToggle" class="container-fluid ">
          <a class="navbar-brand py-0" href="#welcome-img" aria-current="page">
             <img id="logo" src="./public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
          </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <input class="navbar-checkbox" type="checkbox" />
+            <span class="mt-1"></span>
+            <span></span>
+            <span></span>
          </button>
+
+
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link not-scroll" href="/aktualnosci.html">Aktualności</a>
-               <a class="nav-link not-scroll" href="/o-nas.html">O Nas</a>
-               <a class="nav-link not-scroll" href="/zespol.html">Nasz
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/aktualnosci.html">Aktualności</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/o-nas.html">O Nas</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
-               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
-               <a class="nav-link" href="#contact">Kontakt</a>
+               <a class="nav-link my-1 my-md-0  not-scroll" href="/cennik.html">Cennik</a>
+               <a class="nav-link my-1 my-md-0 " href="#kontakt">Kontakt</a>
             </div>
          </div>
       </div>
+
    </nav>
+
 
    <header class="container-fluid" id="welcome-img">
       <div id="title" class="p-3">
-         <!-- <h1 class="display-1 text-sweet-brown">OrtoDentica</h1> -->
          <img src="./public/assets/ortodentica/ortodentica-logo-color.png"
             alt="Logo OrtoDentica Klinika Stomatologiczna">
       </div>
 
       <a href="#content" id="showMore">
-         <!-- <img src="./public/svgs/down_arrow_empty.svg" alt="Czytaj więcej"> -->
          <div class="arrow"></div>
       </a>
    </header>
 
    <main>
+
       <section id="content" class="relative">
 
 
-         <!-- <div class="space"></div> -->
+
 
          <div id="o-nas" class="py-adjusted row-content d-flex flex-column bg-white">
 
@@ -107,7 +117,7 @@
                      <a href="tel:+48-604-53-22-02"
                         class="not-scroll tel mt-3 btn btn-success btn-sweet-brown  text-uppercase col-12 col-md-5">Telefon:
                         +48 604 53 22 02</a>
-                     <a href="#contact"
+                     <a href="#kontakt"
                         class="mt-3 btn-sweet-brown  btn btn-success text-uppercase col-12 col-md-5">Napisz do
                         nas!</a>
                   </p>
@@ -126,7 +136,7 @@
                            alt="Dentysta, ortodonta i stomatolog">
                      </div>
 
-                     <!-- <img class="svg-experience" src="./public/svgs/experience.svg" alt="Doświadczenie"> -->
+
 
                   </div>
 
@@ -135,7 +145,7 @@
 
             </div>
          </div>
-         <!-- <div class="space"></div> -->
+
 
          <div class="py-adjusted row-content d-flex flex-column bg-bone">
             <div class="container  center-everything">
@@ -151,13 +161,11 @@
 
 
                <div class="w-100 mt-2 mt-lg-5 row d-flex justify-content-center">
-                  <!-- <img class="row-img my-5" src="./public/assets/ortodentica/img_3724_dxo.jpg"
-                     alt="Część zespołu Ortodentica"></img>
-                  <img class="svg-certificate" src="./public/svgs/certificate.svg" alt="Profesjonalizm zespołu"> -->
+
                   <div class="col-12 col-md-6 col-lg-4 my-5 mt-md-3 center-everything">
                      <div class="card shadow border-sweet-brown">
-                        <img src="./public/assets/maszyny/IMG-20210316-WA0005.jpg" class="card-img-top" height="220px"
-                           alt="wybielanie zębów">
+                        <img src="./public/assets/maszyny/cropped/IMG-20210316-WA0005.jpg" class="card-img-top"
+                           height="220px" alt="wybielanie zębów">
                         <div class="card-body">
                            <h5 class="card-title">Wybielanie lampą BEYOND</h5>
                            <p class="card-text">Najnowocześniejszą i najefektywniejszą lampa do wybielania zębów
@@ -165,15 +173,15 @@
                               Dokładne utlenienie przebarwień na powierzchni szkliwa uzyskujemy dzięki nałożeniu
                               wybielającego żelu, a następnie aktywowanie go przy użyciu światła akceleratora BEYOND.
                            </p>
-                           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
                         </div>
                      </div>
                   </div>
 
                   <div class="col-12 col-md-6 col-lg-4 my-5 mt-md-3 center-everything">
                      <div class="card shadow border-sweet-brown">
-                        <img src="./public/assets/maszyny/IMG-20210316-WA0006.jpg" class="card-img-top" height="220px"
-                           alt="...">
+                        <img src="./public/assets/maszyny/cropped/IMG-20210316-WA0006.jpg" class="card-img-top"
+                           height="220px" alt="...">
                         <div class="card-body">
                            <h5 class="card-title">Mikroskop Zumax</h5>
                            <p class="card-text">Mikroskop stosowany w stomatologii pozwala na obserwację operowanego
@@ -181,15 +189,15 @@
                               zabiegowego powiększonego nawet 20x w stosunku do rzeczywistego (graniczne powiększenie
                               umożliwiające efektywne wykonywanie zabiegów). Dzięki temu
                               właściwie wykonany zabieg w powiększeniu cechuje się wysoką skutecznością.</p>
-                           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
                         </div>
                      </div>
                   </div>
 
                   <div class="col-12 col-md-12 col-lg-4 my-5 mt-md-3 mt-lg-3 center-everything">
                      <div class="card shadow border-sweet-brown">
-                        <img src="./public/assets/maszyny/IMG-20210316-WA0001.jpg" class="card-img-top" height="220px"
-                           alt="Tomografia">
+                        <img src="./public/assets/maszyny/cropped/IMG-20210316-WA0001.jpg" class="card-img-top"
+                           height="220px" alt="Tomografia">
                         <div class="card-body">
                            <h5 class="card-title">Tomografia 3D</h5>
                            <p class="card-text">Tomografia stomatologiczna 3D zębów jest badaniem
@@ -197,7 +205,7 @@
                               trzech płaszczyznach. Służy ona do wykonywania specjalistycznych i precyzyjncyh badań.
                               W naszej klinice używamy najnowocześniejszego tomografu - Hyperion X9, który jest
                               gwarancją bezpieczeństwa i precyzji.</p>
-                           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
                         </div>
                      </div>
                   </div>
@@ -207,170 +215,10 @@
             </div>
          </div>
 
-         <!-- <div class="space upsidedown"></div> -->
 
-         <!-- <div class="py-adjusted row-content d-flex flex-column bg-white">
-            <div class="container  center-everything">
-               <h2 class="text-sweet-brown pt-3 pt-md-0 width-till-md-90">Niesamowita podróż</h2>
-               <p class="paragraph width-till-md-90">
-                  Dołącz do nas i przekonaj się, że decyzja o Twojej metamorfozie związanej z leczeniem zębów i uśmiechu
-                  będzie bardzo pozytywna, a sam czas kuracji przyniesie Ci wiele radości i niezapomnianych wrażeń. Z
-                  naszą profesjonalną obsługą i osobistym podejściem do każdej osoby jesteśmy w stanie, bez żadnych
-                  przykrości, przeprowadzić Cię do wspaniałego jutra, gdzie Twój piękny uśmiech będzie Twoim
-                  nieodłącznym kompanem.
-               </p>
-               <p class="paragraph width-till-md-90 d-flex align-self-start">
-                  Serdecznie zapraszamy,
-                  <br>
-                  Zespół OrtoDentica
-               </p>
-
-               <div class="w-100 d-flex justify-content-center">
-                  <img class="row-img my-5" src="./public/assets/ortodentica/img_3745_dxo.jpg"
-                     alt="Część zespołu Ortodentica"></img>
-                  <img class="svg-trust" src="./public/svgs/trust.svg" alt="Pełne zaufanie">
-
-               </div>
-
-
-            </div>
-         </div> -->
 
       </section>
 
-
-      <!-- <div class="space"></div> -->
-
-
-      <!-- <section id="team" class="container-fluid container-md py-5">
-         <div class="row">
-            <h2
-               class="col-12 display-3 text-sweet-brown pt-3 pb-4 pb-md-0 d-flex justify-content-center justify-content-md-start">
-               Nasz Zespół</h2>
-         </div>
-
-         <div class="row px-2">
-
-            <div id="members" data-scrollbar
-               class="col-12 col-md-6 d-flex flex-column flex-md-row flex-wrap justify-content-center py-2 px-1">
-
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="member">
-                  <div class="whiten"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-search" viewBox="0 0 16 16">
-                     <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-               </div>
-               <div class="col-md-12 ps-2 pb-md-4"></div>
-            </div>
-
-            <div id="shownMember" class="col-12 col-md-6 d-flex flex-column pt-3 text-center text-md-start">
-               <h4 id="shownMemberName" class="display-6 text-sweet-brown  text-center text-md-start"></h4>
-               <p id="shownMemberInfo" class="paragraph text-center text-md-start"></p>
-               <div id="shownMemberPic"></div>
-            </div>
-         </div>
-      </section> -->
-
-
-      <!-- <div class="space upsidedown"></div> -->
 
       <section id="mapa" class="bg-white py-adjusted d-flex flex-column ">
 
@@ -381,7 +229,7 @@
             </p>
          </div>
          <div id="mapContainer" class="container px-0">
-            <!-- <div class="container px-0" aria-hidden="true"> -->
+
             <img src="./public/svgs/phone.svg" class="svg-map" alt="Mapa dojazdu do dentysty">
             <div id="map">
                <div class="load-div">
@@ -390,10 +238,7 @@
                   <div class="square" style="--i:2"></div>
                </div>
             </div>
-            <!-- <iframe id="map" frameborder="0"
-               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANCKjaDk-XScaeveIbajn7kR_XpXkXRkI&q=Warszawa-Kędzieżyńska 9,Polska&zoom=15"
-               allowfullscreen>
-            </iframe> -->
+
          </div>
          <div class="container mt-3 ">
             <p class="paragraph me-0 width-till-md-90 d-flex justify-content-end">Ul. Kędzierzynska 9 lokal 11, 04-915
@@ -403,12 +248,7 @@
       </section>
 
 
-
-
-      <!-- <div class="space"></div> -->
-
-
-      <section id="contact" class="py-adjusted relative">
+      <section id="kontakt" class="py-adjusted relative">
          <img src="./public/svgs/email.svg" class="svg-contact" alt="Kontakt Email Ortodonta">
 
          <!-- <section id="contact" class=" bg-white rounded-top-left rounded-top-right"> -->
@@ -472,45 +312,6 @@
          </div>
       </section>
 
-
-      <!-- <div class="space upsidedown"></div> -->
-
-      <!-- <section id="carousel">
-         <div class="container">
-            <h2 class="col-12 display-3 text-sweet-brown pb-4  d-flex justify-content-center ">
-               Galeria</h2>
-         </div>
-         <div id="carouselImages" class="carousel slide container" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-bs-target="#carouselImages" data-bs-slide-to="0" class="active"></li>
-               <li data-bs-target="#carouselImages" data-bs-slide-to="1"></li>
-               <li data-bs-target="#carouselImages" data-bs-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <img src="./public/assets/ortodentica/img_3741_dxo.jpg" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item">
-                  <img src="./public/assets/ortodentica/img_3745_dxo.jpg" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item">
-                  <img src="./public/assets/ortodentica/img_3724_dxo.jpg" class="d-block w-100" alt="...">
-               </div>
-            </div>
-            <a class="not-scroll carousel-control-prev" href="#carouselImages" role="button" data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="not-scroll carousel-control-next" href="#carouselImages" role="button" data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-            </a>
-         </div>
-      </section> -->
-
-
-
-
    </main>
 
    <footer class="pt-4 pt-md-2 px-3">
@@ -523,7 +324,7 @@
                <a class="not-scroll px-2" href="/o-nas.html">O Nas</a>
                <a class="not-scroll px-2" href="/zespol.html">Zespół</a>
                <a class="not-scroll px-2" href="/cennik.html">Cennik</a>
-               <a class=" px-2" href="#contact">Kontakt</a>
+               <a class=" px-2" href="#kontakt">Kontakt</a>
             </div>
 
             <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
@@ -551,29 +352,24 @@
    </footer>
 
 
-   <!-- <div id="cursor"></div> -->
 
 
-   <!-- We use StatCrab to protect your privacy -->
-   <!-- <script src="https://app.statcrab.com/embed/crab.js" data-project="AxlaKm" defer></script> -->
-   <!-- StatCrab.com -->
-
-   <script src="./public/javascripts/apiKey.js"></script>
-   <script src="./public/javascripts/mapbox-gl.js"></script>
-   <!-- <script src="./public/javascripts/showPageMap.js" defer></script> -->
 
 
+   <!-- BOOTSTRAP -->
    <script src="./public/javascripts/popper.min.js"></script>
    <script src="./public/javascripts/bootstrap.min.js"></script>
 
-   <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
-   <!-- <script src="./public/javascripts/overscroll.min.js"></script> -->
 
-   <!-- <script src="./public/javascripts/membersData.js"></script> -->
+   <!-- MAP SCRIPTS -->
+   <script src="./public/javascripts/apiKey.js"></script>
+   <script src="./public/javascripts/mapbox-gl.js"></script>
+
+
+   <!-- APP SCRIPTS -->
+   <script src="./public/javascripts/smooth-scrollbar.min.js"></script>
    <script src="./public/javascripts/validateForms.js"></script>
    <script src="./public/javascripts/app.js"></script>
-
-
 
 </body>
 

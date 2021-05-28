@@ -6,10 +6,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>O nas | OrtoDentica.org</title>
+   <link rel="shortcut icon" type="image/png" href="./public/assets/icon/favicon.png" />
    <link rel="stylesheet" href="./public/stylesheets/bootstrap.min.css">
-   <link rel="stylesheet" href="./public/stylesheets/colorPallete.css">
+   <link rel="stylesheet" href="./public/stylesheets/root.css">
    <link rel="stylesheet" href="./public/stylesheets/o-nas.css">
-   <!-- <link rel="stylesheet" href="./public/stylesheets/quaries-zespol.css"> -->
+
 
    <meta name="description"
       content="Dane kontaktowe: OrtoDentica.org ul. Kędzierzyńska 9 04-915 Warszawa-Falenica I piętro tel: +48 604 53 22 Ortodentica wawer falenica">
@@ -19,7 +20,7 @@
 <body id="scroll-container" data-scrollbar>
 
    <section id="ads">
-      <a class="not-scroll" href="/?q=contact">
+      <a class="not-scroll" href="/?q=kontakt">
          <span>UMÓW WIZYTĘ</span>
       </a>
       <a class="not-scroll" href="/?q=mapa">
@@ -40,22 +41,29 @@
    </section>
 
    <nav id="navbar" class="solid-nav fixed-top navbar navbar-expand-md navbar-light nav-gradient">
-      <div class="container-fluid ">
+      <div id="menuToggle" class="container-fluid ">
          <a class="navbar-brand py-0 not-scroll" href="/" aria-current="page">
             <img id="logo" src="./public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
          </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <input class="navbar-checkbox" type="checkbox" />
+            <span class="mt-1"></span>
+            <span></span>
+            <span></span>
          </button>
+
+
          <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="navbarLinks">
-               <a class="nav-link not-scroll" href="/aktualnosci.html">Aktualności</a>
-               <a class="nav-link not-scroll" href="/o-nas.html">O Nas</a>
-               <a class="nav-link not-scroll" href="/zespol.html">Nasz
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/aktualnosci.html">Aktualności</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/o-nas.html">O Nas</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/zespol.html">Nasz
                   Zespół</a>
-               <a class="nav-link not-scroll" href="/cennik.html">Cennik</a>
-               <a class="nav-link not-scroll" href="/?q=contact">Kontakt</a>
+               <a class="nav-link my-1 my-md-0  not-scroll" href="/cennik.html">Cennik</a>
+               <a class="nav-link my-1 my-md-0 not-scroll" href="/?q=kontakt">Kontakt</a>
             </div>
          </div>
       </div>
@@ -70,11 +78,11 @@
          <p class="intro">Leczymy naszych pacjentów z pasją i zaangażowaniem. Nasi dentyści wiedzą jak zadbać o piękny
             uśmiech i zdrowe zęby. Naszą misją jest zapewnienie najwyższej jakości usług dentystycznych przy użyciu
             nowoczesnych materiałów i sprzętu stomatologicznego, którym dysponujemy.</p>
-         <!-- <hr role=tournament6> -->
-      </div>
-      <!-- <div class="space"></div> -->
 
-      <!-- <img src="./public/svgs/team4.svg" class="svg-team" alt="Zespół OrtoDentica"> -->
+      </div>
+
+
+
       <div class="container width-till-md-90">
 
          <div class="row maszyna  mb-5">
@@ -98,11 +106,7 @@
                   Nasz tomograf umożliwia również wykonanie zdjęcia cefalometryczngo czyli jednej z odmian zdjęcia RTG
                   czaszki w pozycji bocznej, wykonywanego przede wszystkim w diagnostyce wad zgryzu oraz planowaniu
                   leczenia ortodontycznego.
-                  <!-- Można nim również zrobić pantomogram czyli zdjęcie rentgenowskie, na którym widoczne są zęby, szczęki,
-                  żuchwę i stawy skroniowo-żuchwowe. Dzięki wykonaniu zdjęcia panoramicznego (pantomograficznego)
-                  możliwa
-                  jest ocena struktur przyzębia oraz kości szczęki, co jest pomocne przy rozpoczęciu leczenia
-                  stomatologicznego. -->
+
                </p>
             </div>
          </div>
@@ -234,7 +238,7 @@
                <a class="not-scroll px-2" href="/?q=o-nas">O Nas</a>
                <a class="not-scroll px-2" href="/zespol.html">Zespół</a>
                <a class="not-scroll px-2" href="/cennik.html">Cennik</a>
-               <a class="not-scroll px-2" href="/?q=contact">Kontakt</a>
+               <a class="not-scroll px-2" href="/?q=kontakt">Kontakt</a>
             </div>
 
             <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">

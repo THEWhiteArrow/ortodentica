@@ -189,6 +189,7 @@ hr[role="tournament6"]::before {
 }
 .nav-link{
    color:#222C00ff !important;
+   border-bottom: 1px solid  var(--sweet-brown);
 }
 .nav-link.active{
    color:#292d31 !important;
@@ -197,6 +198,89 @@ hr[role="tournament6"]::before {
    background-color:rgb(255, 255, 255);
    border-bottom: 1px solid var(--sweet-brown);
 }
+
+#menuToggle button{
+   position: relative;
+}
+
+#menuToggle input
+{
+   position: absolute;
+  display: block;
+  width: 57px;
+  height: 39px;
+  top: 0px;
+  right: 0px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #888888;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform: 4px 0px;
+  
+  transition: transform var(--navbar-timing) ease,
+              background var(--navbar-timing) ease,
+              opacity var(--navbar-timing) ease;
+}
+
+#menuToggle span:first-child
+{
+  transform: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform:translate(0px, -8px) rotate(45deg) ;
+  /* background: #232323; */
+  background: #707070;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: translate(0px,25px) rotate(45deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform:translate(0, 0px) rotate(-45deg) ;
+}
+
 
 
 /* ADVERTISEMENT */
@@ -390,6 +474,9 @@ hr[role="tournament6"]::before {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+   .nav-link{
+      border-bottom: none;
+   }
    /* #regulamin{
       margin-bottom: 400px !important;
    } */
