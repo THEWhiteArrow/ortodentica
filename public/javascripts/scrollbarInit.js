@@ -20,7 +20,7 @@ const setUpSmoothScrollbars = () => {
    const mainElem = document.getElementById("scroll-container");
 
    const options = {
-      damping: 0.11,
+      damping: 0.12,
       // renderByPixels: !('ontouchstart' in document),
       renderByPixels: true,
       syncCallbacks: true,

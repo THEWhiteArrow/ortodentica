@@ -401,10 +401,12 @@ hr[role="tournament6"]::before {
    font-size: 18px;
 }
 
+.laser{
+   background-image: url('../assets/maszyny/orginal/laser.png');
+}
 .tomograf{
    background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0001.jpg');
 }
-
 .mikroskop{
    background-image: url('../assets/maszyny/orginal/IMG-20210316-WA0006.jpg');
 }
