@@ -3,6 +3,7 @@ const navbarCollapse = document.querySelector('#navbarNavAltMarkup');
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarCheckbox = document.querySelector('.navbar-checkbox');
 
+const links = document.querySelectorAll('a');
 const mapa = document.querySelector('#map');
 const ads = document.querySelector('#ads');
 const welcomeImg = document.querySelector('#welcome-img');
@@ -21,19 +22,16 @@ const init = () => {
    // DELETE ALL THE HASHES
    document.location.hash = '';
 
-   // window.onload = hideURLParams;
+
    restoreScroll();
 
    if (!isMobile()) {
       setUpSmoothScrollbars();
-      // setUpCursor();
       console.log('mouse device');
    } else {
       setUpScrollListener(document);
       scrollOnQuery(window);
       setUpLinks(window);
-      // cursor.removed = true;
-      // cursor.remove();
       console.log('touch device');
    }
 
@@ -45,7 +43,6 @@ const init = () => {
 
 const scrollOnQuery = (scrollbar) => {
    const urlParam = window.location.href;
-   console.log('yes')
 
    if (!isMobile()) {
 
@@ -103,7 +100,6 @@ const hideURLParams = () => {
 
 const setUpSmoothScrollbars = () => {
    const mainElem = document.getElementById("scroll-container");
-   // const membersContainer = document.getElementById("members");
 
    const options = {
       damping: 0.12,
@@ -113,33 +109,17 @@ const setUpSmoothScrollbars = () => {
       alwaysShowTracks: true
    };
 
-   // Scrollbar.use(OverscrollPlugin);
-   // const overscrollOptions = {
-   //    enable: true,
-   //    effect: navigator.userAgent.match(/Android/) ? 'glow' : 'bounce',
-   //    damping: 0,
-   //    maxOverscroll: navigator.userAgent.match(/Android/) ? 150 : 100,
-   //    glowColor: mainElem.dataset.glowColor,
-   // };
+
 
 
    const bodyScrollbar = Scrollbar.init(mainElem, {
       ...options,
       delegateTo: document,
-      // plugins: {
-      //    overscroll: { ...overscrollOptions },
-      // },
    })
 
    setUpScrollListener(bodyScrollbar);
    setUpLinks(bodyScrollbar);
    scrollOnQuery(bodyScrollbar);
-
-   // overscrollOptions.damping = 0.11;
-   // const membersScrollbar = Scrollbar.init(membersContainer, {
-   //    ...options,
-   //    delegateTo: membersContainer
-   // })
 
 }
 
@@ -148,13 +128,14 @@ const setUpLinks = (scrollbar) => {
       scroll < breakPoint ? navbar.classList.toggle('solid-nav') : null;
    });
 
-   const links = document.querySelectorAll('a');
+
    for (let link of links) {
+
       if (!link.classList.contains('not-scroll')) {
+
          link.addEventListener('click', (e) => {
             e.preventDefault();
             navbarCollapse.classList.remove('show');
-            // link.getAttribute('href') === '#o-nas' ? offsetTop = 100 : null;
             if (scrollbar !== window) {
                scrollbar.scrollIntoView(document.querySelector(link.getAttribute('href')), {
                   offsetTop: defaultOffsetTop,
@@ -165,6 +146,7 @@ const setUpLinks = (scrollbar) => {
                scrollbar.scroll(0, document.querySelector(`${href}`).offsetTop - defaultOffsetTop);
             }
          })
+
       }
    }
 }
@@ -179,21 +161,15 @@ const restoreScroll = () => {
 }
 
 const checkForNavbarChangePoints = (scrollOffset) => {
-   // breakPoint = welcomeImg.offsetHeight - 56;
    breakPoint = welcomeImg.offsetHeight - 456;
    if ((scrollOffset >= breakPoint) && !navbar.classList.contains('solid-nav')) {
       navbar.classList.add('solid-nav');
       ads.style.opacity = "1";
-      // console.log('added solid-nav')
+
    } else if ((scrollOffset < breakPoint) && navbar.classList.contains('solid-nav')) {
       ads.style.opacity = "0";
       navbar.classList.remove('solid-nav');
-      // console.log('removed solid-nav')
    }
-
-   // if (scrollOffset > document.querySelector('#mapContainer').offsetTop - window.innerHeight && isMapAlreadyActivated === false && false) {
-
-   // }
 
 }
 
@@ -284,13 +260,10 @@ const setUpScrollListener = (scrollbar) => {
          scroll = this.scrollY;
          checkForNavbarChangePoints(scroll);
       });
+
    } else {
       scrollbar.addListener(() => {
          scroll = scrollbar.offset.y;
-
-         // DELETED CURSOR
-         // cursor.y = scroll;
-         // cursor.style.setProperty('--mtop', e.clientY + cursor.y - 22.5 + 'px');
          navbar.style.top = scroll + 'px';
          ads.style.transform = ` translate3d(0,${scroll - ads.offsetHeight * 1.3}px,0)`;
          checkForNavbarChangePoints(scroll);
@@ -304,14 +277,9 @@ const isMobile = () => {
    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
-const easyMode = () => {
+const lowPerformanceMode = () => {
    Scrollbar.destroyAll();
 }
 
-// const updateOnResize = () => {
-//    window.addEventListener('resize', () => {
-//       window.innerWidth >= 768 ? defaultOffsetTop = 0 : defaultOffsetTop = 50;
-//    })
-// }
 
 init();

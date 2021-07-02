@@ -380,7 +380,7 @@ section{
    padding-right: 10px;
    display: grid;
    grid-template-columns:1fr;
-   grid-template-rows: repeat(12, 1fr);
+   grid-template-rows: repeat(13, 1fr);
    gap: 7px 7px;
    grid-template-areas:
    "jeden"
@@ -394,7 +394,8 @@ section{
    "dziewiec"
    "dziesiec"
    "jedenascie"
-   "dwanascie";
+   "dwanascie"
+   "trzynascie" ;
 
  }
  .jeden { grid-area: jeden; }
@@ -409,6 +410,7 @@ section{
  .dziesiec { grid-area: dziesiec; }
  .jedenascie { grid-area: jedenascie; }
  .dwanascie { grid-area: dwanascie; }
+ .trzynascie { grid-area: trzynascie; } 
 
 
 
@@ -428,14 +430,15 @@ section{
 
    .grid-container{
       grid-template-columns:repeat(2,1fr);
-      grid-template-rows: repeat(6, 1fr);
+      grid-template-rows: repeat(7, 1fr);
       grid-template-areas:
       "jeden dwa"
       "trzy cztery"
       "piec szesc"
       "siedem osiem"
       "dziewiec dziesiec"
-      "jedenascie dwanascie";
+      "jedenascie dwanascie"
+      "trzynascie trzynascie";
    } 
 
 
@@ -478,7 +481,7 @@ display: flex;
 }
    .grid-container{
       grid-template-columns: repeat(9,1fr);
-      grid-template-rows: repeat(8, 1fr);
+      grid-template-rows: repeat(10, 1fr);
       grid-template-areas:
       "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
      "jeden jeden dwa dwa dwa trzy trzy trzy trzy"
@@ -487,7 +490,9 @@ display: flex;
      "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
      "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
      "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
-     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie";
+     "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
+     "trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie"
+     "trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie";
      /* "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
      "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
      "cztery cztery cztery piec piec piec szesc szesc szesc"
