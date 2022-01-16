@@ -43,7 +43,7 @@ h1{
 main{
    margin: 0 auto;
    width:min(100%,1200px);
-   height:800px;
+   height:1000px !important;
    display:flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -57,7 +57,14 @@ main a{
    color:var(--sweet-brown);
    background-color: var(--bone-trasparent-title);
    border:2px solid var(--sweet-brown);   
-transition: 0.10s ease-in-out;
+   transition: 0.10s ease-in-out;
+   height:100%;
+   font-size: 1.25rem;
+   text-decoration:none;
+   justify-content:center;
+   align-items:center;
+   text-align:center;
+   padding:10px 0;
 }
 
 .grid-container a:hover{
@@ -68,18 +75,7 @@ transition: 0.10s ease-in-out;
 }
 
 
-main a span{
-   position: absolute;
-   display: flex;
-   width:100%;
-   justify-content: center;
-   text-align: center;
-   top:50%;
-   transform: translate3d(0,-50%,0);
-
-   font-size: 1.25rem;
-
-}
+ 
 
 ul{
    /* padding-top: 2rem; */
@@ -375,12 +371,27 @@ section{
    /* width:18px; */
 }
 
+.jeden { grid-area: jeden; }
+.dwa { grid-area: dwa; }
+.trzy { grid-area: trzy; }
+.cztery { grid-area: cztery; }
+.piec { grid-area: piec; }
+.szesc { grid-area: szesc; }
+.siedem { grid-area: siedem; }
+.osiem { grid-area: osiem; }
+.dziewiec { grid-area: dziewiec; }
+.dziesiec { grid-area: dziesiec; }
+.jedenascie { grid-area: jedenascie; }
+.dwanascie { grid-area: dwanascie; }
+.trzynascie { grid-area: trzynascie; } 
+.czternascie { grid-area: czternascie; } 
+
 .grid-container {
    padding-left: 10px;
    padding-right: 10px;
-   display: grid;
+   display: grid; 
    grid-template-columns:1fr;
-   grid-template-rows: repeat(13, 1fr);
+   grid-template-rows: repeat(14, 1fr);
    gap: 7px 7px;
    grid-template-areas:
    "jeden"
@@ -395,22 +406,11 @@ section{
    "dziesiec"
    "jedenascie"
    "dwanascie"
-   "trzynascie" ;
+   "trzynascie"
+   "czternascie" ;
 
  }
- .jeden { grid-area: jeden; }
- .dwa { grid-area: dwa; }
- .trzy { grid-area: trzy; }
- .cztery { grid-area: cztery; }
- .piec { grid-area: piec; }
- .szesc { grid-area: szesc; }
- .siedem { grid-area: siedem; }
- .osiem { grid-area: osiem; }
- .dziewiec { grid-area: dziewiec; }
- .dziesiec { grid-area: dziesiec; }
- .jedenascie { grid-area: jedenascie; }
- .dwanascie { grid-area: dwanascie; }
- .trzynascie { grid-area: trzynascie; } 
+
 
 
 
@@ -421,9 +421,9 @@ section{
    h1{
       padding-top:35px;
    }
-   main{
+   /* main{
       height:clamp(400px,72vh,800px);
-   }
+   } */
    .return svg{
       display: flex;
    }
@@ -438,7 +438,7 @@ section{
       "siedem osiem"
       "dziewiec dziesiec"
       "jedenascie dwanascie"
-      "trzynascie trzynascie";
+      "trzynascie czternascie";
    } 
 
 
@@ -476,8 +476,8 @@ section{
    }
    #ads{
       display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
+      display: -ms-flexbox;
+      display: flex;
 }
    .grid-container{
       grid-template-columns: repeat(9,1fr);
@@ -491,16 +491,8 @@ display: flex;
      "siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec dziewiec"
      "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
      "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
-     "trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie"
-     "trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie trzynascie";
-     /* "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
-     "jeden jeden jeden dwa dwa dwa trzy trzy trzy"
-     "cztery cztery cztery piec piec piec szesc szesc szesc"
-     "cztery cztery cztery piec piec piec szesc szesc szesc"
-     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
-     "siedem siedem siedem osiem osiem osiem dziewiec dziewiec dziewiec"
-     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"
-     "dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie dwanascie"; */
+     "trzynascie trzynascie trzynascie trzynascie trzynascie czternascie czternascie czternascie czternascie"
+     "trzynascie trzynascie trzynascie trzynascie trzynascie czternascie czternascie czternascie czternascie"; 
    }
    li{
       font-size: 1.4rem !important;
@@ -512,14 +504,14 @@ display: flex;
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-   main a span{
+   main a {
       font-size: 1.35rem;
    }
  }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-   main a span{
+   main a {
       font-size: 1.45rem;
    }
  }
