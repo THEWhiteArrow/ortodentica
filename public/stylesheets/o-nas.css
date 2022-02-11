@@ -417,7 +417,9 @@ hr[role="tournament6"]::before {
    border-color: var(--sweet-brown-dark);
 }
 
-
+.sedacja-wziewna{
+   background-image: url('../assets/maszyny/orginal/IMG-20220208-WA0016.jpg');
+}
 .laser{
    background-image: url('../assets/maszyny/orginal/laser.png');
 }
