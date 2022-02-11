@@ -15,29 +15,10 @@
 
 </head>
 
-<body id="scroll-container" data-scrollbar>
-   <section id="ads">
-      <a class="not-scroll" href="/?q=kontakt">
-         <span>UMÓW WIZYTĘ</span>
-      </a>
-      <a class="not-scroll" href="/?q=mapa">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
-            viewBox="0 0 16 16">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-         </svg>
-      </a>
-      <a class="not-scroll" href="/cennik.html">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill"
-            viewBox="0 0 16 16">
-            <path
-               d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            <path
-               d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
-         </svg>
-      </a>
-   </section>
+<body>
 
-   <nav id="navbar" class="solid-nav sitcky-top navbar navbar-expand-md navbar-light nav-gradient">
+
+   <nav id="navbar" class="solid-nav fixed-top navbar navbar-expand-md navbar-light nav-gradient">
       <div id="menuToggle" class="container-fluid ">
          <a class="navbar-brand py-0 not-scroll" href="/" aria-current="page">
             <img id="logo" src="./public/assets/ortodentica/ortodentica-logo.png" alt="Logo OrtoDentica">
@@ -66,64 +47,89 @@
       </div>
    </nav>
 
-   <h1>Cennik</h1>
-   <main class="grid-container">
-      <a href="cennik/ortodoncja.html" class="not-scroll jeden"><span>Ortodoncja</span></a>
-      <a href="cennik/endodoncja.html" class="not-scroll dwa"><span>Endodoncja</span></a>
-      <a href="cennik/stomatologia-dziecieca.html" class="not-scroll trzy"><span>Stomatologia dziecięca</span></a>
-      <a href="cennik/stomatologia-estetyczna.html" class="not-scroll cztery"><span>Stomatologia estetyczna</span></a>
-      <a href="cennik/profilaktyka.html" class="not-scroll piec"><span>Profilaktyka</span></a>
-      <a href="cennik/rtg.html" class="not-scroll szesc"><span>RTG</span></a>
-      <a href="cennik/protetyka.html" class="not-scroll siedem"><span>Protetyka</span></a>
-      <a href="cennik/implantologia.html" class="not-scroll osiem"><span>Implantologia</span></a>
-      <a href="cennik/stomatologia-zachowawcza.html" class="not-scroll dziewiec"><span>Stomatologia
-            zachowawcza</span></a>
-      <a href="cennik/chirurgia-stomatologiczna.html" class="not-scroll dziesiec"><span>Chirurgia
-            stomatologiczna</span></a>
-      <a href="cennik/peridontologia.html" class="not-scroll jedenascie"><span>Periodontologia</span></a>
-      <a href="cennik/logopedia.html" class="not-scroll dwanascie"><span>Logopedia</span></a>
+   <section id="scroll-container" data-scrollbar>
 
-      <a href="cennik/laser.html" class="not-scroll trzynascie"><span>Zabiegi z użyciem lasera Smart M Pro</span></a>
-      <a href="cennik/medycyna-estetyczna.html" class="not-scroll czternascie"><span>Medycyna estetyczna</span></a>
-   </main>
+      <section id="ads">
+         <a class="not-scroll" href="/?q=kontakt">
+            <span>UMÓW WIZYTĘ</span>
+         </a>
+         <a class="not-scroll" href="/?q=mapa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+         </a>
+         <a class="not-scroll" href="/cennik.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill"
+               viewBox="0 0 16 16">
+               <path
+                  d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+               <path
+                  d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+            </svg>
+         </a>
+      </section>
+
+      <h1 class="pt-5 mt-5">Cennik</h1>
+      <main class="grid-container">
+         <a href="cennik/ortodoncja.html" class="not-scroll jeden"><span>Ortodoncja</span></a>
+         <a href="cennik/endodoncja.html" class="not-scroll dwa"><span>Endodoncja</span></a>
+         <a href="cennik/stomatologia-dziecieca.html" class="not-scroll trzy"><span>Stomatologia dziecięca</span></a>
+         <a href="cennik/stomatologia-estetyczna.html" class="not-scroll cztery"><span>Stomatologia
+               estetyczna</span></a>
+         <a href="cennik/profilaktyka.html" class="not-scroll piec"><span>Profilaktyka</span></a>
+         <a href="cennik/rtg.html" class="not-scroll szesc"><span>RTG</span></a>
+         <a href="cennik/protetyka.html" class="not-scroll siedem"><span>Protetyka</span></a>
+         <a href="cennik/implantologia.html" class="not-scroll osiem"><span>Implantologia</span></a>
+         <a href="cennik/stomatologia-zachowawcza.html" class="not-scroll dziewiec"><span>Stomatologia
+               zachowawcza</span></a>
+         <a href="cennik/chirurgia-stomatologiczna.html" class="not-scroll dziesiec"><span>Chirurgia
+               stomatologiczna</span></a>
+         <a href="cennik/peridontologia.html" class="not-scroll jedenascie"><span>Periodontologia</span></a>
+         <a href="cennik/logopedia.html" class="not-scroll dwanascie"><span>Logopedia</span></a>
+
+         <a href="cennik/laser.html" class="not-scroll trzynascie"><span>Zabiegi z użyciem lasera Smart M Pro</span></a>
+         <a href="cennik/medycyna-estetyczna.html" class="not-scroll czternascie"><span>Medycyna estetyczna</span></a>
+      </main>
 
 
-   <footer class="mt-5 pt-2 px-3">
-      <div class="container p-2">
-         <div class="row">
+      <footer class="mt-5 pt-2 px-3">
+         <div class="container p-2">
+            <div class="row">
 
-            <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
-               <p class="lead bg-sweet-brown p-2 rounded">MENU</p>
-               <a class="not-scroll px-2" href="/aktualnosci.html">Aktualności</a>
-               <a class="not-scroll px-2" href="/o-nas.html">O Nas</a>
-               <a class="not-scroll px-2" href="/zespol.html">Zespół</a>
-               <a class="not-scroll px-2" href="/cennik.html">Cennik</a>
-               <a class="not-scroll px-2" href="/?q=kontakt">Kontakt</a>
+               <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
+                  <p class="lead bg-sweet-brown p-2 rounded">MENU</p>
+                  <a class="not-scroll px-2" href="/aktualnosci.html">Aktualności</a>
+                  <a class="not-scroll px-2" href="/o-nas.html">O Nas</a>
+                  <a class="not-scroll px-2" href="/zespol.html">Zespół</a>
+                  <a class="not-scroll px-2" href="/cennik.html">Cennik</a>
+                  <a class="not-scroll px-2" href="/?q=kontakt">Kontakt</a>
+               </div>
+
+               <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
+                  <p class="lead bg-sweet-brown p-2 rounded">REGULAMINY</p>
+                  <a class="not-scroll px-2" href="/polityka-prywatnosci.html">Polityka Prywatności</a>
+               </div>
+
+               <div class="col-12 col-md-6 d-flex flex-column">
+                  <p class="lead d-flex flex-column bg-sweet-brown p-2 rounded">ORTODENTICA.ORG</p>
+                  <p class=" px-2">ul. Kędzierzyńska 9/11, I piętro, 04-915 Warszawa-Falenica</p>
+
+                  <p class=" px-2"><a class="not-scroll" href="mailto:gabinet@ortodentica.org">Email:
+                        gabinet@ortodentica.org<img src="./public/svgs/email_icon.svg" alt="Kontakt mailowy"></a></p>
+                  <p class=" px-2"><a class="not-scroll" href="tel:+48-604-53-22-02">Telefon: +48 604 53 22 02 <img
+                           src="./public/svgs/phone_icon.svg" alt="Kontakt telefoniczny"></a>
+               </div>
+
             </div>
-
-            <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
-               <p class="lead bg-sweet-brown p-2 rounded">REGULAMINY</p>
-               <a class="not-scroll px-2" href="/polityka-prywatnosci.html">Polityka Prywatności</a>
-            </div>
-
-            <div class="col-12 col-md-6 d-flex flex-column">
-               <p class="lead d-flex flex-column bg-sweet-brown p-2 rounded">ORTODENTICA.ORG</p>
-               <p class=" px-2">ul. Kędzierzyńska 9/11, I piętro, 04-915 Warszawa-Falenica</p>
-
-               <p class=" px-2"><a class="not-scroll" href="mailto:gabinet@ortodentica.org">Email:
-                     gabinet@ortodentica.org<img src="./public/svgs/email_icon.svg" alt="Kontakt mailowy"></a></p>
-               <p class=" px-2"><a class="not-scroll" href="tel:+48-604-53-22-02">Telefon: +48 604 53 22 02 <img
-                        src="./public/svgs/phone_icon.svg" alt="Kontakt telefoniczny"></a>
-            </div>
-
          </div>
-      </div>
-      <div class="text-center text-md-end p-2 pe-md-5">
-         &copy; 2021 Damian Trafiałek <a href="mailto:damian.trafialek@gmail.com"
-            class="not-scroll">damian.trafialek@gmail.com</a>
-      </div>
-   </footer>
+         <div class="text-center text-md-end p-2 pe-md-5">
+            &copy; 2021 Damian Trafiałek <a href="mailto:damian.trafialek@gmail.com"
+               class="not-scroll">damian.trafialek@gmail.com</a>
+         </div>
+      </footer>
 
+   </section>
 
    <script src="../public/javascripts/popper.min.js"></script>
    <script src="../public/javascripts/bootstrap.min.js"></script>

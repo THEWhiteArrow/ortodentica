@@ -23,9 +23,13 @@ html{
 body{
    color:#222C00ff;
    position: relative;
-   height: 100vh;
+   /* height: 100vh; */
    font-family: 'Tinos', serif;
 
+}
+
+#scroll-container{
+   height:100vh; 
 }
 svg{
    height:auto;
@@ -329,30 +333,40 @@ button#submit:hover,
 
 
 /* NAVBAR */
-.vanbar-collapse{
-   transition: all var(--navbar-timing) ease-in;
-}
 
-.nav-gradient{
-   will-change: height, background-color, backdrop-filter, border-bottom;
+/* .navbar-collapse{
+   transition: all var(--navbar-timing) ease-in;
+} */
+
+#navbar{
+   //will-change: height, background-color, backdrop-filter, border-bottom;
    width:100%;
-   z-index: 100;
    -webkit-box-align: start;
        -ms-flex-align: start;
            align-items: flex-start;
 
+   position:fixed;
+   opacity:1;
+   left:0;
+   /* top:-100vh; */
+   z-index:2000 !important;
 
+           
    background-color: rgba(255, 255, 255, 0.7);
    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(255,255,255,1)), to(rgba(255,255,255,0)));
    background: -o-linear-gradient(top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
    background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="wheatfff",endColorstr="#ffffff",GradientType=1);
-
    -webkit-transition: all var(--navbar-timing) ease-in, border-bottom-color 0s linear, top 0s linear;
 
    -o-transition: all var(--navbar-timing) ease-in, border-bottom-color 0s linear, top 0s linear;
 
    transition: all var(--navbar-timing) ease-in, border-bottom-color 0s linear, top 0s linear;
+}
+.nav-space{
+   display:flex;
+   width:100%;
+   height:72px;
 }
 .nav-link{
    color:#222C00ff !important;
@@ -361,7 +375,7 @@ button#submit:hover,
 .nav-link.active{
    color:#292d31 !important;
 }
-.solid-nav{
+#navbar.solid-nav{
    background-color:rgb(255, 255, 255);
    border-bottom: 1px solid var(--sweet-brown);
 }
@@ -682,7 +696,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 /* ADVERTISEMENT */
 #ads{
-   display: none;
    width:36px;
    /* border: 2px solid #222C00ff; */
    border-left: none;

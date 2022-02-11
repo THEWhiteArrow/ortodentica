@@ -19,11 +19,14 @@ body{
    position: relative;
    background-color: var(--bone-trasparent-vivit);
    /* background-color: var(--bone-trasparent); */
-   height: 100vh;
+ 
    font-family: 'Tinos', serif;
 
 }
 
+#scroll-container{
+   height:100vh; 
+}
 
 div.scroll-content{
    height:100%;

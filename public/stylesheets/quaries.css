@@ -51,9 +51,9 @@
 @media (min-width: 576px) { 
    #ads{
       display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-}
+      display: -ms-flexbox;
+      display: flex;
+   }
 
    #title img{
       width:300px;

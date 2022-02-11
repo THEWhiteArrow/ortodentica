@@ -27,9 +27,12 @@ body{
    position: relative;
    background-color: var(--bone-trasparent-vivit);
    /* background-color: var(--bone); */
-   height: 100vh;
+  
    font-family: 'Tinos', serif;
 
+}
+#scroll-container{
+   height: 100vh;
 }
 svg{
    height:auto;
