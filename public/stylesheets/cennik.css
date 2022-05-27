@@ -90,6 +90,9 @@ ul{
    border:2px solid var(--sweet-brown);
    border-top: none;
 }
+ul.no-border{
+   border:none;
+}
 
 
 ul li{
@@ -106,9 +109,14 @@ ul li{
 }
 
 
-ul li:nth-of-type(2n+1){
-   background-color: var(--bone-trasparent);
+li:nth-of-type(2n+1):not(.collapsible){
+   background-color: var(--bone-light);
 }
+
+li.collapsible button {
+   border-radius:0;
+}
+
 
 footer{
    width:100%;
@@ -155,6 +163,17 @@ section{
 .fadeIn{
    animation:fadeIn 0.4s ease-in-out;
 }
+
+
+.text-uppercase{
+   text-transform:uppercase;
+   padding:8px 0;
+}
+
+.capitalize{
+   text-transform: lowercase; 
+}
+.capitalize::first-letter{ text-transform:uppercase !important;}
 
 @keyframes fadeIn{
    from{opacity:0;}

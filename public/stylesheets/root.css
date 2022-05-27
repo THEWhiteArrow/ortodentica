@@ -1,6 +1,7 @@
 :root{
    /* CSS HEX */
 --bone:#ebd7c4;
+--bone-light:#f6dcc4;
 --bone-trasparent-vivit:#f5d7bcad;
 --bone-trasparent:#f5d9bead;
 --bone-trasparent-title:#fff8efbe;
@@ -16,4 +17,26 @@
 
 --navbar-timing:0.13s;
 }
+ 
+button#submit:focus,
+button#submit:active,
+.btn-sweet-brown:focus,
+.btn-sweet-brown:active{
+   background-color: var(--sweet-brown-dark);
+   border-color: var(--sweet-brown-dark);
+   -webkit-box-shadow:0 0 0 .25rem var(--sweet-brown-transparent) !important;
+           box-shadow:0 0 0 .25rem var(--sweet-brown-transparent) !important;
+}
+
+button#submit,
+.btn-sweet-brown{
+   background-color: var(--sweet-brown);
+   border-color: var(--sweet-brown);
+}
+button#submit:hover,
+.btn-sweet-brown:hover{
+   background-color: var(--sweet-brown-dark);
+   border-color: var(--sweet-brown-dark);
+}
+
  
