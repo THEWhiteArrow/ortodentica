@@ -9,107 +9,117 @@
 
 <url>
   <loc>https://ortodentica.org/</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://ortodentica.org/cennik.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <loc>https://ortodentica.org/aktualnosci</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ortodentica.org/aktualnosci.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <loc>https://ortodentica.org/o-nas</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ortodentica.org/o-nas.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <loc>https://ortodentica.org/zespol</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ortodentica.org/zespol.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <loc>https://ortodentica.org/cennik</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ortodentica.org/polityka-prywatnosci.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <loc>https://ortodentica.org/polityka-prywatnosci</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ortodentica.org/?q=kontakt</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ortodentica.org/?q=mapa</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/ortodoncja.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/endodoncja.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/stomatologia-dziecieca.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/stomatologia-estetyczna.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/profilaktyka.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/rtg.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/protetyka.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/implantologia.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/stomatologia-zachowawcza.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/chirurgia-stomatologiczna.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/peridontologia.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://ortodentica.org/cennik/logopedia.html</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ortodentica.org/?q=o-nas</loc>
-  <lastmod>2021-04-27T09:20:24+00:00</lastmod>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/ortodoncja</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/endodoncja</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/stomatologia-dziecieca</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/stomatologia-estetyczna</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/profilaktyka</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/rtg</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/protetyka</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/implantologia</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/stomatologia-zachowawcza</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/chirurgia-stomatologiczna</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/peridontologia</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/logopedia</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/laser</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ortodentica.org/cennik/medycyna-estetyczna</loc>
+  <lastmod>2022-08-09T14:09:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
