@@ -25,11 +25,13 @@ body{
 }
 
 #scroll-container{
-   height:100vh; 
+   /* min-height:100vh;  */
+   /* height: 100%; */
+   height:100vh;
 }
 
 div.scroll-content{
-   height:100%;
+   /* height:100%; */
    display: flex;
    flex-direction: column;
    /* align-content: space-between; */
@@ -46,7 +48,7 @@ h1{
 main{
    margin: 0 auto;
    width:min(100%,1200px);
-   height:1000px !important;
+   height: 100%;
    display:flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -200,6 +202,21 @@ section{
    color:white;
 }
 
+
+.accordion-item button{
+   font-size: 1.25rem;
+   color: #222C00ff !important;
+   background-color: white !important;
+}
+
+.accordion-item button:active,
+.accordion-item button:focus{
+   /* border-color: var(--sweet-brown-dark); */
+   -webkit-box-shadow: 0 0 0 .25rem var(--sweet-brown) !important;
+   box-shadow: 0 0 0 .25rem var(--sweet-brown) !important;
+   background-color: rgba(10,10,10,0.025);
+   color: #222C00ff;
+}
 
 .return svg{
    display: none;
@@ -393,7 +410,7 @@ section{
    /* width:18px; */
 }
 
-.jeden { grid-area: jeden; }
+/* .jeden { grid-area: jeden; }
 .dwa { grid-area: dwa; }
 .trzy { grid-area: trzy; }
 .cztery { grid-area: cztery; }
@@ -432,7 +449,7 @@ section{
    "czternascie" ;
 
  }
-
+ */
 
 
 
@@ -450,7 +467,7 @@ section{
       display: flex;
    }
 
-   .grid-container{
+   /* .grid-container{
       grid-template-columns:repeat(2,1fr);
       grid-template-rows: repeat(7, 1fr);
       grid-template-areas:
@@ -461,7 +478,7 @@ section{
       "dziewiec dziesiec"
       "jedenascie dwanascie"
       "trzynascie czternascie";
-   } 
+   }  */
 
 
 
@@ -501,7 +518,7 @@ section{
       display: -ms-flexbox;
       display: flex;
 }
-   .grid-container{
+   /* .grid-container{
       grid-template-columns: repeat(9,1fr);
       grid-template-rows: repeat(10, 1fr);
       grid-template-areas:
@@ -515,7 +532,7 @@ section{
      "dziesiec dziesiec dziesiec dziesiec jedenascie jedenascie jedenascie dwanascie dwanascie"
      "trzynascie trzynascie trzynascie trzynascie trzynascie czternascie czternascie czternascie czternascie"
      "trzynascie trzynascie trzynascie trzynascie trzynascie czternascie czternascie czternascie czternascie"; 
-   }
+   } */
    li{
       font-size: 1.4rem !important;
    }

@@ -320,7 +320,7 @@ h2{
 } */
 
 #navbar{
-   //will-change: height, background-color, backdrop-filter, border-bottom;
+   /* //will-change: height, background-color, backdrop-filter, border-bottom; */
    width:100%;
    -webkit-box-align: start;
        -ms-flex-align: start;
