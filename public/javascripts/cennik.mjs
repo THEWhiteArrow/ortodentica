@@ -22,7 +22,6 @@ const init = async () => {
 		}
 		const serializedKategoria = kategoria.replace(/\s/g, "");
 		const kategoriaContent = `
-		<div class="accordion-item">
 			<div class="accordion-header" id="heading${serializedKategoria}">
 				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${serializedKategoria}" aria-expanded="false" aria-controls="collapse${serializedKategoria}">
 					${kategoria}
@@ -35,7 +34,6 @@ const init = async () => {
 				</ul>
 				
 			</div>
-		</div>
 		`;
 
 		kategoriaDiv.innerHTML = kategoriaContent;
