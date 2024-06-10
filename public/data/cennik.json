@@ -78,12 +78,12 @@
 		"Pakiet higieny (piasakowanie, scaling, fluoryzacja, instruktaż)": "400 zł"
 	},
 	"RTG": {
-		"Pantomogram": "50 zł",
-		"Zdjęcie cefalometryczne": "170 zł",
-		"Tomografia komputerowa szczęka lub żuchwa": "350 zł",
-		"Tomografia komputerowa szczęka i żuchwa": "250 zł",
-		"Tomografia komputerowa punktowa jednego zęba": "130 zł",
-		"Zdjęcie punktowe": "130 zł"
+		"Pantomogram": "130 zł",
+		"Zdjęcie cefalometryczne": "130 zł",
+		"Tomografia komputerowa szczęka lub żuchwa": "250 zł",
+		"Tomografia komputerowa szczęka i żuchwa": "350 zł",
+		"Tomografia komputerowa punktowa jednego zęba": "170 zł",
+		"Zdjęcie punktowe": "50 zł"
 	},
 	"Protetyka": {
 		"Konsultacja protetyczna": "200 zł",
@@ -160,7 +160,7 @@
 	},
 	"Logopedia": {
 		"Diagnoza logopedyczna": "200 zł",
-		"Wizyt logopedyczna": "120 zł"
+		"Wizyta logopedyczna": "120 zł"
 	},
 	"Zabiegi z użyciem lasera SMART M PRO": {
 		"Biostymulacja bez połączenia z innym zabiegiem": "100 zł",
