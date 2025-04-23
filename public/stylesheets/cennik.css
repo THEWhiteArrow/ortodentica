@@ -269,7 +269,11 @@ section{
 
 #cennikMedycynaEstetyczna .accordion-header .accordion-button{
    font-size: 100%;
+   padding-left:24px;
+   padding-top: 12px;
+   padding-bottom: 12px;
 }
+
 
 
 #menuToggle button{
