@@ -28,6 +28,8 @@ Keep track of all major updates and improvements here:
 -   1 person addition to the team page
 -   image cropping and optimization
 
+#### 2025-08-28
+-   1 pricing update from email info on phone
 ---
 
 Thank you for visiting and supporting my journey!
