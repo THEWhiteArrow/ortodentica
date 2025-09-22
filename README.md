@@ -35,4 +35,7 @@ Keep track of all major updates and improvements here:
 #### 2025-09-14
 -   1 pricing update from email info
 
+### 2025-09-22
+-   1 person addition to the team page
+
 Thank you for visiting and supporting my journey!
